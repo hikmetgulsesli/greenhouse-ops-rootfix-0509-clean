@@ -1,0 +1,2069 @@
+[
+  {
+    "screenId": "7ec5ec999bdb41808f7c773981088e6c",
+    "screenTitle": "Storage Error State",
+    "deviceType": "DESKTOP",
+    "elements": [
+      {
+        "type": "link",
+        "label": "dashboard",
+        "href": "#",
+        "line": 139
+      },
+      {
+        "type": "link",
+        "label": "Task Board",
+        "href": "#",
+        "line": 143
+      },
+      {
+        "type": "link",
+        "label": "Equipment",
+        "href": "#",
+        "line": 147
+      },
+      {
+        "type": "link",
+        "label": "Logs",
+        "href": "#",
+        "line": 151
+      },
+      {
+        "type": "link",
+        "label": "settings",
+        "href": "#",
+        "line": 157
+      },
+      {
+        "type": "link",
+        "label": "help",
+        "href": "#",
+        "line": 161
+      },
+      {
+        "type": "button",
+        "label": "notifications",
+        "line": 109
+      },
+      {
+        "type": "button",
+        "label": "thermostat",
+        "line": 112
+      },
+      {
+        "type": "button",
+        "label": "humidity_mid",
+        "line": 115
+      },
+      {
+        "type": "button",
+        "label": "sensors",
+        "line": 118
+      },
+      {
+        "type": "button",
+        "label": "Account",
+        "line": 122
+      },
+      {
+        "type": "button",
+        "label": "Emergency Stop",
+        "line": 165
+      },
+      {
+        "type": "button",
+        "label": "Retry Connection",
+        "line": 201
+      },
+      {
+        "type": "button",
+        "label": "Reset Storage Cache",
+        "line": 205
+      }
+    ],
+    "navigation": [
+      {
+        "type": "link",
+        "label": "dashboard",
+        "href": "#",
+        "line": 139
+      },
+      {
+        "type": "link",
+        "label": "Task Board",
+        "href": "#",
+        "line": 143
+      },
+      {
+        "type": "link",
+        "label": "Equipment",
+        "href": "#",
+        "line": 147
+      },
+      {
+        "type": "link",
+        "label": "Logs",
+        "href": "#",
+        "line": 151
+      },
+      {
+        "type": "link",
+        "label": "settings",
+        "href": "#",
+        "line": 157
+      },
+      {
+        "type": "link",
+        "label": "help",
+        "href": "#",
+        "line": 161
+      }
+    ],
+    "buttons": [
+      {
+        "type": "button",
+        "label": "notifications",
+        "line": 109
+      },
+      {
+        "type": "button",
+        "label": "thermostat",
+        "line": 112
+      },
+      {
+        "type": "button",
+        "label": "humidity_mid",
+        "line": 115
+      },
+      {
+        "type": "button",
+        "label": "sensors",
+        "line": 118
+      },
+      {
+        "type": "button",
+        "label": "Account",
+        "line": 122
+      },
+      {
+        "type": "button",
+        "label": "Emergency Stop",
+        "line": 165
+      },
+      {
+        "type": "button",
+        "label": "Retry Connection",
+        "line": 201
+      },
+      {
+        "type": "button",
+        "label": "Reset Storage Cache",
+        "line": 205
+      }
+    ],
+    "inputs": [],
+    "hardcodedData": [],
+    "totalInteractive": 14,
+    "requiresRouter": false,
+    "requiresDragDrop": false
+  },
+  {
+    "screenId": "347a893b76354420b87735e1ed1db389",
+    "screenTitle": "Empty State",
+    "deviceType": "DESKTOP",
+    "elements": [
+      {
+        "type": "link",
+        "label": "dashboard",
+        "href": "#",
+        "line": 131
+      },
+      {
+        "type": "link",
+        "label": "Task Board",
+        "href": "#",
+        "line": 136
+      },
+      {
+        "type": "link",
+        "label": "Equipment",
+        "href": "#",
+        "line": 141
+      },
+      {
+        "type": "link",
+        "label": "Logs",
+        "href": "#",
+        "line": 146
+      },
+      {
+        "type": "link",
+        "label": "settings",
+        "href": "#",
+        "line": 160
+      },
+      {
+        "type": "link",
+        "label": "help",
+        "href": "#",
+        "line": 164
+      },
+      {
+        "type": "link",
+        "label": "Sensor Pairing Guide Learn how to connect local telemetry devices to the central node.",
+        "href": "#",
+        "line": 240
+      },
+      {
+        "type": "link",
+        "label": "Supported Hardware View the compatibility matrix for climate and irrigation units.",
+        "href": "#",
+        "line": 250
+      },
+      {
+        "type": "button",
+        "label": "Emergency Stop",
+        "line": 153
+      },
+      {
+        "type": "button",
+        "label": "notifications",
+        "line": 182
+      },
+      {
+        "type": "button",
+        "label": "thermostat",
+        "line": 185
+      },
+      {
+        "type": "button",
+        "label": "humidity_mid",
+        "line": 188
+      },
+      {
+        "type": "button",
+        "label": "sensors",
+        "line": 191
+      },
+      {
+        "type": "button",
+        "label": "Account",
+        "line": 196
+      },
+      {
+        "type": "button",
+        "label": "Equipment",
+        "line": 225
+      },
+      {
+        "type": "button",
+        "label": "Import Catalog",
+        "line": 229
+      },
+      {
+        "type": "input",
+        "label": "Search equipment, logs...",
+        "inputType": "text",
+        "placeholder": "Search equipment, logs...",
+        "line": 176
+      }
+    ],
+    "navigation": [
+      {
+        "type": "link",
+        "label": "dashboard",
+        "href": "#",
+        "line": 131
+      },
+      {
+        "type": "link",
+        "label": "Task Board",
+        "href": "#",
+        "line": 136
+      },
+      {
+        "type": "link",
+        "label": "Equipment",
+        "href": "#",
+        "line": 141
+      },
+      {
+        "type": "link",
+        "label": "Logs",
+        "href": "#",
+        "line": 146
+      },
+      {
+        "type": "link",
+        "label": "settings",
+        "href": "#",
+        "line": 160
+      },
+      {
+        "type": "link",
+        "label": "help",
+        "href": "#",
+        "line": 164
+      },
+      {
+        "type": "link",
+        "label": "Sensor Pairing Guide Learn how to connect local telemetry devices to the central node.",
+        "href": "#",
+        "line": 240
+      },
+      {
+        "type": "link",
+        "label": "Supported Hardware View the compatibility matrix for climate and irrigation units.",
+        "href": "#",
+        "line": 250
+      }
+    ],
+    "buttons": [
+      {
+        "type": "button",
+        "label": "Emergency Stop",
+        "line": 153
+      },
+      {
+        "type": "button",
+        "label": "notifications",
+        "line": 182
+      },
+      {
+        "type": "button",
+        "label": "thermostat",
+        "line": 185
+      },
+      {
+        "type": "button",
+        "label": "humidity_mid",
+        "line": 188
+      },
+      {
+        "type": "button",
+        "label": "sensors",
+        "line": 191
+      },
+      {
+        "type": "button",
+        "label": "Account",
+        "line": 196
+      },
+      {
+        "type": "button",
+        "label": "Equipment",
+        "line": 225
+      },
+      {
+        "type": "button",
+        "label": "Import Catalog",
+        "line": 229
+      }
+    ],
+    "inputs": [
+      {
+        "type": "input",
+        "label": "Search equipment, logs...",
+        "inputType": "text",
+        "placeholder": "Search equipment, logs...",
+        "line": 176
+      }
+    ],
+    "hardcodedData": [],
+    "totalInteractive": 17,
+    "requiresRouter": false,
+    "requiresDragDrop": false
+  },
+  {
+    "screenId": "9db37b864f0d4cc0a85700a557cbcda6",
+    "screenTitle": "Profile Panel",
+    "deviceType": "DESKTOP",
+    "elements": [
+      {
+        "type": "button",
+        "label": "Back to Console",
+        "line": 165
+      },
+      {
+        "type": "button",
+        "label": "Edit Profile",
+        "line": 194
+      },
+      {
+        "type": "button",
+        "label": "Sign Out",
+        "line": 324
+      },
+      {
+        "type": "input",
+        "label": "email",
+        "inputType": "email",
+        "line": 214
+      },
+      {
+        "type": "input",
+        "label": "tel",
+        "inputType": "tel",
+        "line": 218
+      },
+      {
+        "type": "input",
+        "label": "select",
+        "inputType": "select",
+        "line": 284
+      },
+      {
+        "type": "input",
+        "label": "radio",
+        "inputType": "radio",
+        "line": 299
+      },
+      {
+        "type": "input",
+        "label": "radio",
+        "inputType": "radio",
+        "line": 307
+      }
+    ],
+    "navigation": [],
+    "buttons": [
+      {
+        "type": "button",
+        "label": "Back to Console",
+        "line": 165
+      },
+      {
+        "type": "button",
+        "label": "Edit Profile",
+        "line": 194
+      },
+      {
+        "type": "button",
+        "label": "Sign Out",
+        "line": 324
+      }
+    ],
+    "inputs": [
+      {
+        "type": "input",
+        "label": "email",
+        "inputType": "email",
+        "line": 214
+      },
+      {
+        "type": "input",
+        "label": "tel",
+        "inputType": "tel",
+        "line": 218
+      },
+      {
+        "type": "input",
+        "label": "select",
+        "inputType": "select",
+        "line": 284
+      },
+      {
+        "type": "input",
+        "label": "radio",
+        "inputType": "radio",
+        "line": 299
+      },
+      {
+        "type": "input",
+        "label": "radio",
+        "inputType": "radio",
+        "line": 307
+      }
+    ],
+    "hardcodedData": [],
+    "totalInteractive": 8,
+    "requiresRouter": false,
+    "requiresDragDrop": true
+  },
+  {
+    "screenId": "1112d5920e134423a36422170add3571",
+    "screenTitle": "Task Board",
+    "deviceType": "DESKTOP",
+    "elements": [
+      {
+        "type": "link",
+        "label": "dashboard",
+        "href": "#",
+        "line": 122
+      },
+      {
+        "type": "link",
+        "label": "Task Board",
+        "href": "#",
+        "line": 127
+      },
+      {
+        "type": "link",
+        "label": "Equipment",
+        "href": "#",
+        "line": 131
+      },
+      {
+        "type": "link",
+        "label": "Logs",
+        "href": "#",
+        "line": 135
+      },
+      {
+        "type": "link",
+        "label": "settings",
+        "href": "#",
+        "line": 147
+      },
+      {
+        "type": "link",
+        "label": "help",
+        "href": "#",
+        "line": 151
+      },
+      {
+        "type": "button",
+        "label": "Emergency Stop",
+        "line": 142
+      },
+      {
+        "type": "button",
+        "label": "menu",
+        "line": 167
+      },
+      {
+        "type": "button",
+        "label": "Sensors",
+        "line": 179
+      },
+      {
+        "type": "button",
+        "label": "Humidity",
+        "line": 182
+      },
+      {
+        "type": "button",
+        "label": "Thermostat",
+        "line": 185
+      },
+      {
+        "type": "button",
+        "label": "Notifications",
+        "line": 188
+      },
+      {
+        "type": "button",
+        "label": "Account",
+        "line": 194
+      },
+      {
+        "type": "button",
+        "label": "Filter",
+        "line": 210
+      },
+      {
+        "type": "button",
+        "label": "New Task",
+        "line": 214
+      },
+      {
+        "type": "button",
+        "label": "arrow_forward",
+        "line": 247
+      },
+      {
+        "type": "button",
+        "label": "arrow_forward",
+        "line": 267
+      },
+      {
+        "type": "button",
+        "label": "arrow_back",
+        "line": 300
+      },
+      {
+        "type": "button",
+        "label": "arrow_forward",
+        "line": 301
+      },
+      {
+        "type": "button",
+        "label": "undo",
+        "line": 331
+      },
+      {
+        "type": "input",
+        "label": "Search tasks, logs...",
+        "inputType": "text",
+        "placeholder": "Search tasks, logs...",
+        "line": 164
+      }
+    ],
+    "navigation": [
+      {
+        "type": "link",
+        "label": "dashboard",
+        "href": "#",
+        "line": 122
+      },
+      {
+        "type": "link",
+        "label": "Task Board",
+        "href": "#",
+        "line": 127
+      },
+      {
+        "type": "link",
+        "label": "Equipment",
+        "href": "#",
+        "line": 131
+      },
+      {
+        "type": "link",
+        "label": "Logs",
+        "href": "#",
+        "line": 135
+      },
+      {
+        "type": "link",
+        "label": "settings",
+        "href": "#",
+        "line": 147
+      },
+      {
+        "type": "link",
+        "label": "help",
+        "href": "#",
+        "line": 151
+      }
+    ],
+    "buttons": [
+      {
+        "type": "button",
+        "label": "Emergency Stop",
+        "line": 142
+      },
+      {
+        "type": "button",
+        "label": "menu",
+        "line": 167
+      },
+      {
+        "type": "button",
+        "label": "Sensors",
+        "line": 179
+      },
+      {
+        "type": "button",
+        "label": "Humidity",
+        "line": 182
+      },
+      {
+        "type": "button",
+        "label": "Thermostat",
+        "line": 185
+      },
+      {
+        "type": "button",
+        "label": "Notifications",
+        "line": 188
+      },
+      {
+        "type": "button",
+        "label": "Account",
+        "line": 194
+      },
+      {
+        "type": "button",
+        "label": "Filter",
+        "line": 210
+      },
+      {
+        "type": "button",
+        "label": "New Task",
+        "line": 214
+      },
+      {
+        "type": "button",
+        "label": "arrow_forward",
+        "line": 247
+      },
+      {
+        "type": "button",
+        "label": "arrow_forward",
+        "line": 267
+      },
+      {
+        "type": "button",
+        "label": "arrow_back",
+        "line": 300
+      },
+      {
+        "type": "button",
+        "label": "arrow_forward",
+        "line": 301
+      },
+      {
+        "type": "button",
+        "label": "undo",
+        "line": 331
+      }
+    ],
+    "inputs": [
+      {
+        "type": "input",
+        "label": "Search tasks, logs...",
+        "inputType": "text",
+        "placeholder": "Search tasks, logs...",
+        "line": 164
+      }
+    ],
+    "hardcodedData": [],
+    "totalInteractive": 21,
+    "requiresRouter": false,
+    "requiresDragDrop": false
+  },
+  {
+    "screenId": "ee91e06997834da1bd710da05850d12a",
+    "screenTitle": "Dashboard",
+    "deviceType": "DESKTOP",
+    "elements": [
+      {
+        "type": "link",
+        "label": "dashboard",
+        "href": "#",
+        "line": 150
+      },
+      {
+        "type": "link",
+        "label": "Task Board",
+        "href": "#",
+        "line": 154
+      },
+      {
+        "type": "link",
+        "label": "Equipment",
+        "href": "#",
+        "line": 158
+      },
+      {
+        "type": "link",
+        "label": "Logs",
+        "href": "#",
+        "line": 162
+      },
+      {
+        "type": "link",
+        "label": "settings",
+        "href": "#",
+        "line": 168
+      },
+      {
+        "type": "link",
+        "label": "help",
+        "href": "#",
+        "line": 172
+      },
+      {
+        "type": "button",
+        "label": "notifications",
+        "line": 120
+      },
+      {
+        "type": "button",
+        "label": "thermostat",
+        "line": 124
+      },
+      {
+        "type": "button",
+        "label": "humidity_mid",
+        "line": 127
+      },
+      {
+        "type": "button",
+        "label": "sensors",
+        "line": 130
+      },
+      {
+        "type": "button",
+        "label": "Account",
+        "line": 135
+      },
+      {
+        "type": "button",
+        "label": "Emergency Stop",
+        "line": 177
+      },
+      {
+        "type": "button",
+        "label": "Today",
+        "line": 194
+      },
+      {
+        "type": "button",
+        "label": "All Zones",
+        "line": 198
+      },
+      {
+        "type": "button",
+        "label": "View Detailed Log",
+        "line": 282
+      },
+      {
+        "type": "button",
+        "label": "Initiate Manual Irrigation Override schedule for selected zones",
+        "line": 330
+      },
+      {
+        "type": "button",
+        "label": "Force Ventilation Purge Clear humidity/temp build-up",
+        "line": 337
+      },
+      {
+        "type": "button",
+        "label": "Acknowledge",
+        "line": 365
+      },
+      {
+        "type": "button",
+        "label": "Create Task",
+        "line": 375
+      },
+      {
+        "type": "button",
+        "label": "View Maintenance Schedule",
+        "line": 422
+      },
+      {
+        "type": "input",
+        "label": "Search parameters, zones...",
+        "inputType": "text",
+        "placeholder": "Search parameters, zones...",
+        "line": 115
+      }
+    ],
+    "navigation": [
+      {
+        "type": "link",
+        "label": "dashboard",
+        "href": "#",
+        "line": 150
+      },
+      {
+        "type": "link",
+        "label": "Task Board",
+        "href": "#",
+        "line": 154
+      },
+      {
+        "type": "link",
+        "label": "Equipment",
+        "href": "#",
+        "line": 158
+      },
+      {
+        "type": "link",
+        "label": "Logs",
+        "href": "#",
+        "line": 162
+      },
+      {
+        "type": "link",
+        "label": "settings",
+        "href": "#",
+        "line": 168
+      },
+      {
+        "type": "link",
+        "label": "help",
+        "href": "#",
+        "line": 172
+      }
+    ],
+    "buttons": [
+      {
+        "type": "button",
+        "label": "notifications",
+        "line": 120
+      },
+      {
+        "type": "button",
+        "label": "thermostat",
+        "line": 124
+      },
+      {
+        "type": "button",
+        "label": "humidity_mid",
+        "line": 127
+      },
+      {
+        "type": "button",
+        "label": "sensors",
+        "line": 130
+      },
+      {
+        "type": "button",
+        "label": "Account",
+        "line": 135
+      },
+      {
+        "type": "button",
+        "label": "Emergency Stop",
+        "line": 177
+      },
+      {
+        "type": "button",
+        "label": "Today",
+        "line": 194
+      },
+      {
+        "type": "button",
+        "label": "All Zones",
+        "line": 198
+      },
+      {
+        "type": "button",
+        "label": "View Detailed Log",
+        "line": 282
+      },
+      {
+        "type": "button",
+        "label": "Initiate Manual Irrigation Override schedule for selected zones",
+        "line": 330
+      },
+      {
+        "type": "button",
+        "label": "Force Ventilation Purge Clear humidity/temp build-up",
+        "line": 337
+      },
+      {
+        "type": "button",
+        "label": "Acknowledge",
+        "line": 365
+      },
+      {
+        "type": "button",
+        "label": "Create Task",
+        "line": 375
+      },
+      {
+        "type": "button",
+        "label": "View Maintenance Schedule",
+        "line": 422
+      }
+    ],
+    "inputs": [
+      {
+        "type": "input",
+        "label": "Search parameters, zones...",
+        "inputType": "text",
+        "placeholder": "Search parameters, zones...",
+        "line": 115
+      }
+    ],
+    "hardcodedData": [],
+    "totalInteractive": 21,
+    "requiresRouter": false,
+    "requiresDragDrop": false
+  },
+  {
+    "screenId": "a8f00315ca1a44998ce770e2d9b0db28",
+    "screenTitle": "Equipment Status",
+    "deviceType": "DESKTOP",
+    "elements": [
+      {
+        "type": "link",
+        "label": "dashboard",
+        "href": "#",
+        "line": 120
+      },
+      {
+        "type": "link",
+        "label": "Task Board",
+        "href": "#",
+        "line": 124
+      },
+      {
+        "type": "link",
+        "label": "Equipment",
+        "href": "#",
+        "line": 129
+      },
+      {
+        "type": "link",
+        "label": "Logs",
+        "href": "#",
+        "line": 133
+      },
+      {
+        "type": "link",
+        "label": "settings",
+        "href": "#",
+        "line": 147
+      },
+      {
+        "type": "link",
+        "label": "help",
+        "href": "#",
+        "line": 151
+      },
+      {
+        "type": "button",
+        "label": "Emergency Stop",
+        "line": 140
+      },
+      {
+        "type": "button",
+        "label": "notifications",
+        "line": 170
+      },
+      {
+        "type": "button",
+        "label": "thermostat",
+        "line": 173
+      },
+      {
+        "type": "button",
+        "label": "humidity_mid",
+        "line": 176
+      },
+      {
+        "type": "button",
+        "label": "sensors",
+        "line": 179
+      },
+      {
+        "type": "button",
+        "label": "Account",
+        "line": 183
+      },
+      {
+        "type": "button",
+        "label": "Calibrate",
+        "line": 244
+      },
+      {
+        "type": "button",
+        "label": "Schedule",
+        "line": 247
+      },
+      {
+        "type": "button",
+        "label": "Inspect",
+        "line": 278
+      },
+      {
+        "type": "button",
+        "label": "Schedule Maint.",
+        "line": 281
+      },
+      {
+        "type": "button",
+        "label": "Reset Breaker",
+        "line": 312
+      },
+      {
+        "type": "button",
+        "label": "Details",
+        "line": 315
+      },
+      {
+        "type": "button",
+        "label": "Calibrate",
+        "line": 346
+      },
+      {
+        "type": "button",
+        "label": "Flush",
+        "line": 349
+      },
+      {
+        "type": "input",
+        "label": "Search equipment...",
+        "inputType": "text",
+        "placeholder": "Search equipment...",
+        "line": 166
+      }
+    ],
+    "navigation": [
+      {
+        "type": "link",
+        "label": "dashboard",
+        "href": "#",
+        "line": 120
+      },
+      {
+        "type": "link",
+        "label": "Task Board",
+        "href": "#",
+        "line": 124
+      },
+      {
+        "type": "link",
+        "label": "Equipment",
+        "href": "#",
+        "line": 129
+      },
+      {
+        "type": "link",
+        "label": "Logs",
+        "href": "#",
+        "line": 133
+      },
+      {
+        "type": "link",
+        "label": "settings",
+        "href": "#",
+        "line": 147
+      },
+      {
+        "type": "link",
+        "label": "help",
+        "href": "#",
+        "line": 151
+      }
+    ],
+    "buttons": [
+      {
+        "type": "button",
+        "label": "Emergency Stop",
+        "line": 140
+      },
+      {
+        "type": "button",
+        "label": "notifications",
+        "line": 170
+      },
+      {
+        "type": "button",
+        "label": "thermostat",
+        "line": 173
+      },
+      {
+        "type": "button",
+        "label": "humidity_mid",
+        "line": 176
+      },
+      {
+        "type": "button",
+        "label": "sensors",
+        "line": 179
+      },
+      {
+        "type": "button",
+        "label": "Account",
+        "line": 183
+      },
+      {
+        "type": "button",
+        "label": "Calibrate",
+        "line": 244
+      },
+      {
+        "type": "button",
+        "label": "Schedule",
+        "line": 247
+      },
+      {
+        "type": "button",
+        "label": "Inspect",
+        "line": 278
+      },
+      {
+        "type": "button",
+        "label": "Schedule Maint.",
+        "line": 281
+      },
+      {
+        "type": "button",
+        "label": "Reset Breaker",
+        "line": 312
+      },
+      {
+        "type": "button",
+        "label": "Details",
+        "line": 315
+      },
+      {
+        "type": "button",
+        "label": "Calibrate",
+        "line": 346
+      },
+      {
+        "type": "button",
+        "label": "Flush",
+        "line": 349
+      }
+    ],
+    "inputs": [
+      {
+        "type": "input",
+        "label": "Search equipment...",
+        "inputType": "text",
+        "placeholder": "Search equipment...",
+        "line": 166
+      }
+    ],
+    "hardcodedData": [],
+    "totalInteractive": 21,
+    "requiresRouter": false,
+    "requiresDragDrop": false
+  },
+  {
+    "screenId": "dafa2a3cf8dd4c68997b44a5b1d07c5c",
+    "screenTitle": "Settings",
+    "deviceType": "DESKTOP",
+    "elements": [
+      {
+        "type": "link",
+        "label": "dashboard",
+        "href": "#",
+        "line": 116
+      },
+      {
+        "type": "link",
+        "label": "Task Board",
+        "href": "#",
+        "line": 122
+      },
+      {
+        "type": "link",
+        "label": "Equipment",
+        "href": "#",
+        "line": 128
+      },
+      {
+        "type": "link",
+        "label": "Logs",
+        "href": "#",
+        "line": 134
+      },
+      {
+        "type": "link",
+        "label": "settings",
+        "href": "#",
+        "line": 147
+      },
+      {
+        "type": "link",
+        "label": "help",
+        "href": "#",
+        "line": 153
+      },
+      {
+        "type": "button",
+        "label": "Emergency Stop",
+        "line": 141
+      },
+      {
+        "type": "button",
+        "label": "menu",
+        "line": 165
+      },
+      {
+        "type": "button",
+        "label": "notifications",
+        "line": 177
+      },
+      {
+        "type": "button",
+        "label": "thermostat",
+        "line": 181
+      },
+      {
+        "type": "button",
+        "label": "humidity_mid",
+        "line": 184
+      },
+      {
+        "type": "button",
+        "label": "sensors",
+        "line": 187
+      },
+      {
+        "type": "button",
+        "label": "Account",
+        "line": 191
+      },
+      {
+        "type": "button",
+        "label": "General Preferences",
+        "line": 207
+      },
+      {
+        "type": "button",
+        "label": "Alerts &amp; Notifications",
+        "line": 213
+      },
+      {
+        "type": "button",
+        "label": "Security &amp; Access",
+        "line": 219
+      },
+      {
+        "type": "button",
+        "label": "Sensor Calibration",
+        "line": 225
+      },
+      {
+        "type": "button",
+        "label": "Standard",
+        "line": 244
+      },
+      {
+        "type": "button",
+        "label": "Condensed",
+        "line": 245
+      },
+      {
+        "type": "button",
+        "label": "Discard Changes",
+        "line": 294
+      },
+      {
+        "type": "button",
+        "label": "Preferences",
+        "line": 295
+      },
+      {
+        "type": "input",
+        "label": "Search systems...",
+        "inputType": "text",
+        "placeholder": "Search systems...",
+        "line": 174
+      },
+      {
+        "type": "input",
+        "label": "checkbox",
+        "inputType": "checkbox",
+        "line": 254
+      },
+      {
+        "type": "input",
+        "label": "number",
+        "inputType": "number",
+        "line": 268
+      },
+      {
+        "type": "input",
+        "label": "number",
+        "inputType": "number",
+        "line": 275
+      },
+      {
+        "type": "input",
+        "label": "checkbox",
+        "inputType": "checkbox",
+        "line": 286
+      }
+    ],
+    "navigation": [
+      {
+        "type": "link",
+        "label": "dashboard",
+        "href": "#",
+        "line": 116
+      },
+      {
+        "type": "link",
+        "label": "Task Board",
+        "href": "#",
+        "line": 122
+      },
+      {
+        "type": "link",
+        "label": "Equipment",
+        "href": "#",
+        "line": 128
+      },
+      {
+        "type": "link",
+        "label": "Logs",
+        "href": "#",
+        "line": 134
+      },
+      {
+        "type": "link",
+        "label": "settings",
+        "href": "#",
+        "line": 147
+      },
+      {
+        "type": "link",
+        "label": "help",
+        "href": "#",
+        "line": 153
+      }
+    ],
+    "buttons": [
+      {
+        "type": "button",
+        "label": "Emergency Stop",
+        "line": 141
+      },
+      {
+        "type": "button",
+        "label": "menu",
+        "line": 165
+      },
+      {
+        "type": "button",
+        "label": "notifications",
+        "line": 177
+      },
+      {
+        "type": "button",
+        "label": "thermostat",
+        "line": 181
+      },
+      {
+        "type": "button",
+        "label": "humidity_mid",
+        "line": 184
+      },
+      {
+        "type": "button",
+        "label": "sensors",
+        "line": 187
+      },
+      {
+        "type": "button",
+        "label": "Account",
+        "line": 191
+      },
+      {
+        "type": "button",
+        "label": "General Preferences",
+        "line": 207
+      },
+      {
+        "type": "button",
+        "label": "Alerts &amp; Notifications",
+        "line": 213
+      },
+      {
+        "type": "button",
+        "label": "Security &amp; Access",
+        "line": 219
+      },
+      {
+        "type": "button",
+        "label": "Sensor Calibration",
+        "line": 225
+      },
+      {
+        "type": "button",
+        "label": "Standard",
+        "line": 244
+      },
+      {
+        "type": "button",
+        "label": "Condensed",
+        "line": 245
+      },
+      {
+        "type": "button",
+        "label": "Discard Changes",
+        "line": 294
+      },
+      {
+        "type": "button",
+        "label": "Preferences",
+        "line": 295
+      }
+    ],
+    "inputs": [
+      {
+        "type": "input",
+        "label": "Search systems...",
+        "inputType": "text",
+        "placeholder": "Search systems...",
+        "line": 174
+      },
+      {
+        "type": "input",
+        "label": "checkbox",
+        "inputType": "checkbox",
+        "line": 254
+      },
+      {
+        "type": "input",
+        "label": "number",
+        "inputType": "number",
+        "line": 268
+      },
+      {
+        "type": "input",
+        "label": "number",
+        "inputType": "number",
+        "line": 275
+      },
+      {
+        "type": "input",
+        "label": "checkbox",
+        "inputType": "checkbox",
+        "line": 286
+      }
+    ],
+    "hardcodedData": [],
+    "totalInteractive": 26,
+    "requiresRouter": false,
+    "requiresDragDrop": false
+  },
+  {
+    "screenId": "3e3ec9a01d0b44d59b6b3853d85dc29d",
+    "screenTitle": "Maintenance Log",
+    "deviceType": "DESKTOP",
+    "elements": [
+      {
+        "type": "link",
+        "label": "dashboard",
+        "href": "#",
+        "line": 149
+      },
+      {
+        "type": "link",
+        "label": "Task Board",
+        "href": "#",
+        "line": 153
+      },
+      {
+        "type": "link",
+        "label": "Equipment",
+        "href": "#",
+        "line": 157
+      },
+      {
+        "type": "link",
+        "label": "Logs",
+        "href": "#",
+        "line": 161
+      },
+      {
+        "type": "link",
+        "label": "settings",
+        "href": "#",
+        "line": 173
+      },
+      {
+        "type": "link",
+        "label": "help",
+        "href": "#",
+        "line": 177
+      },
+      {
+        "type": "button",
+        "label": "notifications",
+        "line": 120
+      },
+      {
+        "type": "button",
+        "label": "thermostat",
+        "line": 123
+      },
+      {
+        "type": "button",
+        "label": "humidity_mid",
+        "line": 126
+      },
+      {
+        "type": "button",
+        "label": "sensors",
+        "line": 129
+      },
+      {
+        "type": "button",
+        "label": "Account",
+        "line": 133
+      },
+      {
+        "type": "button",
+        "label": "Emergency Stop",
+        "line": 167
+      },
+      {
+        "type": "button",
+        "label": "Export CSV",
+        "line": 192
+      },
+      {
+        "type": "button",
+        "label": "Reset Filters",
+        "line": 228
+      },
+      {
+        "type": "button",
+        "label": "View Details",
+        "line": 265
+      },
+      {
+        "type": "button",
+        "label": "View Details",
+        "line": 288
+      },
+      {
+        "type": "button",
+        "label": "View Details",
+        "line": 311
+      },
+      {
+        "type": "button",
+        "label": "View Details",
+        "line": 334
+      },
+      {
+        "type": "button",
+        "label": "chevron_left",
+        "line": 346
+      },
+      {
+        "type": "button",
+        "label": "chevron_right",
+        "line": 350
+      },
+      {
+        "type": "input",
+        "label": "Search parameters...",
+        "inputType": "text",
+        "placeholder": "Search parameters...",
+        "line": 116
+      },
+      {
+        "type": "input",
+        "label": "ID, Operator, Task...",
+        "inputType": "text",
+        "placeholder": "ID, Operator, Task...",
+        "line": 203
+      },
+      {
+        "type": "input",
+        "label": "date",
+        "inputType": "date",
+        "line": 208
+      },
+      {
+        "type": "input",
+        "label": "select",
+        "inputType": "select",
+        "line": 212
+      },
+      {
+        "type": "input",
+        "label": "select",
+        "inputType": "select",
+        "line": 221
+      }
+    ],
+    "navigation": [
+      {
+        "type": "link",
+        "label": "dashboard",
+        "href": "#",
+        "line": 149
+      },
+      {
+        "type": "link",
+        "label": "Task Board",
+        "href": "#",
+        "line": 153
+      },
+      {
+        "type": "link",
+        "label": "Equipment",
+        "href": "#",
+        "line": 157
+      },
+      {
+        "type": "link",
+        "label": "Logs",
+        "href": "#",
+        "line": 161
+      },
+      {
+        "type": "link",
+        "label": "settings",
+        "href": "#",
+        "line": 173
+      },
+      {
+        "type": "link",
+        "label": "help",
+        "href": "#",
+        "line": 177
+      }
+    ],
+    "buttons": [
+      {
+        "type": "button",
+        "label": "notifications",
+        "line": 120
+      },
+      {
+        "type": "button",
+        "label": "thermostat",
+        "line": 123
+      },
+      {
+        "type": "button",
+        "label": "humidity_mid",
+        "line": 126
+      },
+      {
+        "type": "button",
+        "label": "sensors",
+        "line": 129
+      },
+      {
+        "type": "button",
+        "label": "Account",
+        "line": 133
+      },
+      {
+        "type": "button",
+        "label": "Emergency Stop",
+        "line": 167
+      },
+      {
+        "type": "button",
+        "label": "Export CSV",
+        "line": 192
+      },
+      {
+        "type": "button",
+        "label": "Reset Filters",
+        "line": 228
+      },
+      {
+        "type": "button",
+        "label": "View Details",
+        "line": 265
+      },
+      {
+        "type": "button",
+        "label": "View Details",
+        "line": 288
+      },
+      {
+        "type": "button",
+        "label": "View Details",
+        "line": 311
+      },
+      {
+        "type": "button",
+        "label": "View Details",
+        "line": 334
+      },
+      {
+        "type": "button",
+        "label": "chevron_left",
+        "line": 346
+      },
+      {
+        "type": "button",
+        "label": "chevron_right",
+        "line": 350
+      }
+    ],
+    "inputs": [
+      {
+        "type": "input",
+        "label": "Search parameters...",
+        "inputType": "text",
+        "placeholder": "Search parameters...",
+        "line": 116
+      },
+      {
+        "type": "input",
+        "label": "ID, Operator, Task...",
+        "inputType": "text",
+        "placeholder": "ID, Operator, Task...",
+        "line": 203
+      },
+      {
+        "type": "input",
+        "label": "date",
+        "inputType": "date",
+        "line": 208
+      },
+      {
+        "type": "input",
+        "label": "select",
+        "inputType": "select",
+        "line": 212
+      },
+      {
+        "type": "input",
+        "label": "select",
+        "inputType": "select",
+        "line": 221
+      }
+    ],
+    "hardcodedData": [],
+    "totalInteractive": 25,
+    "requiresRouter": false,
+    "requiresDragDrop": false
+  },
+  {
+    "screenId": "186cf98c48744d69b87b8058cde8016e",
+    "screenTitle": "Filtered Overview",
+    "deviceType": "DESKTOP",
+    "elements": [
+      {
+        "type": "link",
+        "label": "dashboard",
+        "href": "#",
+        "line": 188
+      },
+      {
+        "type": "link",
+        "label": "Task Board",
+        "href": "#",
+        "line": 193
+      },
+      {
+        "type": "link",
+        "label": "Equipment",
+        "href": "#",
+        "line": 198
+      },
+      {
+        "type": "link",
+        "label": "Logs",
+        "href": "#",
+        "line": 203
+      },
+      {
+        "type": "link",
+        "label": "settings",
+        "href": "#",
+        "line": 210
+      },
+      {
+        "type": "link",
+        "label": "help",
+        "href": "#",
+        "line": 214
+      },
+      {
+        "type": "button",
+        "label": "Emergency Stop",
+        "line": 221
+      },
+      {
+        "type": "button",
+        "label": "notifications",
+        "line": 241
+      },
+      {
+        "type": "button",
+        "label": "thermostat",
+        "line": 244
+      },
+      {
+        "type": "button",
+        "label": "humidity_mid",
+        "line": 247
+      },
+      {
+        "type": "button",
+        "label": "sensors",
+        "line": 250
+      },
+      {
+        "type": "button",
+        "label": "Account",
+        "line": 254
+      },
+      {
+        "type": "button",
+        "label": "Export CSV",
+        "line": 270
+      },
+      {
+        "type": "button",
+        "label": "Modify Filters",
+        "line": 274
+      },
+      {
+        "type": "button",
+        "label": "Clear All",
+        "line": 284
+      },
+      {
+        "type": "button",
+        "label": "close",
+        "line": 291
+      },
+      {
+        "type": "button",
+        "label": "close",
+        "line": 298
+      },
+      {
+        "type": "button",
+        "label": "close",
+        "line": 305
+      },
+      {
+        "type": "button",
+        "label": "open_in_new",
+        "line": 340
+      },
+      {
+        "type": "button",
+        "label": "open_in_new",
+        "line": 360
+      },
+      {
+        "type": "button",
+        "label": "open_in_new",
+        "line": 380
+      },
+      {
+        "type": "button",
+        "label": "open_in_new",
+        "line": 400
+      },
+      {
+        "type": "input",
+        "label": "Search logs, events, anomalies...",
+        "inputType": "text",
+        "placeholder": "Search logs, events, anomalies...",
+        "line": 236
+      }
+    ],
+    "navigation": [
+      {
+        "type": "link",
+        "label": "dashboard",
+        "href": "#",
+        "line": 188
+      },
+      {
+        "type": "link",
+        "label": "Task Board",
+        "href": "#",
+        "line": 193
+      },
+      {
+        "type": "link",
+        "label": "Equipment",
+        "href": "#",
+        "line": 198
+      },
+      {
+        "type": "link",
+        "label": "Logs",
+        "href": "#",
+        "line": 203
+      },
+      {
+        "type": "link",
+        "label": "settings",
+        "href": "#",
+        "line": 210
+      },
+      {
+        "type": "link",
+        "label": "help",
+        "href": "#",
+        "line": 214
+      }
+    ],
+    "buttons": [
+      {
+        "type": "button",
+        "label": "Emergency Stop",
+        "line": 221
+      },
+      {
+        "type": "button",
+        "label": "notifications",
+        "line": 241
+      },
+      {
+        "type": "button",
+        "label": "thermostat",
+        "line": 244
+      },
+      {
+        "type": "button",
+        "label": "humidity_mid",
+        "line": 247
+      },
+      {
+        "type": "button",
+        "label": "sensors",
+        "line": 250
+      },
+      {
+        "type": "button",
+        "label": "Account",
+        "line": 254
+      },
+      {
+        "type": "button",
+        "label": "Export CSV",
+        "line": 270
+      },
+      {
+        "type": "button",
+        "label": "Modify Filters",
+        "line": 274
+      },
+      {
+        "type": "button",
+        "label": "Clear All",
+        "line": 284
+      },
+      {
+        "type": "button",
+        "label": "close",
+        "line": 291
+      },
+      {
+        "type": "button",
+        "label": "close",
+        "line": 298
+      },
+      {
+        "type": "button",
+        "label": "close",
+        "line": 305
+      },
+      {
+        "type": "button",
+        "label": "open_in_new",
+        "line": 340
+      },
+      {
+        "type": "button",
+        "label": "open_in_new",
+        "line": 360
+      },
+      {
+        "type": "button",
+        "label": "open_in_new",
+        "line": 380
+      },
+      {
+        "type": "button",
+        "label": "open_in_new",
+        "line": 400
+      }
+    ],
+    "inputs": [
+      {
+        "type": "input",
+        "label": "Search logs, events, anomalies...",
+        "inputType": "text",
+        "placeholder": "Search logs, events, anomalies...",
+        "line": 236
+      }
+    ],
+    "hardcodedData": [],
+    "totalInteractive": 23,
+    "requiresRouter": false,
+    "requiresDragDrop": false
+  }
+]
