@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>FloraOps Pro - No Equipment</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts: Inter -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config -->
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-primary-fixed-variant": "#003ea8",
+                      "primary": "#b4c5ff",
+                      "primary-fixed-dim": "#b4c5ff",
+                      "secondary-fixed": "#d5e3fc",
+                      "on-surface": "#e1e2ed",
+                      "tertiary-fixed": "#ffdbcd",
+                      "outline-variant": "#434655",
+                      "on-surface-variant": "#c3c6d7",
+                      "on-secondary": "#233144",
+                      "tertiary": "#ffb596",
+                      "on-secondary-fixed": "#0d1c2e",
+                      "on-background": "#e1e2ed",
+                      "on-tertiary-container": "#ffede6",
+                      "on-error-container": "#ffdad6",
+                      "surface-container-low": "#191b23",
+                      "on-primary-fixed": "#00174b",
+                      "inverse-on-surface": "#2e3039",
+                      "on-tertiary-fixed": "#360f00",
+                      "error-container": "#93000a",
+                      "inverse-surface": "#e1e2ed",
+                      "surface-container-highest": "#32343d",
+                      "secondary-fixed-dim": "#b9c7df",
+                      "inverse-primary": "#0053db",
+                      "tertiary-container": "#bc4800",
+                      "surface-dim": "#11131b",
+                      "on-error": "#690005",
+                      "surface-container-lowest": "#0c0e16",
+                      "background": "#11131b",
+                      "secondary-container": "#3c4a5e",
+                      "primary-container": "#2563eb",
+                      "on-secondary-container": "#abb9d1",
+                      "on-tertiary-fixed-variant": "#7d2d00",
+                      "tertiary-fixed-dim": "#ffb596",
+                      "surface-container": "#1d1f27",
+                      "surface-bright": "#373942",
+                      "surface-variant": "#32343d",
+                      "surface-tint": "#b4c5ff",
+                      "surface": "#11131b",
+                      "on-secondary-fixed-variant": "#3a485b",
+                      "outline": "#8d90a0",
+                      "error": "#ffb4ab",
+                      "primary-fixed": "#dbe1ff",
+                      "on-primary-container": "#eeefff",
+                      "on-tertiary": "#581e00",
+                      "on-primary": "#002a78",
+                      "secondary": "#b9c7df",
+                      "surface-container-high": "#282a32"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "unit": "4px",
+                      "container-margin": "24px",
+                      "cell-padding-y": "8px",
+                      "cell-padding-x": "12px",
+                      "gutter": "16px"
+              },
+              "fontFamily": {
+                      "headline-md": ["Inter"],
+                      "body-sm": ["Inter"],
+                      "title-sm": ["Inter"],
+                      "display-lg": ["Inter"],
+                      "label-caps": ["Inter"],
+                      "code-data": ["Inter"],
+                      "body-base": ["Inter"]
+              },
+              "fontSize": {
+                      "headline-md": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                      "body-sm": ["13px", {"lineHeight": "18px", "fontWeight": "400"}],
+                      "title-sm": ["18px", {"lineHeight": "24px", "fontWeight": "600"}],
+                      "display-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                      "code-data": ["13px", {"lineHeight": "18px", "fontWeight": "500"}],
+                      "body-base": ["14px", {"lineHeight": "20px", "fontWeight": "400"}]
+              }
+            }
+          }
+        }
+    </script>
+<style>
+        /* Base typography application to avoid repeating classes everywhere */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #11131b; /* background */
+            color: #e1e2ed; /* on-surface */
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface antialiased overflow-hidden">
+<!-- JSON Component: SideNavBar -->
+<nav class="fixed left-0 top-0 h-full w-[240px] flex flex-col py-container-margin border-r border-outline-variant bg-surface-container z-40 hidden md:flex">
+<!-- Header / Brand -->
+<div class="px-6 mb-8 flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-primary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-on-primary-container" style="font-variation-settings: 'FILL' 1;">eco</span>
+</div>
+<div class="overflow-hidden">
+<h1 class="font-headline-md text-headline-md font-bold text-primary truncate">FloraOps Pro</h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Zone A-1 Main</p>
+</div>
+</div>
+<!-- Navigation Tabs -->
+<div class="flex-1 flex flex-col gap-1 px-3">
+<!-- Inactive -->
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-on-surface-variant font-body-base hover:bg-surface-variant transition-colors hover:scale-[0.98] duration-150" href="#">
+<span class="material-symbols-outlined text-outline">dashboard</span>
+                Dashboard
+            </a>
+<!-- Inactive -->
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-on-surface-variant font-body-base hover:bg-surface-variant transition-colors hover:scale-[0.98] duration-150" href="#">
+<span class="material-symbols-outlined text-outline">assignment</span>
+                Task Board
+            </a>
+<!-- Active State Navigation (Equipment is intent) -->
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-primary font-bold border-l-4 border-primary bg-secondary-container/10 scale-[0.98] transition-transform duration-150" href="#">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">precision_manufacturing</span>
+                Equipment
+            </a>
+<!-- Inactive -->
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-on-surface-variant font-body-base hover:bg-surface-variant transition-colors hover:scale-[0.98] duration-150" href="#">
+<span class="material-symbols-outlined text-outline">database</span>
+                Logs
+            </a>
+</div>
+<!-- Emergency Stop CTA -->
+<div class="px-6 mb-6">
+<button class="w-full flex items-center justify-center gap-2 py-2.5 rounded-lg border border-error text-error hover:bg-error/10 transition-colors font-title-sm text-title-sm">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">warning</span>
+                Emergency Stop
+            </button>
+</div>
+<!-- Footer Tabs -->
+<div class="mt-auto px-3 border-t border-outline-variant pt-4 flex flex-col gap-1">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-on-surface-variant font-body-base hover:bg-surface-variant transition-colors" href="#">
+<span class="material-symbols-outlined text-outline">settings</span>
+                Settings
+            </a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-on-surface-variant font-body-base hover:bg-surface-variant transition-colors" href="#">
+<span class="material-symbols-outlined text-outline">help</span>
+                Help
+            </a>
+</div>
+</nav>
+<!-- JSON Component: TopAppBar -->
+<header class="fixed top-0 right-0 w-full md:w-[calc(100%-240px)] z-50 flex justify-between items-center px-gutter h-16 border-b border-outline-variant bg-surface">
+<!-- Search Bar (Left) -->
+<div class="flex items-center flex-1 max-w-md">
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline">search</span>
+<input class="w-full bg-surface-container text-on-surface border border-outline-variant rounded-full py-1.5 pl-10 pr-4 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary font-body-base text-body-base placeholder-on-surface-variant" placeholder="Search equipment, logs..." type="text"/>
+</div>
+</div>
+<!-- Trailing Actions -->
+<div class="flex items-center gap-4 ml-auto">
+<div class="flex items-center gap-2 hidden sm:flex">
+<button aria-label="notifications" class="p-2 rounded-full text-on-surface-variant hover:text-primary hover:bg-surface-variant transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button aria-label="thermostat" class="p-2 rounded-full text-on-surface-variant hover:text-primary hover:bg-surface-variant transition-colors">
+<span class="material-symbols-outlined">thermostat</span>
+</button>
+<button aria-label="humidity_mid" class="p-2 rounded-full text-on-surface-variant hover:text-primary hover:bg-surface-variant transition-colors">
+<span class="material-symbols-outlined">humidity_mid</span>
+</button>
+<button aria-label="sensors" class="p-2 rounded-full text-on-surface-variant hover:text-primary hover:bg-surface-variant transition-colors">
+<span class="material-symbols-outlined">sensors</span>
+</button>
+</div>
+<div class="h-6 w-px bg-outline-variant mx-2 hidden sm:block"></div>
+<button class="flex items-center gap-2 text-on-surface hover:text-primary transition-colors font-title-sm text-title-sm">
+<div class="w-8 h-8 rounded-full bg-secondary-container flex items-center justify-center border border-outline-variant">
+<span class="material-symbols-outlined text-on-secondary-container text-sm">person</span>
+</div>
+<span class="hidden sm:block">Account</span>
+</button>
+</div>
+</header>
+<!-- Main Content Canvas: Empty State for Equipment -->
+<main class="w-full md:pl-[240px] pt-16 h-screen overflow-y-auto">
+<div class="max-w-5xl mx-auto p-container-margin h-full flex flex-col justify-center items-center pb-24">
+<!-- Structural Container for Empty State to give it presence without heavy borders -->
+<div class="w-full max-w-2xl bg-surface-container-low rounded-xl border-2 border-dashed border-outline-variant p-10 flex flex-col items-center text-center shadow-sm relative overflow-hidden">
+<!-- Subtle background glow to add premium feel without breaking dark corporate rules -->
+<div class="absolute top-0 left-1/2 -translate-x-1/2 w-64 h-32 bg-primary/5 blur-[80px] rounded-full pointer-events-none"></div>
+<!-- Central Icon Illustration -->
+<div class="w-24 h-24 rounded-full bg-surface-variant border border-outline-variant flex items-center justify-center mb-6 relative z-10">
+<div class="absolute inset-0 rounded-full border border-primary/20 scale-[1.15] animate-pulse"></div>
+<span class="material-symbols-outlined text-[48px] text-primary opacity-90" style="font-variation-settings: 'wght' 200;">
+                        precision_manufacturing
+                    </span>
+</div>
+<!-- Typography Identity -->
+<h2 class="font-display-lg text-display-lg text-on-surface mb-3 relative z-10 tracking-tight">No Equipment Configured</h2>
+<p class="font-body-base text-body-base text-on-surface-variant max-w-md mb-8 relative z-10">
+                    Zone A-1 currently has no active sensors, climate control arrays, or machinery tracked. Add your first piece of equipment to establish baseline environmental monitoring.
+                </p>
+<!-- Action Buttons -->
+<div class="flex flex-col sm:flex-row gap-4 relative z-10">
+<button class="flex items-center justify-center gap-2 bg-primary-container text-on-primary-container px-6 py-3 rounded-lg font-title-sm text-title-sm hover:opacity-90 transition-opacity focus:ring-2 focus:ring-offset-2 focus:ring-offset-background focus:ring-primary shadow-sm">
+<span class="material-symbols-outlined text-[20px]">add</span>
+                        Add Equipment
+                    </button>
+<button class="flex items-center justify-center gap-2 bg-transparent border border-outline text-on-surface px-6 py-3 rounded-lg font-title-sm text-title-sm hover:bg-surface-variant transition-colors focus:ring-2 focus:ring-offset-2 focus:ring-offset-background focus:ring-primary">
+<span class="material-symbols-outlined text-[20px]">upload_file</span>
+                        Import Catalog
+                    </button>
+</div>
+</div>
+<!-- Contextual Guidance / Next Steps (Bento Style hints) -->
+<div class="w-full max-w-2xl mt-12">
+<h3 class="font-label-caps text-label-caps text-outline uppercase tracking-wider mb-4 px-2">Quick Start Resources</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<!-- Guide Card 1 -->
+<a class="bg-surface p-5 rounded-lg border border-outline-variant hover:border-primary/50 hover:bg-surface-container-highest transition-all group flex items-start gap-4" href="#">
+<div class="w-10 h-10 rounded bg-secondary-container/20 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-secondary">sensors</span>
+</div>
+<div>
+<h4 class="font-title-sm text-title-sm text-on-surface mb-1 group-hover:text-primary transition-colors">Sensor Pairing Guide</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Learn how to connect local telemetry devices to the central node.</p>
+</div>
+</a>
+<!-- Guide Card 2 -->
+<a class="bg-surface p-5 rounded-lg border border-outline-variant hover:border-primary/50 hover:bg-surface-container-highest transition-all group flex items-start gap-4" href="#">
+<div class="w-10 h-10 rounded bg-secondary-container/20 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-secondary">settings_input_component</span>
+</div>
+<div>
+<h4 class="font-title-sm text-title-sm text-on-surface mb-1 group-hover:text-primary transition-colors">Supported Hardware</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">View the compatibility matrix for climate and irrigation units.</p>
+</div>
+</a>
+</div>
+</div>
+</div>
+</main>
+</body></html>

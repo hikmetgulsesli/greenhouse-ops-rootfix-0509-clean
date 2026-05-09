@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Storage Error State - Greenhouse Console</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-fixed-variant": "#003ea8",
+                        "primary": "#b4c5ff",
+                        "primary-fixed-dim": "#b4c5ff",
+                        "secondary-fixed": "#d5e3fc",
+                        "on-surface": "#e1e2ed",
+                        "tertiary-fixed": "#ffdbcd",
+                        "outline-variant": "#434655",
+                        "on-surface-variant": "#c3c6d7",
+                        "on-secondary": "#233144",
+                        "tertiary": "#ffb596",
+                        "on-secondary-fixed": "#0d1c2e",
+                        "on-background": "#e1e2ed",
+                        "on-tertiary-container": "#ffede6",
+                        "on-error-container": "#ffdad6",
+                        "surface-container-low": "#191b23",
+                        "on-primary-fixed": "#00174b",
+                        "inverse-on-surface": "#2e3039",
+                        "on-tertiary-fixed": "#360f00",
+                        "error-container": "#93000a",
+                        "inverse-surface": "#e1e2ed",
+                        "surface-container-highest": "#32343d",
+                        "secondary-fixed-dim": "#b9c7df",
+                        "inverse-primary": "#0053db",
+                        "tertiary-container": "#bc4800",
+                        "surface-dim": "#11131b",
+                        "on-error": "#690005",
+                        "surface-container-lowest": "#0c0e16",
+                        "background": "#11131b",
+                        "secondary-container": "#3c4a5e",
+                        "primary-container": "#2563eb",
+                        "on-secondary-container": "#abb9d1",
+                        "on-tertiary-fixed-variant": "#7d2d00",
+                        "tertiary-fixed-dim": "#ffb596",
+                        "surface-container": "#1d1f27",
+                        "surface-bright": "#373942",
+                        "surface-variant": "#32343d",
+                        "surface-tint": "#b4c5ff",
+                        "surface": "#11131b",
+                        "on-secondary-fixed-variant": "#3a485b",
+                        "outline": "#8d90a0",
+                        "error": "#ffb4ab",
+                        "primary-fixed": "#dbe1ff",
+                        "on-primary-container": "#eeefff",
+                        "on-tertiary": "#581e00",
+                        "on-primary": "#002a78",
+                        "secondary": "#b9c7df",
+                        "surface-container-high": "#282a32"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit": "4px",
+                        "container-margin": "24px",
+                        "cell-padding-y": "8px",
+                        "cell-padding-x": "12px",
+                        "gutter": "16px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Inter"],
+                        "body-sm": ["Inter"],
+                        "title-sm": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "label-caps": ["Inter"],
+                        "code-data": ["Inter"],
+                        "body-base": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "body-sm": ["13px", { "lineHeight": "18px", "fontWeight": "400" }],
+                        "title-sm": ["18px", { "lineHeight": "24px", "fontWeight": "600" }],
+                        "display-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "code-data": ["13px", { "lineHeight": "18px", "fontWeight": "500" }],
+                        "body-base": ["14px", { "lineHeight": "20px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background font-body-base antialiased min-h-screen flex">
+<!-- TopAppBar -->
+<header class="bg-surface dark:bg-surface fixed top-0 right-0 w-[calc(100%-240px)] z-50 border-b border-outline-variant flex justify-between items-center px-gutter h-16">
+<div class="flex items-center gap-4">
+<!-- Search hidden for simplicity on error state, typically handled via logic -->
+<h1 class="font-headline-md text-headline-md font-bold text-primary">Greenhouse Console</h1>
+</div>
+<div class="flex items-center gap-4">
+<button aria-label="notifications" class="text-on-surface-variant hover:text-primary transition-colors flex items-center justify-center w-10 h-10 rounded-full">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button aria-label="thermostat" class="text-on-surface-variant hover:text-primary transition-colors flex items-center justify-center w-10 h-10 rounded-full">
+<span class="material-symbols-outlined">thermostat</span>
+</button>
+<button aria-label="humidity_mid" class="text-on-surface-variant hover:text-primary transition-colors flex items-center justify-center w-10 h-10 rounded-full">
+<span class="material-symbols-outlined">humidity_mid</span>
+</button>
+<button aria-label="sensors" class="text-on-surface-variant hover:text-primary transition-colors flex items-center justify-center w-10 h-10 rounded-full">
+<span class="material-symbols-outlined">sensors</span>
+</button>
+<div class="w-px h-6 bg-outline-variant mx-2"></div>
+<button aria-label="Account" class="flex items-center gap-2 text-on-surface-variant hover:text-primary transition-colors">
+<img alt="User profile" class="w-8 h-8 rounded-full border border-outline-variant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSc-ezZKKH0B98B-A333iBXKb7jLd_V6wl1y4gixMKEwHxHPNpmjxCojAARdeiSBXCwCJhSz1qd3gn10GPj4c7CeQZMvjTucEPGgHh3-Kzhmd0OhKb9UGZg1chAnLDq-LHLnZjAK1mFpMXZjqNAe71veMGg8GoaGxX-uCOKLyIHTak-LNSkj9_BcSNH4gXYMHkPZzbcEeOFFxK7HyDLfETZbQkobt_N36P7_nL8xuzNN0VfD5fsMBbks23Eulp9WV4B0zHh0881jQ"/>
+</button>
+</div>
+</header>
+<!-- SideNavBar -->
+<nav class="bg-surface-container dark:bg-surface-container fixed left-0 top-0 h-full w-[240px] border-r border-outline-variant flex flex-col h-full py-unit-container-margin z-40">
+<div class="px-gutter mb-8 flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center text-on-primary-container font-bold text-lg border border-outline-variant shrink-0">
+                F
+            </div>
+<div class="overflow-hidden">
+<h2 class="font-headline-md text-headline-md font-bold text-primary truncate">FloraOps Pro</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Zone A-1 Main</p>
+</div>
+</div>
+<div class="flex-1 overflow-y-auto px-3 space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant font-body-base hover:bg-surface-variant transition-colors group" href="#">
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">dashboard</span>
+                Dashboard
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant font-body-base hover:bg-surface-variant transition-colors group" href="#">
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">assignment</span>
+                Task Board
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant font-body-base hover:bg-surface-variant transition-colors group" href="#">
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">precision_manufacturing</span>
+                Equipment
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant font-body-base hover:bg-surface-variant transition-colors group" href="#">
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">database</span>
+                Logs
+            </a>
+</div>
+<div class="px-3 mt-auto pt-4 border-t border-outline-variant space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant font-body-base hover:bg-surface-variant transition-colors group" href="#">
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">settings</span>
+                Settings
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant font-body-base hover:bg-surface-variant transition-colors group" href="#">
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">help</span>
+                Help
+            </a>
+<button class="w-full mt-4 flex items-center justify-center gap-2 px-4 py-3 rounded-lg bg-error-container text-on-error-container font-title-sm text-title-sm hover:bg-error/20 transition-colors border border-error/30">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">warning</span>
+                Emergency Stop
+            </button>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="ml-[240px] mt-16 flex-1 flex flex-col items-center justify-center p-container-margin min-h-[calc(100vh-64px)] relative overflow-hidden bg-[url('https://images.unsplash.com/photo-1621245053787-897db6746927?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=2000&amp;q=80')] bg-cover bg-center before:absolute before:inset-0 before:bg-background/90 before:backdrop-blur-sm" data-alt="A macro shot of a sleek, dark industrial server rack environment, subtly out of focus. Glowing red error LEDs punctuate the dark slate and deep navy panels, creating a sense of technical urgency. The lighting is low-key, moody, and highly contrasted, fitting a modern corporate technical monitoring center. The overall aesthetic implies sophisticated data infrastructure experiencing a critical, yet contained, fault.">
+<!-- Error State Card -->
+<div class="relative z-10 w-full max-w-2xl bg-surface border border-error/30 rounded-xl shadow-2xl overflow-hidden flex flex-col md:flex-row">
+<!-- Error Indicator Column -->
+<div class="bg-error-container/20 md:w-32 flex flex-col items-center justify-center p-8 border-b md:border-b-0 md:border-r border-error/20">
+<div class="w-16 h-16 rounded-full bg-error-container flex items-center justify-center mb-4 shadow-[0_0_20px_rgba(147,0,10,0.4)] animate-pulse">
+<span class="material-symbols-outlined text-on-error-container text-[40px]" style="font-variation-settings: 'FILL' 1;">cloud_off</span>
+</div>
+<div class="text-error font-label-caps text-label-caps tracking-widest text-center">ERROR 503</div>
+</div>
+<!-- Error Details Column -->
+<div class="flex-1 p-8 flex flex-col justify-center">
+<h2 class="font-display-lg text-display-lg text-on-surface mb-2">Storage Persistence Failure</h2>
+<p class="font-body-base text-body-base text-on-surface-variant mb-6 leading-relaxed">
+                    The console is unable to commit sensor telemetry to local storage. Temporary cache is active, but immediate intervention is required to prevent data loss. Zone A-1 monitoring continues via secondary volatile memory.
+                </p>
+<!-- Technical Details Accordion (Simulated) -->
+<div class="mb-8 border border-outline-variant rounded-lg bg-surface-container-low">
+<div class="px-4 py-3 flex items-center justify-between border-b border-outline-variant cursor-pointer hover:bg-surface-variant transition-colors">
+<span class="font-code-data text-code-data text-on-surface">Diagnostic Code: ERR_DSK_FULL_0x9A</span>
+<span class="material-symbols-outlined text-on-surface-variant">expand_more</span>
+</div>
+<div class="px-4 py-3 font-code-data text-[12px] text-on-surface-variant font-mono whitespace-pre-wrap">Target: /dev/nvme0n1p3
+Space Available: 0% (Critical)
+Mount: /var/log/floraops
+Status: Read-only file system</div>
+</div>
+<!-- Actions -->
+<div class="flex flex-col sm:flex-row gap-4 mt-auto">
+<button class="flex-1 bg-primary-container hover:bg-primary-container/90 text-on-primary-container font-title-sm text-title-sm py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2 shadow-lg">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">refresh</span>
+                        Retry Connection
+                    </button>
+<button class="flex-1 bg-transparent border border-outline hover:border-on-surface hover:text-on-surface text-on-surface-variant font-title-sm text-title-sm py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">delete_sweep</span>
+                        Reset Storage Cache
+                    </button>
+</div>
+</div>
+</div>
+<!-- Decorative background elements -->
+<div class="absolute top-1/4 -right-20 w-96 h-96 bg-error/5 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute bottom-1/4 -left-20 w-80 h-80 bg-primary/5 rounded-full blur-3xl pointer-events-none"></div>
+</main>
+</body></html>

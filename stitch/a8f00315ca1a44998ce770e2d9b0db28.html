@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Equipment Status Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-fixed-variant": "#003ea8",
+                        "primary": "#b4c5ff",
+                        "primary-fixed-dim": "#b4c5ff",
+                        "secondary-fixed": "#d5e3fc",
+                        "on-surface": "#e1e2ed",
+                        "tertiary-fixed": "#ffdbcd",
+                        "outline-variant": "#434655",
+                        "on-surface-variant": "#c3c6d7",
+                        "on-secondary": "#233144",
+                        "tertiary": "#ffb596",
+                        "on-secondary-fixed": "#0d1c2e",
+                        "on-background": "#e1e2ed",
+                        "on-tertiary-container": "#ffede6",
+                        "on-error-container": "#ffdad6",
+                        "surface-container-low": "#191b23",
+                        "on-primary-fixed": "#00174b",
+                        "inverse-on-surface": "#2e3039",
+                        "on-tertiary-fixed": "#360f00",
+                        "error-container": "#93000a",
+                        "inverse-surface": "#e1e2ed",
+                        "surface-container-highest": "#32343d",
+                        "secondary-fixed-dim": "#b9c7df",
+                        "inverse-primary": "#0053db",
+                        "tertiary-container": "#bc4800",
+                        "surface-dim": "#11131b",
+                        "on-error": "#690005",
+                        "surface-container-lowest": "#0c0e16",
+                        "background": "#11131b",
+                        "secondary-container": "#3c4a5e",
+                        "primary-container": "#2563eb",
+                        "on-secondary-container": "#abb9d1",
+                        "on-tertiary-fixed-variant": "#7d2d00",
+                        "tertiary-fixed-dim": "#ffb596",
+                        "surface-container": "#1d1f27",
+                        "surface-bright": "#373942",
+                        "surface-variant": "#32343d",
+                        "surface-tint": "#b4c5ff",
+                        "surface": "#11131b",
+                        "on-secondary-fixed-variant": "#3a485b",
+                        "outline": "#8d90a0",
+                        "error": "#ffb4ab",
+                        "primary-fixed": "#dbe1ff",
+                        "on-primary-container": "#eeefff",
+                        "on-tertiary": "#581e00",
+                        "on-primary": "#002a78",
+                        "secondary": "#b9c7df",
+                        "surface-container-high": "#282a32"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit": "4px",
+                        "container-margin": "24px",
+                        "cell-padding-y": "8px",
+                        "cell-padding-x": "12px",
+                        "gutter": "16px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Inter"],
+                        "body-sm": ["Inter"],
+                        "title-sm": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "label-caps": ["Inter"],
+                        "code-data": ["Inter"],
+                        "body-base": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "body-sm": ["13px", { "lineHeight": "18px", "fontWeight": "400" }],
+                        "title-sm": ["18px", { "lineHeight": "24px", "fontWeight": "600" }],
+                        "display-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "code-data": ["13px", { "lineHeight": "18px", "fontWeight": "500" }],
+                        "body-base": ["14px", { "lineHeight": "20px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background flex h-screen overflow-hidden font-body-base text-body-base">
+<!-- SideNavBar -->
+<nav class="hidden md:flex fixed left-0 top-0 h-full w-[240px] bg-surface-container dark:bg-surface-container flex-col py-unit-container-margin border-r border-outline-variant z-50">
+<!-- Header -->
+<div class="px-gutter mb-8 flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-variant overflow-hidden border border-outline-variant shrink-0">
+<img alt="Greenhouse Operator Avatar" class="w-full h-full object-cover" data-alt="A close-up portrait of a professional male agricultural engineer in a modern, dark-themed industrial setting. The lighting is moody with subtle blue and green technical reflections highlighting his face. He is looking off-camera with a focused, serious expression. The overall aesthetic matches a sleek, high-tech corporate UI." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8or9kgpyZKkU2TjuMpXeqJGKxesjsytRi11nyrSJ8rd0x8swZ1EJ27MfMMtyH5U1pUmcwBxSFwtocPZKXks0VOrawy-RkuECuRRrV0D9d-cjXGLrUHqMV4Bj1cM08guIXjvo1dRkE7vxmWuMXtq18x9t6OIJp_q8uscJsGDZF4L7LVY6kMeKk2LdertX5tSzen92AeCYz5lgpoAEqhb-WfzhJ9LgXOuCjp4nbUawLZd4kK57Fa-viW21JK-GdypEsIYTIx4TeD8w"/>
+</div>
+<div class="overflow-hidden">
+<h2 class="font-headline-md text-headline-md font-bold text-primary truncate">FloraOps Pro</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Zone A-1 Main</p>
+</div>
+</div>
+<!-- Main Tabs -->
+<div class="flex-1 px-3 flex flex-col gap-1">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-on-surface-variant font-body-base hover:bg-surface-variant transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+                Dashboard
+            </a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-on-surface-variant font-body-base hover:bg-surface-variant transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="assignment">assignment</span>
+                Task Board
+            </a>
+<!-- Active Tab -->
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-primary font-bold border-l-4 border-primary bg-secondary-container/10 scale-[0.98] transition-transform duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="precision_manufacturing">precision_manufacturing</span>
+                Equipment
+            </a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-on-surface-variant font-body-base hover:bg-surface-variant transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="database">database</span>
+                Logs
+            </a>
+</div>
+<!-- Emergency Stop CTA -->
+<div class="px-4 mt-auto mb-4">
+<button class="w-full flex items-center justify-center gap-2 py-2 px-4 bg-error-container text-on-error-container font-title-sm text-title-sm rounded-lg hover:bg-error transition-colors">
+<span class="material-symbols-outlined">warning</span>
+                Emergency Stop
+            </button>
+</div>
+<!-- Footer Tabs -->
+<div class="px-3 flex flex-col gap-1 border-t border-outline-variant pt-4">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-on-surface-variant font-body-base hover:bg-surface-variant transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+                Settings
+            </a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-on-surface-variant font-body-base hover:bg-surface-variant transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="help">help</span>
+                Help
+            </a>
+</div>
+</nav>
+<!-- Main Content Wrapper -->
+<main class="flex-1 flex flex-col min-w-0 md:ml-[240px] relative">
+<!-- TopAppBar -->
+<header class="bg-surface dark:bg-surface fixed top-0 right-0 w-full md:w-[calc(100%-240px)] z-40 border-b border-outline-variant flex justify-between items-center px-gutter h-16">
+<div class="flex items-center gap-4 flex-1">
+<h1 class="font-headline-md text-headline-md font-bold text-primary hidden sm:block">Greenhouse Console</h1>
+<!-- Search Bar (on_left) -->
+<div class="relative w-full max-w-md ml-0 sm:ml-4">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
+<input class="w-full bg-surface-container border border-outline-variant rounded-full py-1.5 pl-10 pr-4 text-on-surface focus:border-primary focus:ring-1 focus:ring-primary outline-none font-body-sm text-body-sm transition-colors placeholder:text-on-surface-variant/50" placeholder="Search equipment..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="p-2 text-on-surface-variant hover:text-primary transition-colors rounded-full hover:bg-surface-variant">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="p-2 text-on-surface-variant hover:text-primary transition-colors rounded-full hover:bg-surface-variant">
+<span class="material-symbols-outlined" data-icon="thermostat">thermostat</span>
+</button>
+<button class="p-2 text-on-surface-variant hover:text-primary transition-colors rounded-full hover:bg-surface-variant">
+<span class="material-symbols-outlined" data-icon="humidity_mid">humidity_mid</span>
+</button>
+<button class="p-2 text-on-surface-variant hover:text-primary transition-colors rounded-full hover:bg-surface-variant">
+<span class="material-symbols-outlined" data-icon="sensors">sensors</span>
+</button>
+<div class="w-px h-8 bg-outline-variant mx-2"></div>
+<button class="flex items-center gap-2 text-primary font-bold hover:opacity-80 transition-opacity">
+                    Account
+                    <span class="material-symbols-outlined">account_circle</span>
+</button>
+</div>
+</header>
+<!-- Dashboard Canvas -->
+<div class="flex-1 overflow-auto pt-24 pb-container-margin px-container-margin">
+<div class="max-w-7xl mx-auto space-y-8">
+<!-- Page Header & Summary -->
+<div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-4">
+<div>
+<h2 class="font-display-lg text-display-lg text-on-background">Equipment Overview</h2>
+<p class="font-body-base text-body-base text-on-surface-variant mt-1">Real-time status and maintenance tracking for Zone A-1.</p>
+</div>
+<!-- Quick Stats -->
+<div class="flex gap-4">
+<div class="bg-surface border border-outline-variant rounded-lg px-4 py-2 flex items-center gap-3">
+<div class="w-3 h-3 rounded-full bg-primary shadow-[0_0_8px_rgba(37,99,235,0.5)]"></div>
+<div>
+<p class="font-label-caps text-label-caps text-on-surface-variant">ONLINE</p>
+<p class="font-title-sm text-title-sm text-on-surface">142 Units</p>
+</div>
+</div>
+<div class="bg-surface border border-outline-variant rounded-lg px-4 py-2 flex items-center gap-3">
+<div class="w-3 h-3 rounded-full bg-tertiary"></div>
+<div>
+<p class="font-label-caps text-label-caps text-on-surface-variant">MAINTENANCE</p>
+<p class="font-title-sm text-title-sm text-on-surface">5 Pending</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Equipment Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-gutter">
+<!-- Card 1: Normal Status -->
+<div class="bg-surface relative overflow-hidden rounded-lg border border-outline-variant p-5 flex flex-col gap-4 group hover:bg-surface-variant/50 transition-colors">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-primary"></div>
+<div class="flex justify-between items-start">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded bg-primary-container/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-weight="fill">water_pump</span>
+</div>
+<div>
+<h3 class="font-title-sm text-title-sm text-on-background">Main Irrigation Pump</h3>
+<p class="font-code-data text-code-data text-on-surface-variant">ID: PMP-A1-01</p>
+</div>
+</div>
+<span class="px-2 py-1 bg-primary/10 text-primary font-label-caps text-label-caps rounded">ACTIVE</span>
+</div>
+<div class="grid grid-cols-2 gap-4 py-3 border-y border-outline-variant/50">
+<div>
+<p class="font-label-caps text-label-caps text-on-surface-variant">FLOW RATE</p>
+<p class="font-code-data text-code-data text-on-surface">120 L/min</p>
+</div>
+<div>
+<p class="font-label-caps text-label-caps text-on-surface-variant">UPTIME</p>
+<p class="font-code-data text-code-data text-on-surface">99.8%</p>
+</div>
+</div>
+<div class="flex gap-2 mt-auto pt-2">
+<button class="flex-1 py-1.5 px-3 border border-outline-variant text-on-surface hover:text-primary hover:border-primary rounded font-code-data text-code-data transition-colors">
+                                Calibrate
+                            </button>
+<button class="flex-1 py-1.5 px-3 border border-outline-variant text-on-surface hover:text-primary hover:border-primary rounded font-code-data text-code-data transition-colors">
+                                Schedule
+                            </button>
+</div>
+</div>
+<!-- Card 2: Warning Status -->
+<div class="bg-surface relative overflow-hidden rounded-lg border border-outline-variant p-5 flex flex-col gap-4 group hover:bg-surface-variant/50 transition-colors">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-tertiary"></div>
+<div class="flex justify-between items-start">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded bg-tertiary/20 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined" data-weight="fill">air</span>
+</div>
+<div>
+<h3 class="font-title-sm text-title-sm text-on-background">HVAC Blower Fan</h3>
+<p class="font-code-data text-code-data text-on-surface-variant">ID: FAN-A1-04</p>
+</div>
+</div>
+<span class="px-2 py-1 bg-tertiary/10 text-tertiary font-label-caps text-label-caps rounded">SERVICE SOON</span>
+</div>
+<div class="grid grid-cols-2 gap-4 py-3 border-y border-outline-variant/50">
+<div>
+<p class="font-label-caps text-label-caps text-on-surface-variant">VIBRATION</p>
+<p class="font-code-data text-code-data text-tertiary">2.4 mm/s (High)</p>
+</div>
+<div>
+<p class="font-label-caps text-label-caps text-on-surface-variant">RPM</p>
+<p class="font-code-data text-code-data text-on-surface">1450</p>
+</div>
+</div>
+<div class="flex gap-2 mt-auto pt-2">
+<button class="flex-1 py-1.5 px-3 border border-outline-variant text-on-surface hover:text-primary hover:border-primary rounded font-code-data text-code-data transition-colors">
+                                Inspect
+                            </button>
+<button class="flex-1 py-1.5 px-3 border border-tertiary/50 text-tertiary hover:bg-tertiary/10 rounded font-code-data text-code-data transition-colors">
+                                Schedule Maint.
+                            </button>
+</div>
+</div>
+<!-- Card 3: Error Status -->
+<div class="bg-surface relative overflow-hidden rounded-lg border border-outline-variant p-5 flex flex-col gap-4 group hover:bg-surface-variant/50 transition-colors">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-error"></div>
+<div class="flex justify-between items-start">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded bg-error/20 flex items-center justify-center text-error">
+<span class="material-symbols-outlined" data-weight="fill">lightbulb</span>
+</div>
+<div>
+<h3 class="font-title-sm text-title-sm text-on-background">LED Array Grid 2</h3>
+<p class="font-code-data text-code-data text-on-surface-variant">ID: LED-A1-02</p>
+</div>
+</div>
+<span class="px-2 py-1 bg-error/10 text-error font-label-caps text-label-caps rounded">OFFLINE</span>
+</div>
+<div class="grid grid-cols-2 gap-4 py-3 border-y border-outline-variant/50">
+<div>
+<p class="font-label-caps text-label-caps text-on-surface-variant">POWER DRAW</p>
+<p class="font-code-data text-code-data text-error">0.0 kW</p>
+</div>
+<div>
+<p class="font-label-caps text-label-caps text-on-surface-variant">TEMP</p>
+<p class="font-code-data text-code-data text-on-surface">22°C</p>
+</div>
+</div>
+<div class="flex gap-2 mt-auto pt-2">
+<button class="flex-1 py-1.5 px-3 bg-error-container text-on-error-container hover:bg-error rounded font-code-data text-code-data transition-colors">
+                                Reset Breaker
+                            </button>
+<button class="flex-1 py-1.5 px-3 border border-outline-variant text-on-surface hover:text-primary hover:border-primary rounded font-code-data text-code-data transition-colors">
+                                Details
+                            </button>
+</div>
+</div>
+<!-- Card 4: Normal Status -->
+<div class="bg-surface relative overflow-hidden rounded-lg border border-outline-variant p-5 flex flex-col gap-4 group hover:bg-surface-variant/50 transition-colors">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-primary"></div>
+<div class="flex justify-between items-start">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded bg-primary-container/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-weight="fill">science</span>
+</div>
+<div>
+<h3 class="font-title-sm text-title-sm text-on-background">Nutrient Doser</h3>
+<p class="font-code-data text-code-data text-on-surface-variant">ID: DOS-A1-01</p>
+</div>
+</div>
+<span class="px-2 py-1 bg-primary/10 text-primary font-label-caps text-label-caps rounded">ACTIVE</span>
+</div>
+<div class="grid grid-cols-2 gap-4 py-3 border-y border-outline-variant/50">
+<div>
+<p class="font-label-caps text-label-caps text-on-surface-variant">PH LEVEL</p>
+<p class="font-code-data text-code-data text-on-surface">6.2</p>
+</div>
+<div>
+<p class="font-label-caps text-label-caps text-on-surface-variant">EC LEVEL</p>
+<p class="font-code-data text-code-data text-on-surface">1.8 mS/cm</p>
+</div>
+</div>
+<div class="flex gap-2 mt-auto pt-2">
+<button class="flex-1 py-1.5 px-3 border border-outline-variant text-on-surface hover:text-primary hover:border-primary rounded font-code-data text-code-data transition-colors">
+                                Calibrate
+                            </button>
+<button class="flex-1 py-1.5 px-3 border border-outline-variant text-on-surface hover:text-primary hover:border-primary rounded font-code-data text-code-data transition-colors">
+                                Flush
+                            </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</body></html>

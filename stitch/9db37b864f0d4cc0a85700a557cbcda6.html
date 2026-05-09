@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Operator Profile &amp; Settings</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-primary-fixed-variant": "#003ea8",
+                      "primary": "#b4c5ff",
+                      "primary-fixed-dim": "#b4c5ff",
+                      "secondary-fixed": "#d5e3fc",
+                      "on-surface": "#e1e2ed",
+                      "tertiary-fixed": "#ffdbcd",
+                      "outline-variant": "#434655",
+                      "on-surface-variant": "#c3c6d7",
+                      "on-secondary": "#233144",
+                      "tertiary": "#ffb596",
+                      "on-secondary-fixed": "#0d1c2e",
+                      "on-background": "#e1e2ed",
+                      "on-tertiary-container": "#ffede6",
+                      "on-error-container": "#ffdad6",
+                      "surface-container-low": "#191b23",
+                      "on-primary-fixed": "#00174b",
+                      "inverse-on-surface": "#2e3039",
+                      "on-tertiary-fixed": "#360f00",
+                      "error-container": "#93000a",
+                      "inverse-surface": "#e1e2ed",
+                      "surface-container-highest": "#32343d",
+                      "secondary-fixed-dim": "#b9c7df",
+                      "inverse-primary": "#0053db",
+                      "tertiary-container": "#bc4800",
+                      "surface-dim": "#11131b",
+                      "on-error": "#690005",
+                      "surface-container-lowest": "#0c0e16",
+                      "background": "#11131b",
+                      "secondary-container": "#3c4a5e",
+                      "primary-container": "#2563eb",
+                      "on-secondary-container": "#abb9d1",
+                      "on-tertiary-fixed-variant": "#7d2d00",
+                      "tertiary-fixed-dim": "#ffb596",
+                      "surface-container": "#1d1f27",
+                      "surface-bright": "#373942",
+                      "surface-variant": "#32343d",
+                      "surface-tint": "#b4c5ff",
+                      "surface": "#11131b",
+                      "on-secondary-fixed-variant": "#3a485b",
+                      "outline": "#8d90a0",
+                      "error": "#ffb4ab",
+                      "primary-fixed": "#dbe1ff",
+                      "on-primary-container": "#eeefff",
+                      "on-tertiary": "#581e00",
+                      "on-primary": "#002a78",
+                      "secondary": "#b9c7df",
+                      "surface-container-high": "#282a32"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "unit": "4px",
+                      "container-margin": "24px",
+                      "cell-padding-y": "8px",
+                      "cell-padding-x": "12px",
+                      "gutter": "16px"
+              },
+              "fontFamily": {
+                      "headline-md": [
+                              "Inter"
+                      ],
+                      "body-sm": [
+                              "Inter"
+                      ],
+                      "title-sm": [
+                              "Inter"
+                      ],
+                      "display-lg": [
+                              "Inter"
+                      ],
+                      "label-caps": [
+                              "Inter"
+                      ],
+                      "code-data": [
+                              "Inter"
+                      ],
+                      "body-base": [
+                              "Inter"
+                      ]
+              },
+              "fontSize": {
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-sm": [
+                              "13px",
+                              {
+                                      "lineHeight": "18px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "title-sm": [
+                              "18px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "display-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "label-caps": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "code-data": [
+                              "13px",
+                              {
+                                      "lineHeight": "18px",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "body-base": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "fontWeight": "400"
+                              }
+                      ]
+              }
+            },
+          }
+    </script>
+</head>
+<body class="bg-background text-on-background font-body-base text-body-base min-h-screen flex flex-col antialiased selection:bg-primary-container selection:text-on-primary-container">
+<header class="flex justify-between items-center px-gutter h-16 border-b border-outline-variant bg-surface sticky top-0 z-50">
+<button class="flex items-center gap-2 text-on-surface-variant hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-surface rounded-DEFAULT px-2 py-1">
+<span class="material-symbols-outlined">arrow_back</span>
+<span class="font-body-base text-body-base font-semibold">Back to Console</span>
+</button>
+<div class="flex-1 text-center">
+<h1 class="font-headline-md text-headline-md text-primary">Operator Settings</h1>
+</div>
+<div class="w-32"></div>
+</header>
+<main class="flex-1 w-full max-w-5xl mx-auto p-container-margin">
+<div class="space-y-container-margin">
+<section class="bg-surface rounded-xl p-container-margin border border-outline-variant flex flex-col md:flex-row items-center md:items-start gap-container-margin relative overflow-hidden">
+<div class="absolute top-0 left-0 w-2 h-full bg-primary-container"></div>
+<div class="w-24 h-24 rounded-full border-2 border-outline-variant overflow-hidden flex-shrink-0 bg-surface-variant">
+<img alt="Sarah Jenkins profile picture" class="w-full h-full object-cover" data-alt="A highly detailed, cinematic headshot of a professional female agricultural engineer wearing functional corporate workwear. She is set against a blurred background of a high-tech indoor greenhouse glowing with subtle blue and purple LED grow lights. The lighting is dramatic yet professional, emphasizing reliability and technical expertise within a dark, modern corporate aesthetic. Shot on a 50mm lens with shallow depth of field." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2dom3vlj65GPiNeBQkwDMckQkODIGNtbpqrJ8np5mMcuLxeJyvwlBKZZJkiB1xdhthRompxXfChckZ_pIU8uuiQghL9CpAnOXLv4keJrePNPi5giLIxhEj1WOpZUOuoFZrd05E_6ZoS6A-aOuVGtcSFe1pTUHKoRk0X2CHcUzNVmSNo8vDU9rMCF5uVIA2uB6XVOhjdQCsg-Xgk8Yaf_NLalJhyGWHuZbEwLsKiiTnCsicHoF4g3WFJnPR7Uwbn9Ur0tukQSo9Mc"/>
+</div>
+<div class="flex-1 text-center md:text-left space-y-2">
+<h2 class="font-display-lg text-display-lg text-on-surface m-0">Sarah Jenkins</h2>
+<div class="flex flex-wrap items-center justify-center md:justify-start gap-2">
+<span class="inline-flex items-center px-3 py-1 rounded-full bg-primary-container/15 text-primary font-label-caps text-label-caps tracking-wider uppercase border border-primary/20">
+                            Senior Agronomist
+                        </span>
+<span class="inline-flex items-center gap-1 text-on-surface-variant font-code-data text-code-data">
+<span class="material-symbols-outlined text-[16px]">location_on</span>
+                            Zone A-1 Main
+                        </span>
+</div>
+</div>
+<div class="flex-shrink-0 w-full md:w-auto">
+<button class="w-full md:w-auto px-4 py-2 bg-transparent border border-outline rounded text-on-surface hover:bg-surface-variant transition-colors font-title-sm text-title-sm focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-surface">
+                        Edit Profile
+                    </button>
+</div>
+</section>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-container-margin">
+<section class="bg-surface rounded-xl border border-outline-variant overflow-hidden flex flex-col">
+<div class="p-4 border-b border-outline-variant bg-surface-container-low flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">badge</span>
+<h3 class="font-title-sm text-title-sm text-on-surface">Account Details</h3>
+</div>
+<div class="p-container-margin space-y-6 flex-1">
+<div>
+<label class="block font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider mb-1">Employee ID</label>
+<div class="font-code-data text-code-data text-on-surface bg-background border border-outline-variant rounded px-3 py-2 w-full max-w-sm">
+                                AGR-88392-SJ
+                            </div>
+</div>
+<div>
+<label class="block font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider mb-1">Email Address</label>
+<input class="font-body-base text-body-base text-on-surface bg-background border border-outline-variant rounded px-3 py-2 w-full max-w-sm focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary transition-colors cursor-not-allowed text-on-surface-variant" readonly="" type="email" value="s.jenkins@floraops.pro"/>
+</div>
+<div>
+<label class="block font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider mb-1">Secure Phone</label>
+<input class="font-body-base text-body-base text-on-surface bg-background border border-outline rounded px-3 py-2 w-full max-w-sm focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary transition-colors" type="tel" value="+1 (555) 019-2834"/>
+</div>
+</div>
+</section>
+<section class="bg-surface rounded-xl border border-outline-variant overflow-hidden flex flex-col">
+<div class="p-4 border-b border-outline-variant bg-surface-container-low flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">notifications_active</span>
+<h3 class="font-title-sm text-title-sm text-on-surface">Alert Preferences</h3>
+</div>
+<div class="p-0 flex-1">
+<ul class="divide-y divide-outline-variant">
+<li class="p-container-margin flex items-center justify-between hover:bg-surface-variant/50 transition-colors">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-lg bg-error-container/20 border border-error/30 flex items-center justify-center text-error">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">warning</span>
+</div>
+<div>
+<h4 class="font-title-sm text-title-sm text-on-surface">Critical System Alarms</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Temperature spikes, equipment failure</p>
+</div>
+</div>
+<div class="w-12 h-6 bg-primary-container rounded-full relative cursor-pointer shadow-inner">
+<div class="absolute right-1 top-1 w-4 h-4 bg-on-primary-container rounded-full shadow-sm"></div>
+</div>
+</li>
+<li class="p-container-margin flex items-center justify-between hover:bg-surface-variant/50 transition-colors">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-lg bg-primary-container/20 border border-primary/30 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">water_drop</span>
+</div>
+<div>
+<h4 class="font-title-sm text-title-sm text-on-surface">Nutrient &amp; Hydration Updates</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Scheduled feedings, reservoir levels</p>
+</div>
+</div>
+<div class="w-12 h-6 bg-primary-container rounded-full relative cursor-pointer shadow-inner">
+<div class="absolute right-1 top-1 w-4 h-4 bg-on-primary-container rounded-full shadow-sm"></div>
+</div>
+</li>
+<li class="p-container-margin flex items-center justify-between hover:bg-surface-variant/50 transition-colors">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-lg bg-surface-variant border border-outline-variant flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined">analytics</span>
+</div>
+<div>
+<h4 class="font-title-sm text-title-sm text-on-surface">Daily Yield Reports</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">End of shift summaries</p>
+</div>
+</div>
+<div class="w-12 h-6 bg-surface-variant border border-outline rounded-full relative cursor-pointer">
+<div class="absolute left-1 top-1 w-4 h-4 bg-outline rounded-full"></div>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section class="bg-surface rounded-xl border border-outline-variant overflow-hidden col-span-1 lg:col-span-2">
+<div class="p-4 border-b border-outline-variant bg-surface-container-low flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">tune</span>
+<h3 class="font-title-sm text-title-sm text-on-surface">Interface Configuration</h3>
+</div>
+<div class="p-container-margin grid grid-cols-1 md:grid-cols-2 gap-8">
+<div>
+<h4 class="font-title-sm text-title-sm text-on-surface mb-3">Default Dashboard View</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4">Select the zone that loads upon login.</p>
+<div class="relative">
+<select class="appearance-none font-body-base text-body-base text-on-surface bg-background border border-outline rounded px-4 py-3 w-full focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary cursor-pointer pr-10">
+<option value="zone-a">Zone A-1 Main (Current)</option>
+<option value="zone-b">Zone B-2 Nursery</option>
+<option value="global">Global Operations Overview</option>
+</select>
+<div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3 text-on-surface-variant">
+<span class="material-symbols-outlined">expand_more</span>
+</div>
+</div>
+</div>
+<div>
+<h4 class="font-title-sm text-title-sm text-on-surface mb-3">Data Density</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4">Adjust table row heights for monitor setup.</p>
+<div class="flex gap-4">
+<label class="flex-1 cursor-pointer">
+<input checked="" class="peer sr-only" name="density" type="radio"/>
+<div class="p-4 rounded-lg border border-outline-variant bg-background peer-checked:border-primary peer-checked:bg-primary-container/10 transition-colors flex flex-col items-center gap-2 text-center">
+<span class="material-symbols-outlined text-on-surface peer-checked:text-primary">table_rows</span>
+<span class="font-label-caps text-label-caps text-on-surface font-semibold">Standard</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">48px rows</span>
+</div>
+</label>
+<label class="flex-1 cursor-pointer">
+<input class="peer sr-only" name="density" type="radio"/>
+<div class="p-4 rounded-lg border border-outline-variant bg-background peer-checked:border-primary peer-checked:bg-primary-container/10 transition-colors flex flex-col items-center gap-2 text-center">
+<span class="material-symbols-outlined text-on-surface peer-checked:text-primary">reorder</span>
+<span class="font-label-caps text-label-caps text-on-surface font-semibold">Condensed</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">32px rows</span>
+</div>
+</label>
+</div>
+</div>
+</div>
+</section>
+</div>
+<section class="mt-8 pt-8 border-t border-outline-variant flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+<div>
+<h3 class="font-title-sm text-title-sm text-error mb-1">Session Management</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Securely end your current session on this terminal.</p>
+</div>
+<button class="px-6 py-2 rounded bg-background border border-error text-error hover:bg-error-container/20 transition-colors font-title-sm text-title-sm flex items-center gap-2 focus:outline-none focus:ring-2 focus:ring-error focus:ring-offset-2 focus:ring-offset-background">
+<span class="material-symbols-outlined">logout</span>
+                    Sign Out
+                </button>
+</section>
+</div>
+</main>
+</body></html>

@@ -1,0 +1,5880 @@
+{
+  "generatedAt": "2026-05-09T16:39:54.912Z",
+  "screenCount": 9,
+  "screens": {
+    "1112d5920e134423a36422170add3571": {
+      "screenId": "1112d5920e134423a36422170add3571",
+      "materialSymbolsRequired": true,
+      "sections": [
+        {
+          "tag": "nav",
+          "layout": "flex-col",
+          "classes": [
+            "fixed",
+            "left-0",
+            "top-0",
+            "h-full",
+            "w-[240px]",
+            "bg-surface-container",
+            "border-r",
+            "border-outline-variant",
+            "flex",
+            "flex-col"
+          ],
+          "childCount": 5
+        },
+        {
+          "tag": "header",
+          "layout": "flex-row",
+          "classes": [
+            "fixed",
+            "top-0",
+            "right-0",
+            "w-full",
+            "md:w-[calc(100%-240px)]",
+            "z-50",
+            "bg-surface",
+            "border-b",
+            "border-outline-variant",
+            "flex"
+          ],
+          "childCount": 6
+        },
+        {
+          "tag": "main",
+          "layout": "block",
+          "classes": [
+            "md:ml-[240px]",
+            "pt-16",
+            "min-h-screen",
+            "bg-background"
+          ],
+          "childCount": 49
+        }
+      ],
+      "buttons": [
+        {
+          "kind": "button",
+          "label": "Emergency Stop",
+          "classes": [
+            "w-full",
+            "py-2",
+            "bg-error-container",
+            "text-on-error-container",
+            "font-label-caps",
+            "text-label-caps",
+            "rounded",
+            "flex",
+            "items-center",
+            "justify-center",
+            "gap-2",
+            "hover:bg-error",
+            "transition-colors"
+          ],
+          "icon": "warning",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "menu",
+          "classes": [
+            "md:hidden",
+            "text-on-surface",
+            "p-2"
+          ],
+          "icon": "menu",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Sensors",
+          "classes": [
+            "p-2",
+            "rounded-full",
+            "hover:bg-surface-variant",
+            "hover:text-primary",
+            "transition-colors",
+            "active:opacity-80",
+            "relative"
+          ],
+          "icon": "sensors",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Humidity",
+          "classes": [
+            "p-2",
+            "rounded-full",
+            "hover:bg-surface-variant",
+            "hover:text-primary",
+            "transition-colors",
+            "active:opacity-80"
+          ],
+          "icon": "humidity_mid",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Thermostat",
+          "classes": [
+            "p-2",
+            "rounded-full",
+            "hover:bg-surface-variant",
+            "hover:text-primary",
+            "transition-colors",
+            "active:opacity-80"
+          ],
+          "icon": "thermostat",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Notifications",
+          "classes": [
+            "p-2",
+            "rounded-full",
+            "hover:bg-surface-variant",
+            "hover:text-primary",
+            "transition-colors",
+            "active:opacity-80",
+            "relative"
+          ],
+          "icon": "notifications",
+          "action": "navigate",
+          "expectedBehavior": "navigate:/notifications",
+          "expectedRoute": "/notifications",
+          "routeInferred": true
+        },
+        {
+          "kind": "button",
+          "label": "Account",
+          "classes": [
+            "flex",
+            "items-center",
+            "gap-2",
+            "pl-2",
+            "pr-4",
+            "py-1",
+            "rounded-full",
+            "border",
+            "border-outline-variant",
+            "hover:bg-surface-variant",
+            "transition-colors",
+            "active:opacity-80"
+          ],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Filter",
+          "classes": [
+            "px-4",
+            "py-2",
+            "border",
+            "border-outline-variant",
+            "rounded",
+            "text-on-surface",
+            "font-label-caps",
+            "text-label-caps",
+            "hover:bg-surface-variant",
+            "transition-colors",
+            "flex",
+            "items-center",
+            "gap-2"
+          ],
+          "icon": "filter_list",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "New Task",
+          "classes": [
+            "px-4",
+            "py-2",
+            "bg-primary-container",
+            "text-on-primary-container",
+            "rounded",
+            "font-label-caps",
+            "text-label-caps",
+            "hover:bg-primary",
+            "hover:text-on-primary",
+            "transition-colors",
+            "flex",
+            "items-center",
+            "gap-2"
+          ],
+          "icon": "add",
+          "action": "create",
+          "expectedBehavior": "open create flow or add a new item/state"
+        },
+        {
+          "kind": "button",
+          "label": "arrow_forward",
+          "classes": [
+            "p-1",
+            "hover:bg-surface-variant",
+            "rounded",
+            "text-on-surface-variant",
+            "hover:text-primary"
+          ],
+          "icon": "arrow_forward",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "arrow_back",
+          "classes": [
+            "p-1",
+            "hover:bg-surface-variant",
+            "rounded",
+            "text-on-surface-variant",
+            "hover:text-primary"
+          ],
+          "icon": "arrow_back",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "undo",
+          "classes": [
+            "p-1",
+            "hover:bg-surface-variant",
+            "rounded",
+            "text-on-surface-variant",
+            "opacity-0",
+            "group-hover:opacity-100",
+            "transition-opacity"
+          ],
+          "icon": "undo",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "FloraOps Pro Zone A-1 Main",
+          "classes": [],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        }
+      ],
+      "inputs": [
+        {
+          "kind": "input",
+          "type": "text",
+          "label": "Search tasks, logs...",
+          "placeholder": "Search tasks, logs...",
+          "name": "",
+          "classes": [
+            "bg-transparent",
+            "border-none",
+            "focus:ring-0",
+            "text-body-sm",
+            "font-body-sm",
+            "text-on-surface",
+            "w-full",
+            "p-0",
+            "placeholder:text-on-surface-variant"
+          ],
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        }
+      ],
+      "navLinks": [
+        {
+          "kind": "link",
+          "label": "dashboard",
+          "href": "#",
+          "classes": [
+            "group-hover:text-on-surface",
+            "transition-colors"
+          ],
+          "icon": "dashboard",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Task Board",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined",
+            "filled"
+          ],
+          "icon": "assignment",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Equipment",
+          "href": "#",
+          "classes": [
+            "group-hover:text-on-surface",
+            "transition-colors"
+          ],
+          "icon": "precision_manufacturing",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Logs",
+          "href": "#",
+          "classes": [
+            "group-hover:text-on-surface",
+            "transition-colors"
+          ],
+          "icon": "database",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "settings",
+          "href": "#",
+          "classes": [
+            "group-hover:text-on-surface"
+          ],
+          "icon": "settings",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "help",
+          "href": "#",
+          "classes": [
+            "group-hover:text-on-surface"
+          ],
+          "icon": "help",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        }
+      ],
+      "cards": [],
+      "icons": [
+        "dashboard",
+        "assignment",
+        "precision_manufacturing",
+        "database",
+        "warning",
+        "settings",
+        "help",
+        "search",
+        "menu",
+        "sensors",
+        "humidity_mid",
+        "thermostat",
+        "notifications",
+        "filter_list",
+        "add",
+        "arrow_forward",
+        "arrow_back",
+        "check_circle",
+        "undo"
+      ],
+      "images": [
+        {
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuAzkrxGg_HmWuVXh8z3Ex1a0YWeZhqrWeitK5Tph1KCRkrd0lyZ2dzd0dIPFEvxyVAC4m-DraWOxFXMUhLzpAeI4cD5GQMn_T51hRLN_ghHxvzYVDBxbfAFUfD71IbOok6dqAO_PPj-CU6dtXhgCf",
+          "alt": "Greenhouse Operator Avatar"
+        },
+        {
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuBvS_dS3YFFnj1injMH6ZkdqehHms6yabx8Sg72EDPPXnTxcn5bf6pnRTNx38nBbOqvfGnNjeMaZcdXfjVKUbOphBXMYyvHQun5tdPWWOOv_CrLsDMG67YPuM8K8c44BeEVHg6DA5QJ1Wb3QV2bM8",
+          "alt": "User profile"
+        },
+        {
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuCHUYf1xZYZoCSCL2RySUMWrnyLgCBJNRCQGDRAfjp-O89NQRLLn8ZyV68pLtNtG41u1JB5coSIvtf12CjynxiI1Oecec-aAvfj4o8dXw6Y8j9bpM4ofZhaF4YFdWP9If8wYUONjYNWdr1MWSuRrE",
+          "alt": "Assignee"
+        }
+      ],
+      "cssVars": {},
+      "colorPalette": {
+        "on-primary-fixed-variant": "#003ea8",
+        "primary": "#b4c5ff",
+        "primary-fixed-dim": "#b4c5ff",
+        "secondary-fixed": "#d5e3fc",
+        "on-surface": "#e1e2ed",
+        "tertiary-fixed": "#ffdbcd",
+        "outline-variant": "#434655",
+        "on-surface-variant": "#c3c6d7",
+        "on-secondary": "#233144",
+        "tertiary": "#ffb596",
+        "on-secondary-fixed": "#0d1c2e",
+        "on-background": "#e1e2ed",
+        "on-tertiary-container": "#ffede6",
+        "on-error-container": "#ffdad6",
+        "surface-container-low": "#191b23",
+        "on-primary-fixed": "#00174b",
+        "inverse-on-surface": "#2e3039",
+        "on-tertiary-fixed": "#360f00",
+        "error-container": "#93000a",
+        "inverse-surface": "#e1e2ed",
+        "surface-container-highest": "#32343d",
+        "secondary-fixed-dim": "#b9c7df",
+        "inverse-primary": "#0053db",
+        "tertiary-container": "#bc4800",
+        "surface-dim": "#11131b",
+        "on-error": "#690005",
+        "surface-container-lowest": "#0c0e16",
+        "background": "#11131b",
+        "secondary-container": "#3c4a5e",
+        "primary-container": "#2563eb",
+        "on-secondary-container": "#abb9d1",
+        "on-tertiary-fixed-variant": "#7d2d00",
+        "tertiary-fixed-dim": "#ffb596",
+        "surface-container": "#1d1f27",
+        "surface-bright": "#373942",
+        "surface-variant": "#32343d",
+        "surface-tint": "#b4c5ff",
+        "surface": "#11131b",
+        "on-secondary-fixed-variant": "#3a485b",
+        "outline": "#8d90a0",
+        "error": "#ffb4ab",
+        "primary-fixed": "#dbe1ff",
+        "on-primary-container": "#eeefff",
+        "on-tertiary": "#581e00",
+        "on-primary": "#002a78",
+        "secondary": "#b9c7df",
+        "surface-container-high": "#282a32"
+      },
+      "fonts": [
+        "Inter",
+        "Material Symbols Outlined"
+      ],
+      "layoutHints": {
+        "gridCols": 1,
+        "flexDirection": "col",
+        "gap": "3"
+      },
+      "behaviorContract": [
+        {
+          "kind": "link",
+          "label": "dashboard",
+          "icon": "dashboard",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Task Board",
+          "icon": "assignment",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Equipment",
+          "icon": "precision_manufacturing",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Logs",
+          "icon": "database",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "settings",
+          "icon": "settings",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "help",
+          "icon": "help",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "button",
+          "label": "Emergency Stop",
+          "icon": "warning",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "menu",
+          "icon": "menu",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Sensors",
+          "icon": "sensors",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Humidity",
+          "icon": "humidity_mid",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Thermostat",
+          "icon": "thermostat",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Notifications",
+          "icon": "notifications",
+          "action": "navigate",
+          "route": "/notifications",
+          "expectedBehavior": "navigate:/notifications"
+        },
+        {
+          "kind": "button",
+          "label": "Account",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Filter",
+          "icon": "filter_list",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "New Task",
+          "icon": "add",
+          "action": "create",
+          "expectedBehavior": "open create flow or add a new item/state"
+        },
+        {
+          "kind": "button",
+          "label": "arrow_forward",
+          "icon": "arrow_forward",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "arrow_back",
+          "icon": "arrow_back",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "undo",
+          "icon": "undo",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "FloraOps Pro Zone A-1 Main",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "input",
+          "label": "Search tasks, logs...",
+          "type": "text",
+          "placeholder": "Search tasks, logs...",
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        }
+      ],
+      "tabBar": [
+        {
+          "kind": "button",
+          "label": "FloraOps Pro Zone A-1 Main",
+          "icon": null,
+          "active": true
+        },
+        {
+          "kind": "link",
+          "label": "dashboard",
+          "icon": "dashboard",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Task Board",
+          "icon": "assignment",
+          "route": "#",
+          "active": true
+        },
+        {
+          "kind": "link",
+          "label": "Equipment",
+          "icon": "precision_manufacturing",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Logs",
+          "icon": "database",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "button",
+          "label": "Emergency Stop",
+          "icon": "warning",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "settings",
+          "icon": "settings",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "help",
+          "icon": "help",
+          "route": "#",
+          "active": false
+        }
+      ],
+      "title": "Task Board"
+    },
+    "186cf98c48744d69b87b8058cde8016e": {
+      "screenId": "186cf98c48744d69b87b8058cde8016e",
+      "materialSymbolsRequired": true,
+      "sections": [
+        {
+          "tag": "nav",
+          "layout": "flex-row",
+          "classes": [
+            "bg-surface-container",
+            "dark:bg-surface-container",
+            "fixed",
+            "left-0",
+            "top-0",
+            "h-full",
+            "w-[240px]",
+            "border-r",
+            "border-outline-variant",
+            "flex"
+          ],
+          "childCount": 8
+        },
+        {
+          "tag": "header",
+          "layout": "flex-row",
+          "classes": [
+            "bg-surface",
+            "dark:bg-surface",
+            "fixed",
+            "top-0",
+            "right-0",
+            "w-[calc(100%-240px)]",
+            "z-40",
+            "border-b",
+            "border-outline-variant",
+            "flex"
+          ],
+          "childCount": 5
+        },
+        {
+          "tag": "main",
+          "layout": "flex-col",
+          "classes": [
+            "flex-1",
+            "mt-16",
+            "p-container-margin",
+            "flex",
+            "flex-col",
+            "gap-gutter",
+            "bg-background",
+            "overflow-x-hidden"
+          ],
+          "childCount": 45
+        }
+      ],
+      "buttons": [
+        {
+          "kind": "button",
+          "label": "Emergency Stop",
+          "classes": [
+            "w-full",
+            "bg-error-container",
+            "text-on-error-container",
+            "font-title-sm",
+            "text-title-sm",
+            "py-2",
+            "px-4",
+            "rounded",
+            "hover:bg-error/20",
+            "transition-colors",
+            "border",
+            "border-error"
+          ],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "notifications",
+          "classes": [
+            "p-2",
+            "rounded-full",
+            "text-on-surface-variant",
+            "hover:text-primary",
+            "hover:bg-surface-variant",
+            "transition-colors",
+            "flex",
+            "items-center",
+            "justify-center"
+          ],
+          "icon": "notifications",
+          "action": "navigate",
+          "expectedBehavior": "navigate:/notifications",
+          "expectedRoute": "/notifications",
+          "routeInferred": true
+        },
+        {
+          "kind": "button",
+          "label": "thermostat",
+          "classes": [
+            "p-2",
+            "rounded-full",
+            "text-on-surface-variant",
+            "hover:text-primary",
+            "hover:bg-surface-variant",
+            "transition-colors",
+            "flex",
+            "items-center",
+            "justify-center"
+          ],
+          "icon": "thermostat",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "humidity_mid",
+          "classes": [
+            "p-2",
+            "rounded-full",
+            "text-on-surface-variant",
+            "hover:text-primary",
+            "hover:bg-surface-variant",
+            "transition-colors",
+            "flex",
+            "items-center",
+            "justify-center"
+          ],
+          "icon": "humidity_mid",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "sensors",
+          "classes": [
+            "p-2",
+            "rounded-full",
+            "text-on-surface-variant",
+            "hover:text-primary",
+            "hover:bg-surface-variant",
+            "transition-colors",
+            "flex",
+            "items-center",
+            "justify-center"
+          ],
+          "icon": "sensors",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Account",
+          "classes": [
+            "flex",
+            "items-center",
+            "gap-2",
+            "px-3",
+            "py-1.5",
+            "rounded-full",
+            "border",
+            "border-outline-variant",
+            "hover:border-primary",
+            "transition-colors"
+          ],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Export CSV",
+          "classes": [
+            "flex",
+            "items-center",
+            "gap-2",
+            "px-4",
+            "py-2",
+            "border",
+            "border-outline-variant",
+            "rounded",
+            "text-on-surface",
+            "font-title-sm",
+            "text-title-sm",
+            "hover:bg-surface-variant",
+            "transition-colors",
+            "focus:outline-none",
+            "focus:ring-2",
+            "focus:ring-primary",
+            "focus:ring-offset-2",
+            "focus:ring-offset-background"
+          ],
+          "icon": "download",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Modify Filters",
+          "classes": [
+            "flex",
+            "items-center",
+            "gap-2",
+            "px-4",
+            "py-2",
+            "bg-primary-container",
+            "text-on-primary-container",
+            "rounded",
+            "font-title-sm",
+            "text-title-sm",
+            "hover:bg-primary-container/90",
+            "transition-colors",
+            "focus:outline-none",
+            "focus:ring-2",
+            "focus:ring-primary",
+            "focus:ring-offset-2",
+            "focus:ring-offset-background"
+          ],
+          "icon": "tune",
+          "action": "navigate",
+          "expectedBehavior": "navigate:/settings",
+          "expectedRoute": "/settings",
+          "routeInferred": true
+        },
+        {
+          "kind": "button",
+          "label": "Clear All",
+          "classes": [
+            "text-primary",
+            "font-body-sm",
+            "text-body-sm",
+            "hover:underline"
+          ],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "close",
+          "classes": [
+            "text-on-surface-variant",
+            "hover:text-error",
+            "transition-colors",
+            "ml-1",
+            "flex",
+            "items-center"
+          ],
+          "icon": "close",
+          "action": "dismiss",
+          "expectedBehavior": "close dialog/panel or return to previous state"
+        },
+        {
+          "kind": "button",
+          "label": "open_in_new",
+          "classes": [
+            "text-on-surface-variant",
+            "hover:text-primary",
+            "transition-colors",
+            "opacity-0",
+            "group-hover:opacity-100"
+          ],
+          "icon": "open_in_new",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "eco",
+          "classes": [],
+          "icon": "eco",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "FloraOps Pro",
+          "classes": [],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Zone A-1 Main",
+          "classes": [],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        }
+      ],
+      "inputs": [
+        {
+          "kind": "input",
+          "type": "text",
+          "label": "Search logs, events, anomalies...",
+          "placeholder": "Search logs, events, anomalies...",
+          "name": "",
+          "classes": [
+            "w-full",
+            "bg-surface-container-highest",
+            "border",
+            "border-outline-variant",
+            "rounded-full",
+            "py-2",
+            "pl-10",
+            "pr-4",
+            "text-on-surface",
+            "font-body-base",
+            "text-body-base",
+            "focus:outline-none",
+            "focus:border-primary",
+            "focus:ring-1",
+            "focus:ring-primary",
+            "transition-colors",
+            "placeholder:text-on-surface-variant/50"
+          ],
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        }
+      ],
+      "navLinks": [
+        {
+          "kind": "link",
+          "label": "dashboard",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined"
+          ],
+          "icon": "dashboard",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Task Board",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined"
+          ],
+          "icon": "assignment",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Equipment",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined"
+          ],
+          "icon": "precision_manufacturing",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Logs",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined",
+            "fill"
+          ],
+          "icon": "database",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "settings",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined"
+          ],
+          "icon": "settings",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "help",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined"
+          ],
+          "icon": "help",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        }
+      ],
+      "cards": [],
+      "icons": [
+        "eco",
+        "dashboard",
+        "assignment",
+        "precision_manufacturing",
+        "database",
+        "settings",
+        "help",
+        "search",
+        "notifications",
+        "thermostat",
+        "humidity_mid",
+        "sensors",
+        "download",
+        "tune",
+        "close",
+        "arrow_downward",
+        "open_in_new",
+        "water_drop",
+        "air",
+        "light_mode"
+      ],
+      "images": [
+        {
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuBwBUjcwbP_qG0PqNGqtOSIZRNxqvoD-0B9ETVKULXv7UdBIoTe6EqWyKILYijvmrSbnTCBpCCTO_W4gYKb58k66qUHuqj8db0jxoyA8nWZJCaJSABd9xB8zrxQxaT-luQ6SbK2tlu103NjFYs7IC",
+          "alt": "User profile"
+        }
+      ],
+      "cssVars": {},
+      "colorPalette": {
+        "on-primary-fixed-variant": "#003ea8",
+        "primary": "#b4c5ff",
+        "primary-fixed-dim": "#b4c5ff",
+        "secondary-fixed": "#d5e3fc",
+        "on-surface": "#e1e2ed",
+        "tertiary-fixed": "#ffdbcd",
+        "outline-variant": "#434655",
+        "on-surface-variant": "#c3c6d7",
+        "on-secondary": "#233144",
+        "tertiary": "#ffb596",
+        "on-secondary-fixed": "#0d1c2e",
+        "on-background": "#e1e2ed",
+        "on-tertiary-container": "#ffede6",
+        "on-error-container": "#ffdad6",
+        "surface-container-low": "#191b23",
+        "on-primary-fixed": "#00174b",
+        "inverse-on-surface": "#2e3039",
+        "on-tertiary-fixed": "#360f00",
+        "error-container": "#93000a",
+        "inverse-surface": "#e1e2ed",
+        "surface-container-highest": "#32343d",
+        "secondary-fixed-dim": "#b9c7df",
+        "inverse-primary": "#0053db",
+        "tertiary-container": "#bc4800",
+        "surface-dim": "#11131b",
+        "on-error": "#690005",
+        "surface-container-lowest": "#0c0e16",
+        "background": "#11131b",
+        "secondary-container": "#3c4a5e",
+        "primary-container": "#2563eb",
+        "on-secondary-container": "#abb9d1",
+        "on-tertiary-fixed-variant": "#7d2d00",
+        "tertiary-fixed-dim": "#ffb596",
+        "surface-container": "#1d1f27",
+        "surface-bright": "#373942",
+        "surface-variant": "#32343d",
+        "surface-tint": "#b4c5ff",
+        "surface": "#11131b",
+        "on-secondary-fixed-variant": "#3a485b",
+        "outline": "#8d90a0",
+        "error": "#ffb4ab",
+        "primary-fixed": "#dbe1ff",
+        "on-primary-container": "#eeefff",
+        "on-tertiary": "#581e00",
+        "on-primary": "#002a78",
+        "secondary": "#b9c7df",
+        "surface-container-high": "#282a32"
+      },
+      "fonts": [
+        "Inter",
+        "Material Symbols Outlined"
+      ],
+      "layoutHints": {
+        "gridCols": 12,
+        "flexDirection": "col",
+        "gap": "3"
+      },
+      "behaviorContract": [
+        {
+          "kind": "link",
+          "label": "dashboard",
+          "icon": "dashboard",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Task Board",
+          "icon": "assignment",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Equipment",
+          "icon": "precision_manufacturing",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Logs",
+          "icon": "database",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "settings",
+          "icon": "settings",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "help",
+          "icon": "help",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "button",
+          "label": "Emergency Stop",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "notifications",
+          "icon": "notifications",
+          "action": "navigate",
+          "route": "/notifications",
+          "expectedBehavior": "navigate:/notifications"
+        },
+        {
+          "kind": "button",
+          "label": "thermostat",
+          "icon": "thermostat",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "humidity_mid",
+          "icon": "humidity_mid",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "sensors",
+          "icon": "sensors",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Account",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Export CSV",
+          "icon": "download",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Modify Filters",
+          "icon": "tune",
+          "action": "navigate",
+          "route": "/settings",
+          "expectedBehavior": "navigate:/settings"
+        },
+        {
+          "kind": "button",
+          "label": "Clear All",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "close",
+          "icon": "close",
+          "action": "dismiss",
+          "expectedBehavior": "close dialog/panel or return to previous state"
+        },
+        {
+          "kind": "button",
+          "label": "open_in_new",
+          "icon": "open_in_new",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "eco",
+          "icon": "eco",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "FloraOps Pro",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Zone A-1 Main",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "input",
+          "label": "Search logs, events, anomalies...",
+          "type": "text",
+          "placeholder": "Search logs, events, anomalies...",
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        }
+      ],
+      "tabBar": [
+        {
+          "kind": "button",
+          "label": "eco",
+          "icon": "eco",
+          "active": true
+        },
+        {
+          "kind": "button",
+          "label": "FloraOps Pro",
+          "icon": null,
+          "active": true
+        },
+        {
+          "kind": "button",
+          "label": "Zone A-1 Main",
+          "icon": null,
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "dashboard",
+          "icon": "dashboard",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Task Board",
+          "icon": "assignment",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Equipment",
+          "icon": "precision_manufacturing",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Logs",
+          "icon": "database",
+          "route": "#",
+          "active": true
+        },
+        {
+          "kind": "link",
+          "label": "settings",
+          "icon": "settings",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "help",
+          "icon": "help",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "button",
+          "label": "Emergency Stop",
+          "icon": null,
+          "active": false
+        }
+      ],
+      "title": "Filtered Overview"
+    },
+    "347a893b76354420b87735e1ed1db389": {
+      "screenId": "347a893b76354420b87735e1ed1db389",
+      "materialSymbolsRequired": true,
+      "sections": [
+        {
+          "tag": "nav",
+          "layout": "flex-col",
+          "classes": [
+            "fixed",
+            "left-0",
+            "top-0",
+            "h-full",
+            "w-[240px]",
+            "flex",
+            "flex-col",
+            "py-container-margin",
+            "border-r",
+            "border-outline-variant"
+          ],
+          "childCount": 6
+        },
+        {
+          "tag": "header",
+          "layout": "flex-row",
+          "classes": [
+            "fixed",
+            "top-0",
+            "right-0",
+            "w-full",
+            "md:w-[calc(100%-240px)]",
+            "z-50",
+            "flex",
+            "justify-between",
+            "items-center",
+            "px-gutter"
+          ],
+          "childCount": 6
+        },
+        {
+          "tag": "main",
+          "layout": "block",
+          "classes": [
+            "w-full",
+            "md:pl-[240px]",
+            "pt-16",
+            "h-screen",
+            "overflow-y-auto"
+          ],
+          "childCount": 12
+        }
+      ],
+      "buttons": [
+        {
+          "kind": "button",
+          "label": "Emergency Stop",
+          "classes": [
+            "w-full",
+            "flex",
+            "items-center",
+            "justify-center",
+            "gap-2",
+            "py-2.5",
+            "rounded-lg",
+            "border",
+            "border-error",
+            "text-error",
+            "hover:bg-error/10",
+            "transition-colors",
+            "font-title-sm",
+            "text-title-sm"
+          ],
+          "icon": "warning",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "notifications",
+          "classes": [
+            "p-2",
+            "rounded-full",
+            "text-on-surface-variant",
+            "hover:text-primary",
+            "hover:bg-surface-variant",
+            "transition-colors"
+          ],
+          "icon": "notifications",
+          "action": "navigate",
+          "expectedBehavior": "navigate:/notifications",
+          "expectedRoute": "/notifications",
+          "routeInferred": true
+        },
+        {
+          "kind": "button",
+          "label": "thermostat",
+          "classes": [
+            "p-2",
+            "rounded-full",
+            "text-on-surface-variant",
+            "hover:text-primary",
+            "hover:bg-surface-variant",
+            "transition-colors"
+          ],
+          "icon": "thermostat",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "humidity_mid",
+          "classes": [
+            "p-2",
+            "rounded-full",
+            "text-on-surface-variant",
+            "hover:text-primary",
+            "hover:bg-surface-variant",
+            "transition-colors"
+          ],
+          "icon": "humidity_mid",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "sensors",
+          "classes": [
+            "p-2",
+            "rounded-full",
+            "text-on-surface-variant",
+            "hover:text-primary",
+            "hover:bg-surface-variant",
+            "transition-colors"
+          ],
+          "icon": "sensors",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#",
+          "expectedRoute": "#"
+        },
+        {
+          "kind": "button",
+          "label": "Account",
+          "classes": [
+            "flex",
+            "items-center",
+            "gap-2",
+            "text-on-surface",
+            "hover:text-primary",
+            "transition-colors",
+            "font-title-sm",
+            "text-title-sm"
+          ],
+          "icon": "person",
+          "action": "navigate",
+          "expectedBehavior": "navigate:/profile",
+          "expectedRoute": "/profile",
+          "routeInferred": true
+        },
+        {
+          "kind": "button",
+          "label": "Equipment",
+          "classes": [
+            "flex",
+            "items-center",
+            "justify-center",
+            "gap-2",
+            "bg-primary-container",
+            "text-on-primary-container",
+            "px-6",
+            "py-3",
+            "rounded-lg",
+            "font-title-sm",
+            "text-title-sm",
+            "hover:opacity-90",
+            "transition-opacity",
+            "focus:ring-2",
+            "focus:ring-offset-2",
+            "focus:ring-offset-background",
+            "focus:ring-primary",
+            "shadow-sm"
+          ],
+          "icon": "add",
+          "action": "create",
+          "expectedBehavior": "open create flow or add a new item/state"
+        },
+        {
+          "kind": "button",
+          "label": "Import Catalog",
+          "classes": [
+            "flex",
+            "items-center",
+            "justify-center",
+            "gap-2",
+            "bg-transparent",
+            "border",
+            "border-outline",
+            "text-on-surface",
+            "px-6",
+            "py-3",
+            "rounded-lg",
+            "font-title-sm",
+            "text-title-sm",
+            "hover:bg-surface-variant",
+            "transition-colors",
+            "focus:ring-2",
+            "focus:ring-offset-2",
+            "focus:ring-offset-background",
+            "focus:ring-primary"
+          ],
+          "icon": "upload_file",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "eco",
+          "classes": [],
+          "icon": "eco",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "FloraOps Pro Zone A-1 Main",
+          "classes": [],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        }
+      ],
+      "inputs": [
+        {
+          "kind": "input",
+          "type": "text",
+          "label": "Search equipment, logs...",
+          "placeholder": "Search equipment, logs...",
+          "name": "",
+          "classes": [
+            "w-full",
+            "bg-surface-container",
+            "text-on-surface",
+            "border",
+            "border-outline-variant",
+            "rounded-full",
+            "py-1.5",
+            "pl-10",
+            "pr-4",
+            "focus:outline-none",
+            "focus:border-primary",
+            "focus:ring-1",
+            "focus:ring-primary",
+            "font-body-base",
+            "text-body-base",
+            "placeholder-on-surface-variant"
+          ],
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        }
+      ],
+      "navLinks": [
+        {
+          "kind": "link",
+          "label": "dashboard",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined",
+            "text-outline"
+          ],
+          "icon": "dashboard",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Task Board",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined",
+            "text-outline"
+          ],
+          "icon": "assignment",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Equipment",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined",
+            "text-primary"
+          ],
+          "icon": "precision_manufacturing",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Logs",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined",
+            "text-outline"
+          ],
+          "icon": "database",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "settings",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined",
+            "text-outline"
+          ],
+          "icon": "settings",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "help",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined",
+            "text-outline"
+          ],
+          "icon": "help",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Sensor Pairing Guide Learn how to connect local telemetry devices to the central node.",
+          "href": "#",
+          "classes": [
+            "font-body-sm",
+            "text-body-sm",
+            "text-on-surface-variant"
+          ],
+          "icon": "sensors",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Supported Hardware View the compatibility matrix for climate and irrigation units.",
+          "href": "#",
+          "classes": [
+            "font-body-sm",
+            "text-body-sm",
+            "text-on-surface-variant"
+          ],
+          "icon": "settings_input_component",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        }
+      ],
+      "cards": [],
+      "icons": [
+        "eco",
+        "dashboard",
+        "assignment",
+        "precision_manufacturing",
+        "database",
+        "warning",
+        "settings",
+        "help",
+        "search",
+        "notifications",
+        "thermostat",
+        "humidity_mid",
+        "sensors",
+        "person",
+        "add",
+        "upload_file",
+        "settings_input_component"
+      ],
+      "images": [],
+      "cssVars": {},
+      "colorPalette": {
+        "on-primary-fixed-variant": "#003ea8",
+        "primary": "#b4c5ff",
+        "primary-fixed-dim": "#b4c5ff",
+        "secondary-fixed": "#d5e3fc",
+        "on-surface": "#e1e2ed",
+        "tertiary-fixed": "#ffdbcd",
+        "outline-variant": "#434655",
+        "on-surface-variant": "#c3c6d7",
+        "on-secondary": "#233144",
+        "tertiary": "#ffb596",
+        "on-secondary-fixed": "#0d1c2e",
+        "on-background": "#e1e2ed",
+        "on-tertiary-container": "#ffede6",
+        "on-error-container": "#ffdad6",
+        "surface-container-low": "#191b23",
+        "on-primary-fixed": "#00174b",
+        "inverse-on-surface": "#2e3039",
+        "on-tertiary-fixed": "#360f00",
+        "error-container": "#93000a",
+        "inverse-surface": "#e1e2ed",
+        "surface-container-highest": "#32343d",
+        "secondary-fixed-dim": "#b9c7df",
+        "inverse-primary": "#0053db",
+        "tertiary-container": "#bc4800",
+        "surface-dim": "#11131b",
+        "on-error": "#690005",
+        "surface-container-lowest": "#0c0e16",
+        "background": "#11131b",
+        "secondary-container": "#3c4a5e",
+        "primary-container": "#2563eb",
+        "on-secondary-container": "#abb9d1",
+        "on-tertiary-fixed-variant": "#7d2d00",
+        "tertiary-fixed-dim": "#ffb596",
+        "surface-container": "#1d1f27",
+        "surface-bright": "#373942",
+        "surface-variant": "#32343d",
+        "surface-tint": "#b4c5ff",
+        "surface": "#11131b",
+        "on-secondary-fixed-variant": "#3a485b",
+        "outline": "#8d90a0",
+        "error": "#ffb4ab",
+        "primary-fixed": "#dbe1ff",
+        "on-primary-container": "#eeefff",
+        "on-tertiary": "#581e00",
+        "on-primary": "#002a78",
+        "secondary": "#b9c7df",
+        "surface-container-high": "#282a32"
+      },
+      "fonts": [
+        "Material Symbols Outlined",
+        "Inter"
+      ],
+      "layoutHints": {
+        "gridCols": 1,
+        "flexDirection": "col",
+        "gap": "3"
+      },
+      "behaviorContract": [
+        {
+          "kind": "link",
+          "label": "dashboard",
+          "icon": "dashboard",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Task Board",
+          "icon": "assignment",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Equipment",
+          "icon": "precision_manufacturing",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Logs",
+          "icon": "database",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "settings",
+          "icon": "settings",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "help",
+          "icon": "help",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Sensor Pairing Guide Learn how to connect local telemetry devices to the central node.",
+          "icon": "sensors",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Supported Hardware View the compatibility matrix for climate and irrigation units.",
+          "icon": "settings_input_component",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "button",
+          "label": "Emergency Stop",
+          "icon": "warning",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "notifications",
+          "icon": "notifications",
+          "action": "navigate",
+          "route": "/notifications",
+          "expectedBehavior": "navigate:/notifications"
+        },
+        {
+          "kind": "button",
+          "label": "thermostat",
+          "icon": "thermostat",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "humidity_mid",
+          "icon": "humidity_mid",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "sensors",
+          "icon": "sensors",
+          "action": "navigate",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "button",
+          "label": "Account",
+          "icon": "person",
+          "action": "navigate",
+          "route": "/profile",
+          "expectedBehavior": "navigate:/profile"
+        },
+        {
+          "kind": "button",
+          "label": "Equipment",
+          "icon": "add",
+          "action": "create",
+          "expectedBehavior": "open create flow or add a new item/state"
+        },
+        {
+          "kind": "button",
+          "label": "Import Catalog",
+          "icon": "upload_file",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "eco",
+          "icon": "eco",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "FloraOps Pro Zone A-1 Main",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "input",
+          "label": "Search equipment, logs...",
+          "type": "text",
+          "placeholder": "Search equipment, logs...",
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        }
+      ],
+      "tabBar": [
+        {
+          "kind": "button",
+          "label": "eco",
+          "icon": "eco",
+          "active": true
+        },
+        {
+          "kind": "button",
+          "label": "FloraOps Pro Zone A-1 Main",
+          "icon": null,
+          "active": true
+        },
+        {
+          "kind": "link",
+          "label": "dashboard",
+          "icon": "dashboard",
+          "route": "#",
+          "active": true
+        },
+        {
+          "kind": "link",
+          "label": "Task Board",
+          "icon": "assignment",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Equipment",
+          "icon": "precision_manufacturing",
+          "route": "#",
+          "active": true
+        },
+        {
+          "kind": "link",
+          "label": "Logs",
+          "icon": "database",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "button",
+          "label": "Emergency Stop",
+          "icon": "warning",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "settings",
+          "icon": "settings",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "help",
+          "icon": "help",
+          "route": "#",
+          "active": false
+        }
+      ],
+      "title": "Empty State"
+    },
+    "3e3ec9a01d0b44d59b6b3853d85dc29d": {
+      "screenId": "3e3ec9a01d0b44d59b6b3853d85dc29d",
+      "materialSymbolsRequired": true,
+      "sections": [
+        {
+          "tag": "header",
+          "layout": "flex-row",
+          "classes": [
+            "fixed",
+            "top-0",
+            "right-0",
+            "w-[calc(100%-240px)]",
+            "z-50",
+            "bg-surface",
+            "border-b",
+            "border-outline-variant",
+            "flex",
+            "justify-between"
+          ],
+          "childCount": 4
+        },
+        {
+          "tag": "nav",
+          "layout": "flex-col",
+          "classes": [
+            "fixed",
+            "left-0",
+            "top-0",
+            "h-full",
+            "w-[240px]",
+            "bg-surface-container",
+            "border-r",
+            "border-outline-variant",
+            "flex",
+            "flex-col"
+          ],
+          "childCount": 5
+        },
+        {
+          "tag": "main",
+          "layout": "block",
+          "classes": [
+            "ml-[240px]",
+            "pt-16",
+            "min-h-screen"
+          ],
+          "childCount": 22
+        }
+      ],
+      "buttons": [
+        {
+          "kind": "button",
+          "label": "notifications",
+          "classes": [
+            "p-2",
+            "rounded-full",
+            "text-on-surface-variant",
+            "hover:text-primary",
+            "hover:bg-surface-variant",
+            "transition-colors",
+            "group"
+          ],
+          "icon": "notifications",
+          "action": "navigate",
+          "expectedBehavior": "navigate:/notifications",
+          "expectedRoute": "/notifications",
+          "routeInferred": true
+        },
+        {
+          "kind": "button",
+          "label": "thermostat",
+          "classes": [
+            "p-2",
+            "rounded-full",
+            "text-on-surface-variant",
+            "hover:text-primary",
+            "hover:bg-surface-variant",
+            "transition-colors",
+            "group"
+          ],
+          "icon": "thermostat",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "humidity_mid",
+          "classes": [
+            "p-2",
+            "rounded-full",
+            "text-on-surface-variant",
+            "hover:text-primary",
+            "hover:bg-surface-variant",
+            "transition-colors",
+            "group"
+          ],
+          "icon": "humidity_mid",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "sensors",
+          "classes": [
+            "p-2",
+            "rounded-full",
+            "text-on-surface-variant",
+            "hover:text-primary",
+            "hover:bg-surface-variant",
+            "transition-colors",
+            "group"
+          ],
+          "icon": "sensors",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Account",
+          "classes": [
+            "flex",
+            "items-center",
+            "gap-2",
+            "px-3",
+            "py-1.5",
+            "rounded-full",
+            "border",
+            "border-outline-variant",
+            "hover:bg-surface-variant",
+            "transition-colors"
+          ],
+          "icon": "account_circle",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Emergency Stop",
+          "classes": [
+            "w-full",
+            "flex",
+            "justify-center",
+            "items-center",
+            "gap-2",
+            "py-2",
+            "rounded-md",
+            "bg-error-container/20",
+            "text-error",
+            "border",
+            "border-error/50",
+            "hover:bg-error-container/40",
+            "transition-colors",
+            "font-title-sm"
+          ],
+          "icon": "warning",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Export CSV",
+          "classes": [
+            "flex",
+            "items-center",
+            "gap-2",
+            "px-4",
+            "py-2",
+            "bg-primary-container",
+            "text-on-primary-container",
+            "rounded-md",
+            "font-title-sm",
+            "hover:brightness-110",
+            "transition-all",
+            "focus:ring-2",
+            "focus:ring-offset-2",
+            "focus:ring-offset-background",
+            "focus:ring-primary-container"
+          ],
+          "icon": "download",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Reset Filters",
+          "classes": [
+            "px-4",
+            "py-2",
+            "border",
+            "border-outline-variant",
+            "text-on-surface",
+            "hover:bg-surface-variant",
+            "rounded-md",
+            "transition-colors",
+            "font-title-sm",
+            "h-[42px]"
+          ],
+          "icon": null,
+          "action": "reset",
+          "expectedBehavior": "reset visible value/state, with confirmation if destructive"
+        },
+        {
+          "kind": "button",
+          "label": "View Details",
+          "classes": [
+            "text-on-surface-variant",
+            "hover:text-primary",
+            "transition-colors",
+            "p-1"
+          ],
+          "icon": "visibility",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "chevron_left",
+          "classes": [
+            "p-1",
+            "rounded",
+            "text-on-surface-variant",
+            "hover:text-primary",
+            "hover:bg-surface-variant",
+            "disabled:opacity-50"
+          ],
+          "icon": "chevron_left",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "chevron_right",
+          "classes": [
+            "p-1",
+            "rounded",
+            "text-on-surface-variant",
+            "hover:text-primary",
+            "hover:bg-surface-variant"
+          ],
+          "icon": "chevron_right",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "FloraOps Pro Zone A-1 Main",
+          "classes": [],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        }
+      ],
+      "inputs": [
+        {
+          "kind": "input",
+          "type": "text",
+          "label": "Search parameters...",
+          "placeholder": "Search parameters...",
+          "name": "",
+          "classes": [
+            "w-full",
+            "bg-surface-container",
+            "border",
+            "border-outline-variant",
+            "rounded-md",
+            "py-1.5",
+            "pl-10",
+            "pr-3",
+            "text-body-sm",
+            "text-on-surface",
+            "focus:outline-none",
+            "focus:border-primary",
+            "focus:ring-1",
+            "focus:ring-primary",
+            "placeholder:text-on-surface-variant",
+            "transition-colors"
+          ],
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        },
+        {
+          "kind": "input",
+          "type": "text",
+          "label": "ID, Operator, Task...",
+          "placeholder": "ID, Operator, Task...",
+          "name": "",
+          "classes": [
+            "w-full",
+            "bg-surface",
+            "border",
+            "border-outline-variant",
+            "rounded-md",
+            "py-2",
+            "pl-10",
+            "pr-3",
+            "text-body-base",
+            "text-on-surface",
+            "focus:outline-none",
+            "focus:border-primary",
+            "focus:ring-1",
+            "focus:ring-primary"
+          ],
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        },
+        {
+          "kind": "input",
+          "type": "date",
+          "label": "date",
+          "placeholder": "",
+          "name": "",
+          "classes": [
+            "w-full",
+            "bg-surface",
+            "border",
+            "border-outline-variant",
+            "rounded-md",
+            "py-2",
+            "px-3",
+            "text-body-base",
+            "text-on-surface",
+            "focus:outline-none",
+            "focus:border-primary",
+            "focus:ring-1",
+            "focus:ring-primary",
+            "[color-scheme:dark]"
+          ],
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        },
+        {
+          "kind": "input",
+          "type": "select",
+          "label": "select",
+          "placeholder": "",
+          "name": "",
+          "classes": [
+            "w-full",
+            "bg-surface",
+            "border",
+            "border-outline-variant",
+            "rounded-md",
+            "py-2",
+            "px-3",
+            "text-body-base",
+            "text-on-surface",
+            "focus:outline-none",
+            "focus:border-primary",
+            "focus:ring-1",
+            "focus:ring-primary",
+            "appearance-none"
+          ],
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        }
+      ],
+      "navLinks": [
+        {
+          "kind": "link",
+          "label": "dashboard",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined"
+          ],
+          "icon": "dashboard",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Task Board",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined"
+          ],
+          "icon": "assignment",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Equipment",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined"
+          ],
+          "icon": "precision_manufacturing",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Logs",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined"
+          ],
+          "icon": "database",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "settings",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined",
+            "text-[18px]"
+          ],
+          "icon": "settings",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "help",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined",
+            "text-[18px]"
+          ],
+          "icon": "help",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        }
+      ],
+      "cards": [],
+      "icons": [
+        "search",
+        "notifications",
+        "thermostat",
+        "humidity_mid",
+        "sensors",
+        "account_circle",
+        "dashboard",
+        "assignment",
+        "precision_manufacturing",
+        "database",
+        "warning",
+        "settings",
+        "help",
+        "download",
+        "visibility",
+        "chevron_left",
+        "chevron_right"
+      ],
+      "images": [
+        {
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuBbTEoiH7k9V1LJtKagroctsUB6xWxPnvknX4h6NO18Ubmd-qOPsPY727DwC9-0ckYUc7wt7HdcVmTdAF_6c0RAYBiEWTuP9FdKqC7GjpPdsYuIlN2bF7MBtT986mhIW25XUFO2nhYh0zXkpJ1kKS",
+          "alt": "Greenhouse Operator Avatar"
+        }
+      ],
+      "cssVars": {},
+      "colorPalette": {
+        "on-primary-fixed-variant": "#003ea8",
+        "primary": "#b4c5ff",
+        "primary-fixed-dim": "#b4c5ff",
+        "secondary-fixed": "#d5e3fc",
+        "on-surface": "#e1e2ed",
+        "tertiary-fixed": "#ffdbcd",
+        "outline-variant": "#434655",
+        "on-surface-variant": "#c3c6d7",
+        "on-secondary": "#233144",
+        "tertiary": "#ffb596",
+        "on-secondary-fixed": "#0d1c2e",
+        "on-background": "#e1e2ed",
+        "on-tertiary-container": "#ffede6",
+        "on-error-container": "#ffdad6",
+        "surface-container-low": "#191b23",
+        "on-primary-fixed": "#00174b",
+        "inverse-on-surface": "#2e3039",
+        "on-tertiary-fixed": "#360f00",
+        "error-container": "#93000a",
+        "inverse-surface": "#e1e2ed",
+        "surface-container-highest": "#32343d",
+        "secondary-fixed-dim": "#b9c7df",
+        "inverse-primary": "#0053db",
+        "tertiary-container": "#bc4800",
+        "surface-dim": "#11131b",
+        "on-error": "#690005",
+        "surface-container-lowest": "#0c0e16",
+        "background": "#11131b",
+        "secondary-container": "#3c4a5e",
+        "primary-container": "#2563eb",
+        "on-secondary-container": "#abb9d1",
+        "on-tertiary-fixed-variant": "#7d2d00",
+        "tertiary-fixed-dim": "#ffb596",
+        "surface-container": "#1d1f27",
+        "surface-bright": "#373942",
+        "surface-variant": "#32343d",
+        "surface-tint": "#b4c5ff",
+        "surface": "#11131b",
+        "on-secondary-fixed-variant": "#3a485b",
+        "outline": "#8d90a0",
+        "error": "#ffb4ab",
+        "primary-fixed": "#dbe1ff",
+        "on-primary-container": "#eeefff",
+        "on-tertiary": "#581e00",
+        "on-primary": "#002a78",
+        "secondary": "#b9c7df",
+        "surface-container-high": "#282a32"
+      },
+      "fonts": [
+        "Material Symbols Outlined",
+        "Inter"
+      ],
+      "layoutHints": {
+        "flexDirection": "col",
+        "gap": "6"
+      },
+      "behaviorContract": [
+        {
+          "kind": "link",
+          "label": "dashboard",
+          "icon": "dashboard",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Task Board",
+          "icon": "assignment",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Equipment",
+          "icon": "precision_manufacturing",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Logs",
+          "icon": "database",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "settings",
+          "icon": "settings",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "help",
+          "icon": "help",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "button",
+          "label": "notifications",
+          "icon": "notifications",
+          "action": "navigate",
+          "route": "/notifications",
+          "expectedBehavior": "navigate:/notifications"
+        },
+        {
+          "kind": "button",
+          "label": "thermostat",
+          "icon": "thermostat",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "humidity_mid",
+          "icon": "humidity_mid",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "sensors",
+          "icon": "sensors",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Account",
+          "icon": "account_circle",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Emergency Stop",
+          "icon": "warning",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Export CSV",
+          "icon": "download",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Reset Filters",
+          "icon": null,
+          "action": "reset",
+          "expectedBehavior": "reset visible value/state, with confirmation if destructive"
+        },
+        {
+          "kind": "button",
+          "label": "View Details",
+          "icon": "visibility",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "chevron_left",
+          "icon": "chevron_left",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "chevron_right",
+          "icon": "chevron_right",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "FloraOps Pro Zone A-1 Main",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "input",
+          "label": "Search parameters...",
+          "type": "text",
+          "placeholder": "Search parameters...",
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        },
+        {
+          "kind": "input",
+          "label": "ID, Operator, Task...",
+          "type": "text",
+          "placeholder": "ID, Operator, Task...",
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        },
+        {
+          "kind": "input",
+          "label": "date",
+          "type": "date",
+          "placeholder": "",
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        },
+        {
+          "kind": "input",
+          "label": "select",
+          "type": "select",
+          "placeholder": "",
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        }
+      ],
+      "tabBar": [
+        {
+          "kind": "button",
+          "label": "FloraOps Pro Zone A-1 Main",
+          "icon": null,
+          "active": true
+        },
+        {
+          "kind": "link",
+          "label": "dashboard",
+          "icon": "dashboard",
+          "route": "#",
+          "active": true
+        },
+        {
+          "kind": "link",
+          "label": "Task Board",
+          "icon": "assignment",
+          "route": "#",
+          "active": true
+        },
+        {
+          "kind": "link",
+          "label": "Equipment",
+          "icon": "precision_manufacturing",
+          "route": "#",
+          "active": true
+        },
+        {
+          "kind": "link",
+          "label": "Logs",
+          "icon": "database",
+          "route": "#",
+          "active": true
+        },
+        {
+          "kind": "button",
+          "label": "Emergency Stop",
+          "icon": "warning",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "settings",
+          "icon": "settings",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "help",
+          "icon": "help",
+          "route": "#",
+          "active": false
+        }
+      ],
+      "title": "Maintenance Log"
+    },
+    "7ec5ec999bdb41808f7c773981088e6c": {
+      "screenId": "7ec5ec999bdb41808f7c773981088e6c",
+      "materialSymbolsRequired": true,
+      "sections": [
+        {
+          "tag": "header",
+          "layout": "flex-row",
+          "classes": [
+            "bg-surface",
+            "dark:bg-surface",
+            "fixed",
+            "top-0",
+            "right-0",
+            "w-[calc(100%-240px)]",
+            "z-50",
+            "border-b",
+            "border-outline-variant",
+            "flex"
+          ],
+          "childCount": 3
+        },
+        {
+          "tag": "nav",
+          "layout": "flex-row",
+          "classes": [
+            "bg-surface-container",
+            "dark:bg-surface-container",
+            "fixed",
+            "left-0",
+            "top-0",
+            "h-full",
+            "w-[240px]",
+            "border-r",
+            "border-outline-variant",
+            "flex"
+          ],
+          "childCount": 5
+        },
+        {
+          "tag": "main",
+          "layout": "flex-col",
+          "classes": [
+            "ml-[240px]",
+            "mt-16",
+            "flex-1",
+            "flex",
+            "flex-col",
+            "items-center",
+            "justify-center",
+            "p-container-margin",
+            "min-h-[calc(100vh-64px)]",
+            "relative"
+          ],
+          "childCount": 11
+        }
+      ],
+      "buttons": [
+        {
+          "kind": "button",
+          "label": "notifications",
+          "classes": [
+            "text-on-surface-variant",
+            "hover:text-primary",
+            "transition-colors",
+            "flex",
+            "items-center",
+            "justify-center",
+            "w-10",
+            "h-10",
+            "rounded-full"
+          ],
+          "icon": "notifications",
+          "action": "navigate",
+          "expectedBehavior": "navigate:/notifications",
+          "expectedRoute": "/notifications",
+          "routeInferred": true
+        },
+        {
+          "kind": "button",
+          "label": "thermostat",
+          "classes": [
+            "text-on-surface-variant",
+            "hover:text-primary",
+            "transition-colors",
+            "flex",
+            "items-center",
+            "justify-center",
+            "w-10",
+            "h-10",
+            "rounded-full"
+          ],
+          "icon": "thermostat",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "humidity_mid",
+          "classes": [
+            "text-on-surface-variant",
+            "hover:text-primary",
+            "transition-colors",
+            "flex",
+            "items-center",
+            "justify-center",
+            "w-10",
+            "h-10",
+            "rounded-full"
+          ],
+          "icon": "humidity_mid",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "sensors",
+          "classes": [
+            "text-on-surface-variant",
+            "hover:text-primary",
+            "transition-colors",
+            "flex",
+            "items-center",
+            "justify-center",
+            "w-10",
+            "h-10",
+            "rounded-full"
+          ],
+          "icon": "sensors",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Account",
+          "classes": [
+            "flex",
+            "items-center",
+            "gap-2",
+            "text-on-surface-variant",
+            "hover:text-primary",
+            "transition-colors"
+          ],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Emergency Stop",
+          "classes": [
+            "w-full",
+            "mt-4",
+            "flex",
+            "items-center",
+            "justify-center",
+            "gap-2",
+            "px-4",
+            "py-3",
+            "rounded-lg",
+            "bg-error-container",
+            "text-on-error-container",
+            "font-title-sm",
+            "text-title-sm",
+            "hover:bg-error/20",
+            "transition-colors",
+            "border",
+            "border-error/30"
+          ],
+          "icon": "warning",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Retry Connection",
+          "classes": [
+            "flex-1",
+            "bg-primary-container",
+            "hover:bg-primary-container/90",
+            "text-on-primary-container",
+            "font-title-sm",
+            "text-title-sm",
+            "py-3",
+            "px-6",
+            "rounded-lg",
+            "transition-colors",
+            "flex",
+            "items-center",
+            "justify-center",
+            "gap-2",
+            "shadow-lg"
+          ],
+          "icon": "refresh",
+          "action": "retry",
+          "expectedBehavior": "retry the failed action and show loading/error feedback"
+        },
+        {
+          "kind": "button",
+          "label": "Reset Storage Cache",
+          "classes": [
+            "flex-1",
+            "bg-transparent",
+            "border",
+            "border-outline",
+            "hover:border-on-surface",
+            "hover:text-on-surface",
+            "text-on-surface-variant",
+            "font-title-sm",
+            "text-title-sm",
+            "py-3",
+            "px-6",
+            "rounded-lg",
+            "transition-colors",
+            "flex",
+            "items-center",
+            "justify-center",
+            "gap-2"
+          ],
+          "icon": "delete_sweep",
+          "action": "destructive",
+          "expectedBehavior": "perform destructive action with visible feedback or confirmation"
+        },
+        {
+          "kind": "button",
+          "label": "F",
+          "classes": [],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "FloraOps Pro Zone A-1 Main",
+          "classes": [],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        }
+      ],
+      "inputs": [],
+      "navLinks": [
+        {
+          "kind": "link",
+          "label": "dashboard",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined",
+            "text-outline",
+            "group-hover:text-primary",
+            "transition-colors"
+          ],
+          "icon": "dashboard",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Task Board",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined",
+            "text-outline",
+            "group-hover:text-primary",
+            "transition-colors"
+          ],
+          "icon": "assignment",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Equipment",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined",
+            "text-outline",
+            "group-hover:text-primary",
+            "transition-colors"
+          ],
+          "icon": "precision_manufacturing",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Logs",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined",
+            "text-outline",
+            "group-hover:text-primary",
+            "transition-colors"
+          ],
+          "icon": "database",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "settings",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined",
+            "text-outline",
+            "group-hover:text-primary",
+            "transition-colors"
+          ],
+          "icon": "settings",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "help",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined",
+            "text-outline",
+            "group-hover:text-primary",
+            "transition-colors"
+          ],
+          "icon": "help",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        }
+      ],
+      "cards": [],
+      "icons": [
+        "notifications",
+        "thermostat",
+        "humidity_mid",
+        "sensors",
+        "dashboard",
+        "assignment",
+        "precision_manufacturing",
+        "database",
+        "settings",
+        "help",
+        "warning",
+        "cloud_off",
+        "expand_more",
+        "refresh",
+        "delete_sweep"
+      ],
+      "images": [
+        {
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuBSc-ezZKKH0B98B-A333iBXKb7jLd_V6wl1y4gixMKEwHxHPNpmjxCojAARdeiSBXCwCJhSz1qd3gn10GPj4c7CeQZMvjTucEPGgHh3-Kzhmd0OhKb9UGZg1chAnLDq-LHLnZjAK1mFpMXZjqNAe",
+          "alt": "User profile"
+        }
+      ],
+      "cssVars": {},
+      "colorPalette": {
+        "on-primary-fixed-variant": "#003ea8",
+        "primary": "#b4c5ff",
+        "primary-fixed-dim": "#b4c5ff",
+        "secondary-fixed": "#d5e3fc",
+        "on-surface": "#e1e2ed",
+        "tertiary-fixed": "#ffdbcd",
+        "outline-variant": "#434655",
+        "on-surface-variant": "#c3c6d7",
+        "on-secondary": "#233144",
+        "tertiary": "#ffb596",
+        "on-secondary-fixed": "#0d1c2e",
+        "on-background": "#e1e2ed",
+        "on-tertiary-container": "#ffede6",
+        "on-error-container": "#ffdad6",
+        "surface-container-low": "#191b23",
+        "on-primary-fixed": "#00174b",
+        "inverse-on-surface": "#2e3039",
+        "on-tertiary-fixed": "#360f00",
+        "error-container": "#93000a",
+        "inverse-surface": "#e1e2ed",
+        "surface-container-highest": "#32343d",
+        "secondary-fixed-dim": "#b9c7df",
+        "inverse-primary": "#0053db",
+        "tertiary-container": "#bc4800",
+        "surface-dim": "#11131b",
+        "on-error": "#690005",
+        "surface-container-lowest": "#0c0e16",
+        "background": "#11131b",
+        "secondary-container": "#3c4a5e",
+        "primary-container": "#2563eb",
+        "on-secondary-container": "#abb9d1",
+        "on-tertiary-fixed-variant": "#7d2d00",
+        "tertiary-fixed-dim": "#ffb596",
+        "surface-container": "#1d1f27",
+        "surface-bright": "#373942",
+        "surface-variant": "#32343d",
+        "surface-tint": "#b4c5ff",
+        "surface": "#11131b",
+        "on-secondary-fixed-variant": "#3a485b",
+        "outline": "#8d90a0",
+        "error": "#ffb4ab",
+        "primary-fixed": "#dbe1ff",
+        "on-primary-container": "#eeefff",
+        "on-tertiary": "#581e00",
+        "on-primary": "#002a78",
+        "secondary": "#b9c7df",
+        "surface-container-high": "#282a32"
+      },
+      "fonts": [
+        "Material Symbols Outlined",
+        "Inter"
+      ],
+      "layoutHints": {
+        "flexDirection": "col",
+        "gap": "4"
+      },
+      "behaviorContract": [
+        {
+          "kind": "link",
+          "label": "dashboard",
+          "icon": "dashboard",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Task Board",
+          "icon": "assignment",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Equipment",
+          "icon": "precision_manufacturing",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Logs",
+          "icon": "database",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "settings",
+          "icon": "settings",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "help",
+          "icon": "help",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "button",
+          "label": "notifications",
+          "icon": "notifications",
+          "action": "navigate",
+          "route": "/notifications",
+          "expectedBehavior": "navigate:/notifications"
+        },
+        {
+          "kind": "button",
+          "label": "thermostat",
+          "icon": "thermostat",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "humidity_mid",
+          "icon": "humidity_mid",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "sensors",
+          "icon": "sensors",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Account",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Emergency Stop",
+          "icon": "warning",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Retry Connection",
+          "icon": "refresh",
+          "action": "retry",
+          "expectedBehavior": "retry the failed action and show loading/error feedback"
+        },
+        {
+          "kind": "button",
+          "label": "Reset Storage Cache",
+          "icon": "delete_sweep",
+          "action": "destructive",
+          "expectedBehavior": "perform destructive action with visible feedback or confirmation"
+        },
+        {
+          "kind": "button",
+          "label": "F",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "FloraOps Pro Zone A-1 Main",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        }
+      ],
+      "tabBar": [
+        {
+          "kind": "button",
+          "label": "F",
+          "icon": null,
+          "active": true
+        },
+        {
+          "kind": "button",
+          "label": "FloraOps Pro Zone A-1 Main",
+          "icon": null,
+          "active": true
+        },
+        {
+          "kind": "link",
+          "label": "dashboard",
+          "icon": "dashboard",
+          "route": "#",
+          "active": true
+        },
+        {
+          "kind": "link",
+          "label": "Task Board",
+          "icon": "assignment",
+          "route": "#",
+          "active": true
+        },
+        {
+          "kind": "link",
+          "label": "Equipment",
+          "icon": "precision_manufacturing",
+          "route": "#",
+          "active": true
+        },
+        {
+          "kind": "link",
+          "label": "Logs",
+          "icon": "database",
+          "route": "#",
+          "active": true
+        },
+        {
+          "kind": "link",
+          "label": "settings",
+          "icon": "settings",
+          "route": "#",
+          "active": true
+        },
+        {
+          "kind": "link",
+          "label": "help",
+          "icon": "help",
+          "route": "#",
+          "active": true
+        },
+        {
+          "kind": "button",
+          "label": "Emergency Stop",
+          "icon": "warning",
+          "active": false
+        }
+      ],
+      "title": "Storage Error State"
+    },
+    "9db37b864f0d4cc0a85700a557cbcda6": {
+      "screenId": "9db37b864f0d4cc0a85700a557cbcda6",
+      "materialSymbolsRequired": true,
+      "sections": [
+        {
+          "tag": "header",
+          "layout": "flex-row",
+          "classes": [
+            "flex",
+            "justify-between",
+            "items-center",
+            "px-gutter",
+            "h-16",
+            "border-b",
+            "border-outline-variant",
+            "bg-surface",
+            "sticky",
+            "top-0"
+          ],
+          "childCount": 2
+        },
+        {
+          "tag": "main",
+          "layout": "flex-row",
+          "classes": [
+            "flex-1",
+            "w-full",
+            "max-w-5xl",
+            "mx-auto",
+            "p-container-margin"
+          ],
+          "childCount": 48
+        }
+      ],
+      "buttons": [
+        {
+          "kind": "button",
+          "label": "Back to Console",
+          "classes": [
+            "flex",
+            "items-center",
+            "gap-2",
+            "text-on-surface-variant",
+            "hover:text-primary",
+            "transition-colors",
+            "focus:outline-none",
+            "focus:ring-2",
+            "focus:ring-primary",
+            "focus:ring-offset-2",
+            "focus:ring-offset-surface",
+            "rounded-DEFAULT",
+            "px-2",
+            "py-1"
+          ],
+          "icon": "arrow_back",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Edit Profile",
+          "classes": [
+            "w-full",
+            "md:w-auto",
+            "px-4",
+            "py-2",
+            "bg-transparent",
+            "border",
+            "border-outline",
+            "rounded",
+            "text-on-surface",
+            "hover:bg-surface-variant",
+            "transition-colors",
+            "font-title-sm",
+            "text-title-sm",
+            "focus:outline-none",
+            "focus:ring-2",
+            "focus:ring-primary",
+            "focus:ring-offset-2",
+            "focus:ring-offset-surface"
+          ],
+          "icon": null,
+          "action": "edit",
+          "expectedBehavior": "open edit flow or update selected item/state"
+        },
+        {
+          "kind": "button",
+          "label": "Sign Out",
+          "classes": [
+            "px-6",
+            "py-2",
+            "rounded",
+            "bg-background",
+            "border",
+            "border-error",
+            "text-error",
+            "hover:bg-error-container/20",
+            "transition-colors",
+            "font-title-sm",
+            "text-title-sm",
+            "flex",
+            "items-center",
+            "gap-2",
+            "focus:outline-none",
+            "focus:ring-2",
+            "focus:ring-error",
+            "focus:ring-offset-2",
+            "focus:ring-offset-background"
+          ],
+          "icon": "logout",
+          "action": "navigate",
+          "expectedBehavior": "navigate:/logout",
+          "expectedRoute": "/logout",
+          "routeInferred": true
+        }
+      ],
+      "inputs": [
+        {
+          "kind": "input",
+          "type": "email",
+          "label": "email",
+          "placeholder": "",
+          "name": "",
+          "classes": [
+            "font-body-base",
+            "text-body-base",
+            "text-on-surface",
+            "bg-background",
+            "border",
+            "border-outline-variant",
+            "rounded",
+            "px-3",
+            "py-2",
+            "w-full",
+            "max-w-sm",
+            "focus:border-primary",
+            "focus:outline-none",
+            "focus:ring-1",
+            "focus:ring-primary",
+            "transition-colors",
+            "cursor-not-allowed",
+            "text-on-surface-variant"
+          ],
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        },
+        {
+          "kind": "input",
+          "type": "tel",
+          "label": "tel",
+          "placeholder": "",
+          "name": "",
+          "classes": [
+            "font-body-base",
+            "text-body-base",
+            "text-on-surface",
+            "bg-background",
+            "border",
+            "border-outline",
+            "rounded",
+            "px-3",
+            "py-2",
+            "w-full",
+            "max-w-sm",
+            "focus:border-primary",
+            "focus:outline-none",
+            "focus:ring-1",
+            "focus:ring-primary",
+            "transition-colors"
+          ],
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        },
+        {
+          "kind": "input",
+          "type": "select",
+          "label": "select",
+          "placeholder": "",
+          "name": "",
+          "classes": [
+            "appearance-none",
+            "font-body-base",
+            "text-body-base",
+            "text-on-surface",
+            "bg-background",
+            "border",
+            "border-outline",
+            "rounded",
+            "px-4",
+            "py-3",
+            "w-full",
+            "focus:border-primary",
+            "focus:outline-none",
+            "focus:ring-1",
+            "focus:ring-primary",
+            "cursor-pointer",
+            "pr-10"
+          ],
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        },
+        {
+          "kind": "input",
+          "type": "radio",
+          "label": "density",
+          "placeholder": "",
+          "name": "density",
+          "classes": [
+            "peer",
+            "sr-only"
+          ],
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        }
+      ],
+      "navLinks": [],
+      "cards": [],
+      "icons": [
+        "arrow_back",
+        "location_on",
+        "badge",
+        "notifications_active",
+        "warning",
+        "water_drop",
+        "analytics",
+        "tune",
+        "expand_more",
+        "table_rows",
+        "reorder",
+        "logout"
+      ],
+      "images": [
+        {
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuA2dom3vlj65GPiNeBQkwDMckQkODIGNtbpqrJ8np5mMcuLxeJyvwlBKZZJkiB1xdhthRompxXfChckZ_pIU8uuiQghL9CpAnOXLv4keJrePNPi5giLIxhEj1WOpZUOuoFZrd05E_6ZoS6A-aOuVG",
+          "alt": "Sarah Jenkins profile picture"
+        }
+      ],
+      "cssVars": {},
+      "colorPalette": {
+        "on-primary-fixed-variant": "#003ea8",
+        "primary": "#b4c5ff",
+        "primary-fixed-dim": "#b4c5ff",
+        "secondary-fixed": "#d5e3fc",
+        "on-surface": "#e1e2ed",
+        "tertiary-fixed": "#ffdbcd",
+        "outline-variant": "#434655",
+        "on-surface-variant": "#c3c6d7",
+        "on-secondary": "#233144",
+        "tertiary": "#ffb596",
+        "on-secondary-fixed": "#0d1c2e",
+        "on-background": "#e1e2ed",
+        "on-tertiary-container": "#ffede6",
+        "on-error-container": "#ffdad6",
+        "surface-container-low": "#191b23",
+        "on-primary-fixed": "#00174b",
+        "inverse-on-surface": "#2e3039",
+        "on-tertiary-fixed": "#360f00",
+        "error-container": "#93000a",
+        "inverse-surface": "#e1e2ed",
+        "surface-container-highest": "#32343d",
+        "secondary-fixed-dim": "#b9c7df",
+        "inverse-primary": "#0053db",
+        "tertiary-container": "#bc4800",
+        "surface-dim": "#11131b",
+        "on-error": "#690005",
+        "surface-container-lowest": "#0c0e16",
+        "background": "#11131b",
+        "secondary-container": "#3c4a5e",
+        "primary-container": "#2563eb",
+        "on-secondary-container": "#abb9d1",
+        "on-tertiary-fixed-variant": "#7d2d00",
+        "tertiary-fixed-dim": "#ffb596",
+        "surface-container": "#1d1f27",
+        "surface-bright": "#373942",
+        "surface-variant": "#32343d",
+        "surface-tint": "#b4c5ff",
+        "surface": "#11131b",
+        "on-secondary-fixed-variant": "#3a485b",
+        "outline": "#8d90a0",
+        "error": "#ffb4ab",
+        "primary-fixed": "#dbe1ff",
+        "on-primary-container": "#eeefff",
+        "on-tertiary": "#581e00",
+        "on-primary": "#002a78",
+        "secondary": "#b9c7df",
+        "surface-container-high": "#282a32"
+      },
+      "fonts": [
+        "Material Symbols Outlined"
+      ],
+      "layoutHints": {
+        "gridCols": 1,
+        "flexDirection": "col",
+        "gap": "2"
+      },
+      "behaviorContract": [
+        {
+          "kind": "button",
+          "label": "Back to Console",
+          "icon": "arrow_back",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Edit Profile",
+          "icon": null,
+          "action": "edit",
+          "expectedBehavior": "open edit flow or update selected item/state"
+        },
+        {
+          "kind": "button",
+          "label": "Sign Out",
+          "icon": "logout",
+          "action": "navigate",
+          "route": "/logout",
+          "expectedBehavior": "navigate:/logout"
+        },
+        {
+          "kind": "input",
+          "label": "email",
+          "type": "email",
+          "placeholder": "",
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        },
+        {
+          "kind": "input",
+          "label": "tel",
+          "type": "tel",
+          "placeholder": "",
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        },
+        {
+          "kind": "input",
+          "label": "select",
+          "type": "select",
+          "placeholder": "",
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        },
+        {
+          "kind": "input",
+          "label": "density",
+          "type": "radio",
+          "placeholder": "",
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        }
+      ],
+      "tabBar": [],
+      "title": "Profile Panel"
+    },
+    "a8f00315ca1a44998ce770e2d9b0db28": {
+      "screenId": "a8f00315ca1a44998ce770e2d9b0db28",
+      "materialSymbolsRequired": true,
+      "sections": [
+        {
+          "tag": "nav",
+          "layout": "flex-col",
+          "classes": [
+            "hidden",
+            "md:flex",
+            "fixed",
+            "left-0",
+            "top-0",
+            "h-full",
+            "w-[240px]",
+            "bg-surface-container",
+            "dark:bg-surface-container",
+            "flex-col"
+          ],
+          "childCount": 6
+        },
+        {
+          "tag": "main",
+          "layout": "flex-col",
+          "classes": [
+            "flex-1",
+            "flex",
+            "flex-col",
+            "min-w-0",
+            "md:ml-[240px]",
+            "relative"
+          ],
+          "childCount": 56
+        }
+      ],
+      "buttons": [
+        {
+          "kind": "button",
+          "label": "Emergency Stop",
+          "classes": [
+            "w-full",
+            "flex",
+            "items-center",
+            "justify-center",
+            "gap-2",
+            "py-2",
+            "px-4",
+            "bg-error-container",
+            "text-on-error-container",
+            "font-title-sm",
+            "text-title-sm",
+            "rounded-lg",
+            "hover:bg-error",
+            "transition-colors"
+          ],
+          "icon": "warning",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "notifications",
+          "classes": [
+            "p-2",
+            "text-on-surface-variant",
+            "hover:text-primary",
+            "transition-colors",
+            "rounded-full",
+            "hover:bg-surface-variant"
+          ],
+          "icon": "notifications",
+          "action": "navigate",
+          "expectedBehavior": "navigate:/notifications",
+          "expectedRoute": "/notifications",
+          "routeInferred": true
+        },
+        {
+          "kind": "button",
+          "label": "thermostat",
+          "classes": [
+            "p-2",
+            "text-on-surface-variant",
+            "hover:text-primary",
+            "transition-colors",
+            "rounded-full",
+            "hover:bg-surface-variant"
+          ],
+          "icon": "thermostat",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "humidity_mid",
+          "classes": [
+            "p-2",
+            "text-on-surface-variant",
+            "hover:text-primary",
+            "transition-colors",
+            "rounded-full",
+            "hover:bg-surface-variant"
+          ],
+          "icon": "humidity_mid",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "sensors",
+          "classes": [
+            "p-2",
+            "text-on-surface-variant",
+            "hover:text-primary",
+            "transition-colors",
+            "rounded-full",
+            "hover:bg-surface-variant"
+          ],
+          "icon": "sensors",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Account",
+          "classes": [
+            "flex",
+            "items-center",
+            "gap-2",
+            "text-primary",
+            "font-bold",
+            "hover:opacity-80",
+            "transition-opacity"
+          ],
+          "icon": "account_circle",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Calibrate",
+          "classes": [
+            "flex-1",
+            "py-1.5",
+            "px-3",
+            "border",
+            "border-outline-variant",
+            "text-on-surface",
+            "hover:text-primary",
+            "hover:border-primary",
+            "rounded",
+            "font-code-data",
+            "text-code-data",
+            "transition-colors"
+          ],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Schedule",
+          "classes": [
+            "flex-1",
+            "py-1.5",
+            "px-3",
+            "border",
+            "border-outline-variant",
+            "text-on-surface",
+            "hover:text-primary",
+            "hover:border-primary",
+            "rounded",
+            "font-code-data",
+            "text-code-data",
+            "transition-colors"
+          ],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Inspect",
+          "classes": [
+            "flex-1",
+            "py-1.5",
+            "px-3",
+            "border",
+            "border-outline-variant",
+            "text-on-surface",
+            "hover:text-primary",
+            "hover:border-primary",
+            "rounded",
+            "font-code-data",
+            "text-code-data",
+            "transition-colors"
+          ],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Schedule Maint.",
+          "classes": [
+            "flex-1",
+            "py-1.5",
+            "px-3",
+            "border",
+            "border-tertiary/50",
+            "text-tertiary",
+            "hover:bg-tertiary/10",
+            "rounded",
+            "font-code-data",
+            "text-code-data",
+            "transition-colors"
+          ],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Reset Breaker",
+          "classes": [
+            "flex-1",
+            "py-1.5",
+            "px-3",
+            "bg-error-container",
+            "text-on-error-container",
+            "hover:bg-error",
+            "rounded",
+            "font-code-data",
+            "text-code-data",
+            "transition-colors"
+          ],
+          "icon": null,
+          "action": "reset",
+          "expectedBehavior": "reset visible value/state, with confirmation if destructive"
+        },
+        {
+          "kind": "button",
+          "label": "Details",
+          "classes": [
+            "flex-1",
+            "py-1.5",
+            "px-3",
+            "border",
+            "border-outline-variant",
+            "text-on-surface",
+            "hover:text-primary",
+            "hover:border-primary",
+            "rounded",
+            "font-code-data",
+            "text-code-data",
+            "transition-colors"
+          ],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Flush",
+          "classes": [
+            "flex-1",
+            "py-1.5",
+            "px-3",
+            "border",
+            "border-outline-variant",
+            "text-on-surface",
+            "hover:text-primary",
+            "hover:border-primary",
+            "rounded",
+            "font-code-data",
+            "text-code-data",
+            "transition-colors"
+          ],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "FloraOps Pro Zone A-1 Main",
+          "classes": [],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        }
+      ],
+      "inputs": [
+        {
+          "kind": "input",
+          "type": "text",
+          "label": "Search equipment...",
+          "placeholder": "Search equipment...",
+          "name": "",
+          "classes": [
+            "w-full",
+            "bg-surface-container",
+            "border",
+            "border-outline-variant",
+            "rounded-full",
+            "py-1.5",
+            "pl-10",
+            "pr-4",
+            "text-on-surface",
+            "focus:border-primary",
+            "focus:ring-1",
+            "focus:ring-primary",
+            "outline-none",
+            "font-body-sm",
+            "text-body-sm",
+            "transition-colors",
+            "placeholder:text-on-surface-variant/50"
+          ],
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        }
+      ],
+      "navLinks": [
+        {
+          "kind": "link",
+          "label": "dashboard",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined"
+          ],
+          "icon": "dashboard",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Task Board",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined"
+          ],
+          "icon": "assignment",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Equipment",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined"
+          ],
+          "icon": "precision_manufacturing",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Logs",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined"
+          ],
+          "icon": "database",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "settings",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined"
+          ],
+          "icon": "settings",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "help",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined"
+          ],
+          "icon": "help",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        }
+      ],
+      "cards": [],
+      "icons": [
+        "dashboard",
+        "assignment",
+        "precision_manufacturing",
+        "database",
+        "warning",
+        "settings",
+        "help",
+        "search",
+        "notifications",
+        "thermostat",
+        "humidity_mid",
+        "sensors",
+        "account_circle",
+        "water_pump",
+        "air",
+        "lightbulb",
+        "science"
+      ],
+      "images": [
+        {
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuD8or9kgpyZKkU2TjuMpXeqJGKxesjsytRi11nyrSJ8rd0x8swZ1EJ27MfMMtyH5U1pUmcwBxSFwtocPZKXks0VOrawy-RkuECuRRrV0D9d-cjXGLrUHqMV4Bj1cM08guIXjvo1dRkE7vxmWuMXtq",
+          "alt": "Greenhouse Operator Avatar"
+        }
+      ],
+      "cssVars": {},
+      "colorPalette": {
+        "on-primary-fixed-variant": "#003ea8",
+        "primary": "#b4c5ff",
+        "primary-fixed-dim": "#b4c5ff",
+        "secondary-fixed": "#d5e3fc",
+        "on-surface": "#e1e2ed",
+        "tertiary-fixed": "#ffdbcd",
+        "outline-variant": "#434655",
+        "on-surface-variant": "#c3c6d7",
+        "on-secondary": "#233144",
+        "tertiary": "#ffb596",
+        "on-secondary-fixed": "#0d1c2e",
+        "on-background": "#e1e2ed",
+        "on-tertiary-container": "#ffede6",
+        "on-error-container": "#ffdad6",
+        "surface-container-low": "#191b23",
+        "on-primary-fixed": "#00174b",
+        "inverse-on-surface": "#2e3039",
+        "on-tertiary-fixed": "#360f00",
+        "error-container": "#93000a",
+        "inverse-surface": "#e1e2ed",
+        "surface-container-highest": "#32343d",
+        "secondary-fixed-dim": "#b9c7df",
+        "inverse-primary": "#0053db",
+        "tertiary-container": "#bc4800",
+        "surface-dim": "#11131b",
+        "on-error": "#690005",
+        "surface-container-lowest": "#0c0e16",
+        "background": "#11131b",
+        "secondary-container": "#3c4a5e",
+        "primary-container": "#2563eb",
+        "on-secondary-container": "#abb9d1",
+        "on-tertiary-fixed-variant": "#7d2d00",
+        "tertiary-fixed-dim": "#ffb596",
+        "surface-container": "#1d1f27",
+        "surface-bright": "#373942",
+        "surface-variant": "#32343d",
+        "surface-tint": "#b4c5ff",
+        "surface": "#11131b",
+        "on-secondary-fixed-variant": "#3a485b",
+        "outline": "#8d90a0",
+        "error": "#ffb4ab",
+        "primary-fixed": "#dbe1ff",
+        "on-primary-container": "#eeefff",
+        "on-tertiary": "#581e00",
+        "on-primary": "#002a78",
+        "secondary": "#b9c7df",
+        "surface-container-high": "#282a32"
+      },
+      "fonts": [
+        "Material Symbols Outlined"
+      ],
+      "layoutHints": {
+        "gridCols": 1,
+        "flexDirection": "col",
+        "gap": "3"
+      },
+      "behaviorContract": [
+        {
+          "kind": "link",
+          "label": "dashboard",
+          "icon": "dashboard",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Task Board",
+          "icon": "assignment",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Equipment",
+          "icon": "precision_manufacturing",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Logs",
+          "icon": "database",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "settings",
+          "icon": "settings",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "help",
+          "icon": "help",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "button",
+          "label": "Emergency Stop",
+          "icon": "warning",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "notifications",
+          "icon": "notifications",
+          "action": "navigate",
+          "route": "/notifications",
+          "expectedBehavior": "navigate:/notifications"
+        },
+        {
+          "kind": "button",
+          "label": "thermostat",
+          "icon": "thermostat",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "humidity_mid",
+          "icon": "humidity_mid",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "sensors",
+          "icon": "sensors",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Account",
+          "icon": "account_circle",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Calibrate",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Schedule",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Inspect",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Schedule Maint.",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Reset Breaker",
+          "icon": null,
+          "action": "reset",
+          "expectedBehavior": "reset visible value/state, with confirmation if destructive"
+        },
+        {
+          "kind": "button",
+          "label": "Details",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Flush",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "FloraOps Pro Zone A-1 Main",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "input",
+          "label": "Search equipment...",
+          "type": "text",
+          "placeholder": "Search equipment...",
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        }
+      ],
+      "tabBar": [
+        {
+          "kind": "button",
+          "label": "FloraOps Pro Zone A-1 Main",
+          "icon": null,
+          "active": true
+        },
+        {
+          "kind": "link",
+          "label": "dashboard",
+          "icon": "dashboard",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Task Board",
+          "icon": "assignment",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Equipment",
+          "icon": "precision_manufacturing",
+          "route": "#",
+          "active": true
+        },
+        {
+          "kind": "link",
+          "label": "Logs",
+          "icon": "database",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "button",
+          "label": "Emergency Stop",
+          "icon": "warning",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "settings",
+          "icon": "settings",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "help",
+          "icon": "help",
+          "route": "#",
+          "active": false
+        }
+      ],
+      "title": "Equipment Status"
+    },
+    "dafa2a3cf8dd4c68997b44a5b1d07c5c": {
+      "screenId": "dafa2a3cf8dd4c68997b44a5b1d07c5c",
+      "materialSymbolsRequired": true,
+      "sections": [
+        {
+          "tag": "nav",
+          "layout": "flex-row",
+          "classes": [
+            "bg-surface-container",
+            "dark:bg-surface-container",
+            "fixed",
+            "left-0",
+            "top-0",
+            "h-full",
+            "w-[240px]",
+            "border-r",
+            "border-outline-variant",
+            "flex"
+          ],
+          "childCount": 8
+        },
+        {
+          "tag": "header",
+          "layout": "absolute",
+          "classes": [
+            "bg-surface",
+            "dark:bg-surface",
+            "fixed",
+            "top-0",
+            "right-0",
+            "w-full",
+            "md:w-[calc(100%-240px)]",
+            "z-50",
+            "border-b",
+            "border-outline-variant"
+          ],
+          "childCount": 4
+        },
+        {
+          "tag": "main",
+          "layout": "flex-row",
+          "classes": [
+            "flex-1",
+            "mt-16",
+            "md:ml-[240px]",
+            "overflow-y-auto",
+            "p-container-margin",
+            "w-full"
+          ],
+          "childCount": 27
+        }
+      ],
+      "buttons": [
+        {
+          "kind": "button",
+          "label": "Emergency Stop",
+          "classes": [
+            "w-full",
+            "flex",
+            "justify-center",
+            "items-center",
+            "gap-2",
+            "py-3",
+            "mb-4",
+            "rounded",
+            "bg-error-container",
+            "text-on-error-container",
+            "font-title-sm",
+            "text-title-sm",
+            "hover:opacity-90",
+            "transition-opacity"
+          ],
+          "icon": "warning",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "menu",
+          "classes": [
+            "md:hidden",
+            "text-on-surface-variant",
+            "hover:text-primary",
+            "transition-colors"
+          ],
+          "icon": "menu",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "notifications",
+          "classes": [
+            "w-10",
+            "h-10",
+            "rounded-full",
+            "flex",
+            "items-center",
+            "justify-center",
+            "text-on-surface-variant",
+            "hover:bg-surface-variant",
+            "hover:text-primary",
+            "transition-colors",
+            "relative"
+          ],
+          "icon": "notifications",
+          "action": "navigate",
+          "expectedBehavior": "navigate:/notifications",
+          "expectedRoute": "/notifications",
+          "routeInferred": true
+        },
+        {
+          "kind": "button",
+          "label": "thermostat",
+          "classes": [
+            "w-10",
+            "h-10",
+            "rounded-full",
+            "flex",
+            "items-center",
+            "justify-center",
+            "text-on-surface-variant",
+            "hover:bg-surface-variant",
+            "hover:text-primary",
+            "transition-colors"
+          ],
+          "icon": "thermostat",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "humidity_mid",
+          "classes": [
+            "w-10",
+            "h-10",
+            "rounded-full",
+            "flex",
+            "items-center",
+            "justify-center",
+            "text-on-surface-variant",
+            "hover:bg-surface-variant",
+            "hover:text-primary",
+            "transition-colors"
+          ],
+          "icon": "humidity_mid",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "sensors",
+          "classes": [
+            "w-10",
+            "h-10",
+            "rounded-full",
+            "flex",
+            "items-center",
+            "justify-center",
+            "text-on-surface-variant",
+            "hover:bg-surface-variant",
+            "hover:text-primary",
+            "transition-colors"
+          ],
+          "icon": "sensors",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Account",
+          "classes": [
+            "flex",
+            "items-center",
+            "gap-2",
+            "text-on-surface-variant",
+            "hover:text-primary",
+            "transition-colors"
+          ],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "General Preferences",
+          "classes": [
+            "w-full",
+            "flex",
+            "items-center",
+            "justify-between",
+            "p-4",
+            "bg-surface-variant",
+            "rounded-lg",
+            "border",
+            "border-primary-container",
+            "text-primary",
+            "font-title-sm",
+            "text-title-sm",
+            "transition-colors",
+            "text-left"
+          ],
+          "icon": "tune",
+          "action": "navigate",
+          "expectedBehavior": "navigate:/settings",
+          "expectedRoute": "/settings",
+          "routeInferred": true
+        },
+        {
+          "kind": "button",
+          "label": "Alerts & Notifications",
+          "classes": [
+            "w-full",
+            "flex",
+            "items-center",
+            "justify-between",
+            "p-4",
+            "bg-surface-container",
+            "rounded-lg",
+            "border",
+            "border-transparent",
+            "text-on-surface-variant",
+            "font-title-sm",
+            "text-title-sm",
+            "hover:bg-surface-variant",
+            "transition-colors",
+            "text-left"
+          ],
+          "icon": "notifications_active",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Security & Access",
+          "classes": [
+            "w-full",
+            "flex",
+            "items-center",
+            "justify-between",
+            "p-4",
+            "bg-surface-container",
+            "rounded-lg",
+            "border",
+            "border-transparent",
+            "text-on-surface-variant",
+            "font-title-sm",
+            "text-title-sm",
+            "hover:bg-surface-variant",
+            "transition-colors",
+            "text-left"
+          ],
+          "icon": "admin_panel_settings",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Sensor Calibration",
+          "classes": [
+            "w-full",
+            "flex",
+            "items-center",
+            "justify-between",
+            "p-4",
+            "bg-surface-container",
+            "rounded-lg",
+            "border",
+            "border-transparent",
+            "text-on-surface-variant",
+            "font-title-sm",
+            "text-title-sm",
+            "hover:bg-surface-variant",
+            "transition-colors",
+            "text-left"
+          ],
+          "icon": "memory",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Standard",
+          "classes": [
+            "px-4",
+            "py-1.5",
+            "rounded",
+            "bg-surface-variant",
+            "text-primary",
+            "font-body-sm",
+            "text-body-sm",
+            "border",
+            "border-outline-variant"
+          ],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Condensed",
+          "classes": [
+            "px-4",
+            "py-1.5",
+            "rounded",
+            "text-on-surface-variant",
+            "font-body-sm",
+            "text-body-sm",
+            "hover:bg-surface-variant/50"
+          ],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Discard Changes",
+          "classes": [
+            "px-6",
+            "py-2",
+            "rounded",
+            "border",
+            "border-outline",
+            "text-on-surface",
+            "font-title-sm",
+            "text-title-sm",
+            "hover:bg-surface-variant",
+            "transition-colors"
+          ],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Preferences",
+          "classes": [
+            "px-6",
+            "py-2",
+            "rounded",
+            "bg-primary-container",
+            "text-white",
+            "font-title-sm",
+            "text-title-sm",
+            "hover:bg-inverse-primary",
+            "transition-colors",
+            "flex",
+            "items-center",
+            "gap-2"
+          ],
+          "icon": "save",
+          "action": "form-submit",
+          "expectedBehavior": "validate inputs and submit/apply changes"
+        },
+        {
+          "kind": "button",
+          "label": "FloraOps Pro Zone A-1 Main",
+          "classes": [],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        }
+      ],
+      "inputs": [
+        {
+          "kind": "input",
+          "type": "text",
+          "label": "Search systems...",
+          "placeholder": "Search systems...",
+          "name": "",
+          "classes": [
+            "w-full",
+            "bg-surface-container-high",
+            "border",
+            "border-outline-variant",
+            "rounded-full",
+            "py-2",
+            "pl-10",
+            "pr-4",
+            "text-on-surface",
+            "font-body-sm",
+            "text-body-sm",
+            "focus:border-primary-container",
+            "focus:ring-1",
+            "focus:ring-primary-container",
+            "focus:outline-none",
+            "placeholder-outline"
+          ],
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        },
+        {
+          "kind": "input",
+          "type": "checkbox",
+          "label": "toggle",
+          "placeholder": "",
+          "name": "toggle",
+          "classes": [
+            "toggle-checkbox",
+            "absolute",
+            "block",
+            "w-6",
+            "h-6",
+            "rounded-full",
+            "bg-on-surface",
+            "border-4",
+            "border-surface-container",
+            "appearance-none",
+            "cursor-pointer",
+            "transition-transform",
+            "duration-200",
+            "ease-in-out",
+            "z-10",
+            "translate-x-6"
+          ],
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        },
+        {
+          "kind": "input",
+          "type": "number",
+          "label": "number",
+          "placeholder": "",
+          "name": "",
+          "classes": [
+            "w-full",
+            "bg-surface-dim",
+            "border",
+            "border-outline-variant",
+            "rounded",
+            "p-3",
+            "text-on-surface",
+            "font-code-data",
+            "text-code-data",
+            "focus:border-primary-container",
+            "focus:ring-1",
+            "focus:ring-primary-container",
+            "focus:outline-none"
+          ],
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        }
+      ],
+      "navLinks": [
+        {
+          "kind": "link",
+          "label": "dashboard",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined",
+            "text-[20px]"
+          ],
+          "icon": "dashboard",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Task Board",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined",
+            "text-[20px]"
+          ],
+          "icon": "assignment",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Equipment",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined",
+            "text-[20px]"
+          ],
+          "icon": "precision_manufacturing",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Logs",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined",
+            "text-[20px]"
+          ],
+          "icon": "database",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "settings",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined",
+            "text-[20px]"
+          ],
+          "icon": "settings",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "help",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined",
+            "text-[20px]"
+          ],
+          "icon": "help",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        }
+      ],
+      "cards": [],
+      "icons": [
+        "dashboard",
+        "assignment",
+        "precision_manufacturing",
+        "database",
+        "warning",
+        "settings",
+        "help",
+        "menu",
+        "search",
+        "notifications",
+        "thermostat",
+        "humidity_mid",
+        "sensors",
+        "tune",
+        "notifications_active",
+        "admin_panel_settings",
+        "memory",
+        "save"
+      ],
+      "images": [
+        {
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuBVi2JeQftQkUB62-loSksZLTHmhJomxAD1xgwPBNu6fwtfJdkLkkgiQQKVZ70p5cU7otgjSuhT7P9z6vBOwX3rzjtFHIxm35891rT2_NREYCE3HQt278WLCrQXKCYhwhnhnjlTkw5KH86KMYAwFS",
+          "alt": "User profile"
+        }
+      ],
+      "cssVars": {},
+      "colorPalette": {
+        "on-primary-fixed-variant": "#003ea8",
+        "primary": "#b4c5ff",
+        "primary-fixed-dim": "#b4c5ff",
+        "secondary-fixed": "#d5e3fc",
+        "on-surface": "#e1e2ed",
+        "tertiary-fixed": "#ffdbcd",
+        "outline-variant": "#434655",
+        "on-surface-variant": "#c3c6d7",
+        "on-secondary": "#233144",
+        "tertiary": "#ffb596",
+        "on-secondary-fixed": "#0d1c2e",
+        "on-background": "#e1e2ed",
+        "on-tertiary-container": "#ffede6",
+        "on-error-container": "#ffdad6",
+        "surface-container-low": "#191b23",
+        "on-primary-fixed": "#00174b",
+        "inverse-on-surface": "#2e3039",
+        "on-tertiary-fixed": "#360f00",
+        "error-container": "#93000a",
+        "inverse-surface": "#e1e2ed",
+        "surface-container-highest": "#32343d",
+        "secondary-fixed-dim": "#b9c7df",
+        "inverse-primary": "#0053db",
+        "tertiary-container": "#bc4800",
+        "surface-dim": "#11131b",
+        "on-error": "#690005",
+        "surface-container-lowest": "#0c0e16",
+        "background": "#11131b",
+        "secondary-container": "#3c4a5e",
+        "primary-container": "#2563eb",
+        "on-secondary-container": "#abb9d1",
+        "on-tertiary-fixed-variant": "#7d2d00",
+        "tertiary-fixed-dim": "#ffb596",
+        "surface-container": "#1d1f27",
+        "surface-bright": "#373942",
+        "surface-variant": "#32343d",
+        "surface-tint": "#b4c5ff",
+        "surface": "#11131b",
+        "on-secondary-fixed-variant": "#3a485b",
+        "outline": "#8d90a0",
+        "error": "#ffb4ab",
+        "primary-fixed": "#dbe1ff",
+        "on-primary-container": "#eeefff",
+        "on-tertiary": "#581e00",
+        "on-primary": "#002a78",
+        "secondary": "#b9c7df",
+        "surface-container-high": "#282a32"
+      },
+      "fonts": [
+        "Material Symbols Outlined",
+        "Inter"
+      ],
+      "layoutHints": {
+        "gridCols": 1,
+        "flexDirection": "col",
+        "gap": "3"
+      },
+      "behaviorContract": [
+        {
+          "kind": "link",
+          "label": "dashboard",
+          "icon": "dashboard",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Task Board",
+          "icon": "assignment",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Equipment",
+          "icon": "precision_manufacturing",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Logs",
+          "icon": "database",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "settings",
+          "icon": "settings",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "help",
+          "icon": "help",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "button",
+          "label": "Emergency Stop",
+          "icon": "warning",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "menu",
+          "icon": "menu",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "notifications",
+          "icon": "notifications",
+          "action": "navigate",
+          "route": "/notifications",
+          "expectedBehavior": "navigate:/notifications"
+        },
+        {
+          "kind": "button",
+          "label": "thermostat",
+          "icon": "thermostat",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "humidity_mid",
+          "icon": "humidity_mid",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "sensors",
+          "icon": "sensors",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Account",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "General Preferences",
+          "icon": "tune",
+          "action": "navigate",
+          "route": "/settings",
+          "expectedBehavior": "navigate:/settings"
+        },
+        {
+          "kind": "button",
+          "label": "Alerts & Notifications",
+          "icon": "notifications_active",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Security & Access",
+          "icon": "admin_panel_settings",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Sensor Calibration",
+          "icon": "memory",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Standard",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Condensed",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Discard Changes",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Preferences",
+          "icon": "save",
+          "action": "form-submit",
+          "expectedBehavior": "validate inputs and submit/apply changes"
+        },
+        {
+          "kind": "button",
+          "label": "FloraOps Pro Zone A-1 Main",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "input",
+          "label": "Search systems...",
+          "type": "text",
+          "placeholder": "Search systems...",
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        },
+        {
+          "kind": "input",
+          "label": "toggle",
+          "type": "checkbox",
+          "placeholder": "",
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        },
+        {
+          "kind": "input",
+          "label": "number",
+          "type": "number",
+          "placeholder": "",
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        }
+      ],
+      "tabBar": [
+        {
+          "kind": "button",
+          "label": "FloraOps Pro Zone A-1 Main",
+          "icon": null,
+          "active": true
+        },
+        {
+          "kind": "link",
+          "label": "dashboard",
+          "icon": "dashboard",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Task Board",
+          "icon": "assignment",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Equipment",
+          "icon": "precision_manufacturing",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Logs",
+          "icon": "database",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "button",
+          "label": "Emergency Stop",
+          "icon": "warning",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "settings",
+          "icon": "settings",
+          "route": "#",
+          "active": true
+        },
+        {
+          "kind": "link",
+          "label": "help",
+          "icon": "help",
+          "route": "#",
+          "active": false
+        }
+      ],
+      "title": "Settings"
+    },
+    "ee91e06997834da1bd710da05850d12a": {
+      "screenId": "ee91e06997834da1bd710da05850d12a",
+      "materialSymbolsRequired": true,
+      "sections": [
+        {
+          "tag": "header",
+          "layout": "flex-row",
+          "classes": [
+            "bg-surface",
+            "dark:bg-surface",
+            "fixed",
+            "top-0",
+            "right-0",
+            "w-[calc(100%-240px)]",
+            "z-50",
+            "border-b",
+            "border-outline-variant",
+            "flex"
+          ],
+          "childCount": 7
+        },
+        {
+          "tag": "nav",
+          "layout": "flex-row",
+          "classes": [
+            "bg-surface-container",
+            "dark:bg-surface-container",
+            "fixed",
+            "left-0",
+            "top-0",
+            "h-full",
+            "w-[240px]",
+            "border-r",
+            "border-outline-variant",
+            "flex"
+          ],
+          "childCount": 4
+        },
+        {
+          "tag": "main",
+          "layout": "block",
+          "classes": [
+            "ml-[240px]",
+            "pt-16",
+            "min-h-screen",
+            "p-container-margin"
+          ],
+          "childCount": 64
+        }
+      ],
+      "buttons": [
+        {
+          "kind": "button",
+          "label": "notifications",
+          "classes": [
+            "p-2",
+            "hover:text-primary",
+            "transition-colors",
+            "hover:bg-surface-variant",
+            "rounded-full",
+            "relative",
+            "group"
+          ],
+          "icon": "notifications",
+          "action": "navigate",
+          "expectedBehavior": "navigate:/notifications",
+          "expectedRoute": "/notifications",
+          "routeInferred": true
+        },
+        {
+          "kind": "button",
+          "label": "thermostat",
+          "classes": [
+            "p-2",
+            "hover:text-primary",
+            "transition-colors",
+            "hover:bg-surface-variant",
+            "rounded-full"
+          ],
+          "icon": "thermostat",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "humidity_mid",
+          "classes": [
+            "p-2",
+            "hover:text-primary",
+            "transition-colors",
+            "hover:bg-surface-variant",
+            "rounded-full"
+          ],
+          "icon": "humidity_mid",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "sensors",
+          "classes": [
+            "p-2",
+            "hover:text-primary",
+            "transition-colors",
+            "hover:bg-surface-variant",
+            "rounded-full"
+          ],
+          "icon": "sensors",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Account",
+          "classes": [
+            "flex",
+            "items-center",
+            "gap-2",
+            "hover:text-primary",
+            "transition-colors",
+            "hover:opacity-80"
+          ],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Emergency Stop",
+          "classes": [
+            "w-full",
+            "flex",
+            "justify-center",
+            "items-center",
+            "gap-2",
+            "bg-error/10",
+            "text-error",
+            "hover:bg-error/20",
+            "border",
+            "border-error/30",
+            "py-2",
+            "px-4",
+            "rounded-DEFAULT",
+            "transition-colors",
+            "font-medium"
+          ],
+          "icon": "warning",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Today",
+          "classes": [
+            "flex",
+            "items-center",
+            "gap-2",
+            "px-4",
+            "py-2",
+            "bg-surface-container-low",
+            "border",
+            "border-outline-variant",
+            "rounded-DEFAULT",
+            "hover:bg-surface-variant",
+            "transition-colors",
+            "text-sm"
+          ],
+          "icon": "calendar_today",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "All Zones",
+          "classes": [
+            "flex",
+            "items-center",
+            "gap-2",
+            "px-4",
+            "py-2",
+            "bg-surface-container-low",
+            "border",
+            "border-outline-variant",
+            "rounded-DEFAULT",
+            "hover:bg-surface-variant",
+            "transition-colors",
+            "text-sm"
+          ],
+          "icon": "filter_list",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "View Detailed Log",
+          "classes": [
+            "text-primary",
+            "hover:text-primary-fixed",
+            "text-sm",
+            "font-medium"
+          ],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Initiate Manual Irrigation Override schedule for selected zones",
+          "classes": [
+            "flex",
+            "flex-col",
+            "items-center",
+            "justify-center",
+            "p-6",
+            "bg-surface",
+            "border",
+            "border-outline-variant/50",
+            "rounded-lg",
+            "hover:border-primary",
+            "hover:bg-surface-variant/20",
+            "transition-all",
+            "group"
+          ],
+          "icon": "water_drop",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Force Ventilation Purge Clear humidity/temp build-up",
+          "classes": [
+            "flex",
+            "flex-col",
+            "items-center",
+            "justify-center",
+            "p-6",
+            "bg-surface",
+            "border",
+            "border-outline-variant/50",
+            "rounded-lg",
+            "hover:border-primary",
+            "hover:bg-surface-variant/20",
+            "transition-all",
+            "group"
+          ],
+          "icon": "air",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Acknowledge",
+          "classes": [
+            "text-xs",
+            "bg-red-500/10",
+            "text-red-400",
+            "px-2",
+            "py-1",
+            "rounded",
+            "hover:bg-red-500/20",
+            "transition-colors"
+          ],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Create Task",
+          "classes": [
+            "text-xs",
+            "bg-surface-variant",
+            "text-on-surface",
+            "px-2",
+            "py-1",
+            "rounded",
+            "hover:bg-surface-bright",
+            "transition-colors",
+            "border",
+            "border-outline-variant"
+          ],
+          "icon": null,
+          "action": "create",
+          "expectedBehavior": "open create flow or add a new item/state"
+        },
+        {
+          "kind": "button",
+          "label": "View Maintenance Schedule",
+          "classes": [
+            "w-full",
+            "mt-4",
+            "py-2",
+            "text-sm",
+            "border",
+            "border-outline-variant",
+            "rounded-DEFAULT",
+            "hover:bg-surface-variant",
+            "transition-colors",
+            "text-on-surface"
+          ],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "FloraOps Pro Zone A-1 Main",
+          "classes": [],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        }
+      ],
+      "inputs": [
+        {
+          "kind": "input",
+          "type": "text",
+          "label": "Search parameters, zones...",
+          "placeholder": "Search parameters, zones...",
+          "name": "",
+          "classes": [
+            "w-full",
+            "bg-surface-container-low",
+            "border",
+            "border-outline-variant",
+            "rounded-DEFAULT",
+            "py-2",
+            "pl-10",
+            "pr-4",
+            "text-on-surface",
+            "placeholder:text-on-surface-variant",
+            "focus:border-primary",
+            "focus:ring-1",
+            "focus:ring-primary",
+            "focus:outline-none",
+            "transition-colors"
+          ],
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        }
+      ],
+      "navLinks": [
+        {
+          "kind": "link",
+          "label": "dashboard",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined"
+          ],
+          "icon": "dashboard",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Task Board",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined"
+          ],
+          "icon": "assignment",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Equipment",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined"
+          ],
+          "icon": "precision_manufacturing",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Logs",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined"
+          ],
+          "icon": "database",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "settings",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined"
+          ],
+          "icon": "settings",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "help",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined"
+          ],
+          "icon": "help",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        }
+      ],
+      "cards": [],
+      "icons": [
+        "search",
+        "notifications",
+        "thermostat",
+        "humidity_mid",
+        "sensors",
+        "dashboard",
+        "assignment",
+        "precision_manufacturing",
+        "database",
+        "settings",
+        "help",
+        "warning",
+        "calendar_today",
+        "filter_list",
+        "energy_savings_leaf",
+        "arrow_upward",
+        "water_drop",
+        "arrow_downward",
+        "wb_sunny",
+        "air"
+      ],
+      "images": [
+        {
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuASnZfMfIfDL5SoU3-duu2JZwIPu7VjvndE4uf0t_XcN1sydbwgqFdBxoYuMyoKWszB-4y4d0uuGU1-CUO2zNXYccoug37WjSL9wSZkHdsRY5bjRU2Npr6Pz5cTt-Jdfu9pBXqOGgLtJAGOz_KYZN",
+          "alt": "User profile"
+        }
+      ],
+      "cssVars": {},
+      "colorPalette": {
+        "on-primary-fixed-variant": "#003ea8",
+        "primary": "#b4c5ff",
+        "primary-fixed-dim": "#b4c5ff",
+        "secondary-fixed": "#d5e3fc",
+        "on-surface": "#e1e2ed",
+        "tertiary-fixed": "#ffdbcd",
+        "outline-variant": "#434655",
+        "on-surface-variant": "#c3c6d7",
+        "on-secondary": "#233144",
+        "tertiary": "#ffb596",
+        "on-secondary-fixed": "#0d1c2e",
+        "on-background": "#e1e2ed",
+        "on-tertiary-container": "#ffede6",
+        "on-error-container": "#ffdad6",
+        "surface-container-low": "#191b23",
+        "on-primary-fixed": "#00174b",
+        "inverse-on-surface": "#2e3039",
+        "on-tertiary-fixed": "#360f00",
+        "error-container": "#93000a",
+        "inverse-surface": "#e1e2ed",
+        "surface-container-highest": "#32343d",
+        "secondary-fixed-dim": "#b9c7df",
+        "inverse-primary": "#0053db",
+        "tertiary-container": "#bc4800",
+        "surface-dim": "#11131b",
+        "on-error": "#690005",
+        "surface-container-lowest": "#0c0e16",
+        "background": "#11131b",
+        "secondary-container": "#3c4a5e",
+        "primary-container": "#2563eb",
+        "on-secondary-container": "#abb9d1",
+        "on-tertiary-fixed-variant": "#7d2d00",
+        "tertiary-fixed-dim": "#ffb596",
+        "surface-container": "#1d1f27",
+        "surface-bright": "#373942",
+        "surface-variant": "#32343d",
+        "surface-tint": "#b4c5ff",
+        "surface": "#11131b",
+        "on-secondary-fixed-variant": "#3a485b",
+        "outline": "#8d90a0",
+        "error": "#ffb4ab",
+        "primary-fixed": "#dbe1ff",
+        "on-primary-container": "#eeefff",
+        "on-tertiary": "#581e00",
+        "on-primary": "#002a78",
+        "secondary": "#b9c7df",
+        "surface-container-high": "#282a32"
+      },
+      "fonts": [
+        "Inter",
+        "Material Symbols Outlined"
+      ],
+      "layoutHints": {
+        "gridCols": 1,
+        "flexDirection": "col",
+        "gap": "4"
+      },
+      "behaviorContract": [
+        {
+          "kind": "link",
+          "label": "dashboard",
+          "icon": "dashboard",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Task Board",
+          "icon": "assignment",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Equipment",
+          "icon": "precision_manufacturing",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Logs",
+          "icon": "database",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "settings",
+          "icon": "settings",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "help",
+          "icon": "help",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "button",
+          "label": "notifications",
+          "icon": "notifications",
+          "action": "navigate",
+          "route": "/notifications",
+          "expectedBehavior": "navigate:/notifications"
+        },
+        {
+          "kind": "button",
+          "label": "thermostat",
+          "icon": "thermostat",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "humidity_mid",
+          "icon": "humidity_mid",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "sensors",
+          "icon": "sensors",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Account",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Emergency Stop",
+          "icon": "warning",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Today",
+          "icon": "calendar_today",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "All Zones",
+          "icon": "filter_list",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "View Detailed Log",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Initiate Manual Irrigation Override schedule for selected zones",
+          "icon": "water_drop",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Force Ventilation Purge Clear humidity/temp build-up",
+          "icon": "air",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Acknowledge",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Create Task",
+          "icon": null,
+          "action": "create",
+          "expectedBehavior": "open create flow or add a new item/state"
+        },
+        {
+          "kind": "button",
+          "label": "View Maintenance Schedule",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "FloraOps Pro Zone A-1 Main",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "input",
+          "label": "Search parameters, zones...",
+          "type": "text",
+          "placeholder": "Search parameters, zones...",
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        }
+      ],
+      "tabBar": [
+        {
+          "kind": "button",
+          "label": "FloraOps Pro Zone A-1 Main",
+          "icon": null,
+          "active": true
+        },
+        {
+          "kind": "link",
+          "label": "dashboard",
+          "icon": "dashboard",
+          "route": "#",
+          "active": true
+        },
+        {
+          "kind": "link",
+          "label": "Task Board",
+          "icon": "assignment",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Equipment",
+          "icon": "precision_manufacturing",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Logs",
+          "icon": "database",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "settings",
+          "icon": "settings",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "help",
+          "icon": "help",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "button",
+          "label": "Emergency Stop",
+          "icon": "warning",
+          "active": false
+        }
+      ],
+      "title": "Dashboard"
+    }
+  }
+}

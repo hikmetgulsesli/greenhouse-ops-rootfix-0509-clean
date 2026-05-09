@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Greenhouse Console - Task Board</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-fixed-variant": "#003ea8",
+                    "primary": "#b4c5ff",
+                    "primary-fixed-dim": "#b4c5ff",
+                    "secondary-fixed": "#d5e3fc",
+                    "on-surface": "#e1e2ed",
+                    "tertiary-fixed": "#ffdbcd",
+                    "outline-variant": "#434655",
+                    "on-surface-variant": "#c3c6d7",
+                    "on-secondary": "#233144",
+                    "tertiary": "#ffb596",
+                    "on-secondary-fixed": "#0d1c2e",
+                    "on-background": "#e1e2ed",
+                    "on-tertiary-container": "#ffede6",
+                    "on-error-container": "#ffdad6",
+                    "surface-container-low": "#191b23",
+                    "on-primary-fixed": "#00174b",
+                    "inverse-on-surface": "#2e3039",
+                    "on-tertiary-fixed": "#360f00",
+                    "error-container": "#93000a",
+                    "inverse-surface": "#e1e2ed",
+                    "surface-container-highest": "#32343d",
+                    "secondary-fixed-dim": "#b9c7df",
+                    "inverse-primary": "#0053db",
+                    "tertiary-container": "#bc4800",
+                    "surface-dim": "#11131b",
+                    "on-error": "#690005",
+                    "surface-container-lowest": "#0c0e16",
+                    "background": "#11131b",
+                    "secondary-container": "#3c4a5e",
+                    "primary-container": "#2563eb",
+                    "on-secondary-container": "#abb9d1",
+                    "on-tertiary-fixed-variant": "#7d2d00",
+                    "tertiary-fixed-dim": "#ffb596",
+                    "surface-container": "#1d1f27",
+                    "surface-bright": "#373942",
+                    "surface-variant": "#32343d",
+                    "surface-tint": "#b4c5ff",
+                    "surface": "#11131b",
+                    "on-secondary-fixed-variant": "#3a485b",
+                    "outline": "#8d90a0",
+                    "error": "#ffb4ab",
+                    "primary-fixed": "#dbe1ff",
+                    "on-primary-container": "#eeefff",
+                    "on-tertiary": "#581e00",
+                    "on-primary": "#002a78",
+                    "secondary": "#b9c7df",
+                    "surface-container-high": "#282a32"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "unit": "4px",
+                    "container-margin": "24px",
+                    "cell-padding-y": "8px",
+                    "cell-padding-x": "12px",
+                    "gutter": "16px"
+            },
+            "fontFamily": {
+                    "headline-md": ["Inter"],
+                    "body-sm": ["Inter"],
+                    "title-sm": ["Inter"],
+                    "display-lg": ["Inter"],
+                    "label-caps": ["Inter"],
+                    "code-data": ["Inter"],
+                    "body-base": ["Inter"]
+            },
+            "fontSize": {
+                    "headline-md": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "body-sm": ["13px", {"lineHeight": "18px", "fontWeight": "400"}],
+                    "title-sm": ["18px", {"lineHeight": "24px", "fontWeight": "600"}],
+                    "display-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "code-data": ["13px", {"lineHeight": "18px", "fontWeight": "500"}],
+                    "body-base": ["14px", {"lineHeight": "20px", "fontWeight": "400"}]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.filled {
+            font-variation-settings: 'FILL' 1;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-base text-body-base antialiased min-h-screen">
+<!-- SideNavBar -->
+<nav class="fixed left-0 top-0 h-full w-[240px] bg-surface-container border-r border-outline-variant flex flex-col py-container-margin z-40 hidden md:flex">
+<!-- Header -->
+<div class="px-container-margin mb-8 flex items-center gap-3">
+<img alt="Greenhouse Operator Avatar" class="w-10 h-10 rounded-full object-cover border border-outline-variant" data-alt="A close-up portrait of a professional agriculture technician wearing a dark corporate uniform, set against a blurred, high-tech indoor greenhouse environment. The lighting is crisp and cool, emphasizing a modern, technical, and reliable brand aesthetic suitable for an enterprise dashboard profile image." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzkrxGg_HmWuVXh8z3Ex1a0YWeZhqrWeitK5Tph1KCRkrd0lyZ2dzd0dIPFEvxyVAC4m-DraWOxFXMUhLzpAeI4cD5GQMn_T51hRLN_ghHxvzYVDBxbfAFUfD71IbOok6dqAO_PPj-CU6dtXhgCffEw8Ohk1AJlhyBYv4wX4pntQ2SNw1CFpbNNR4x3XCx8cpW8ElwKEkal61VlewQ4xV5sbRvFVD3sQ4j-JDeT9e-U5HE4M063t5wRQOMUt5nFCMhfO2_YEm4LWc"/>
+<div>
+<h2 class="font-headline-md text-headline-md font-bold text-primary">FloraOps Pro</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Zone A-1 Main</p>
+</div>
+</div>
+<!-- Navigation Links -->
+<div class="flex-1 flex flex-col gap-1 px-3">
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant font-body-base hover:bg-surface-variant transition-colors group" href="#">
+<span class="material-symbols-outlined group-hover:text-on-surface transition-colors" data-icon="dashboard">dashboard</span>
+<span class="group-hover:text-on-surface transition-colors">Dashboard</span>
+</a>
+<!-- ACTIVE TAB -->
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-primary font-bold border-l-4 border-primary bg-secondary-container/10 active:scale-[0.98] transition-transform duration-150" href="#">
+<span class="material-symbols-outlined filled" data-icon="assignment">assignment</span>
+<span>Task Board</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant font-body-base hover:bg-surface-variant transition-colors group" href="#">
+<span class="material-symbols-outlined group-hover:text-on-surface transition-colors" data-icon="precision_manufacturing">precision_manufacturing</span>
+<span class="group-hover:text-on-surface transition-colors">Equipment</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant font-body-base hover:bg-surface-variant transition-colors group" href="#">
+<span class="material-symbols-outlined group-hover:text-on-surface transition-colors" data-icon="database">database</span>
+<span class="group-hover:text-on-surface transition-colors">Logs</span>
+</a>
+</div>
+<!-- CTA & Footer -->
+<div class="px-container-margin mt-auto flex flex-col gap-4">
+<button class="w-full py-2 bg-error-container text-on-error-container font-label-caps text-label-caps rounded flex items-center justify-center gap-2 hover:bg-error transition-colors">
+<span class="material-symbols-outlined text-[18px]">warning</span>
+                Emergency Stop
+            </button>
+<div class="border-t border-outline-variant pt-4 flex flex-col gap-1">
+<a class="flex items-center gap-3 px-2 py-2 rounded-lg text-on-surface-variant font-body-sm hover:bg-surface-variant transition-colors group" href="#">
+<span class="material-symbols-outlined text-[18px] group-hover:text-on-surface" data-icon="settings">settings</span>
+<span class="group-hover:text-on-surface">Settings</span>
+</a>
+<a class="flex items-center gap-3 px-2 py-2 rounded-lg text-on-surface-variant font-body-sm hover:bg-surface-variant transition-colors group" href="#">
+<span class="material-symbols-outlined text-[18px] group-hover:text-on-surface" data-icon="help">help</span>
+<span class="group-hover:text-on-surface">Help</span>
+</a>
+</div>
+</div>
+</nav>
+<!-- TopAppBar -->
+<header class="fixed top-0 right-0 w-full md:w-[calc(100%-240px)] z-50 bg-surface border-b border-outline-variant flex justify-between items-center px-gutter h-16">
+<!-- Search (on_left) -->
+<div class="flex-1 flex items-center gap-4">
+<div class="hidden md:flex items-center gap-2 px-3 py-1.5 bg-surface-container-highest border border-outline-variant rounded-full w-64 focus-within:border-primary focus-within:ring-1 focus-within:ring-primary transition-all">
+<span class="material-symbols-outlined text-on-surface-variant text-[20px]" data-icon="search">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-body-sm font-body-sm text-on-surface w-full p-0 placeholder:text-on-surface-variant" placeholder="Search tasks, logs..." type="text"/>
+</div>
+<!-- Mobile Menu Toggle -->
+<button class="md:hidden text-on-surface p-2">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<span class="font-headline-md text-headline-md font-bold text-primary md:hidden">Greenhouse Console</span>
+</div>
+<!-- Center Brand (Desktop) -->
+<div class="hidden md:flex flex-1 justify-center">
+<span class="font-headline-md text-headline-md font-bold text-primary">Greenhouse Console</span>
+</div>
+<!-- Trailing Actions -->
+<div class="flex-1 flex items-center justify-end gap-2 md:gap-4">
+<div class="hidden lg:flex items-center gap-1 text-on-surface-variant">
+<button class="p-2 rounded-full hover:bg-surface-variant hover:text-primary transition-colors active:opacity-80 relative" title="Sensors">
+<span class="material-symbols-outlined" data-icon="sensors">sensors</span>
+</button>
+<button class="p-2 rounded-full hover:bg-surface-variant hover:text-primary transition-colors active:opacity-80" title="Humidity">
+<span class="material-symbols-outlined" data-icon="humidity_mid">humidity_mid</span>
+</button>
+<button class="p-2 rounded-full hover:bg-surface-variant hover:text-primary transition-colors active:opacity-80" title="Thermostat">
+<span class="material-symbols-outlined" data-icon="thermostat">thermostat</span>
+</button>
+<button class="p-2 rounded-full hover:bg-surface-variant hover:text-primary transition-colors active:opacity-80 relative" title="Notifications">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+<span class="absolute top-1.5 right-1.5 w-2 h-2 bg-error rounded-full"></span>
+</button>
+</div>
+<div class="h-6 w-px bg-outline-variant hidden lg:block mx-1"></div>
+<button class="flex items-center gap-2 pl-2 pr-4 py-1 rounded-full border border-outline-variant hover:bg-surface-variant transition-colors active:opacity-80">
+<img alt="User profile" class="w-7 h-7 rounded-full object-cover" data-alt="A small circular avatar image showing a professional technician's face, intended for the top right corner of a dark mode dashboard. The image should be clear, slightly desaturated to match the corporate tech vibe." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvS_dS3YFFnj1injMH6ZkdqehHms6yabx8Sg72EDPPXnTxcn5bf6pnRTNx38nBbOqvfGnNjeMaZcdXfjVKUbOphBXMYyvHQun5tdPWWOOv_CrLsDMG67YPuM8K8c44BeEVHg6DA5QJ1Wb3QV2bM8a8qTYqKIEfTFfIvXt5UdTPX1cPdLJT4ruYD7gxPetsTN2OEzLTCVAsgpC_lQGL27ICTxGs0SRT5WWqpSDE0HzFBjUvHQJzVBf3g0RNo01qUcBJJBSUz-4pllo"/>
+<span class="font-label-caps text-label-caps text-on-surface">Account</span>
+</button>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="md:ml-[240px] pt-16 min-h-screen bg-background">
+<div class="p-gutter md:p-container-margin h-[calc(100vh-64px)] flex flex-col">
+<!-- Page Header -->
+<div class="flex flex-col md:flex-row md:items-center justify-between mb-6 gap-4">
+<div>
+<h1 class="font-display-lg text-display-lg text-on-surface mb-1">Operational Task Board</h1>
+<p class="font-body-base text-body-base text-on-surface-variant">Manage daily maintenance and crop intervention tasks for Zone A-1.</p>
+</div>
+<div class="flex items-center gap-3">
+<button class="px-4 py-2 border border-outline-variant rounded text-on-surface font-label-caps text-label-caps hover:bg-surface-variant transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">filter_list</span>
+                        Filter
+                    </button>
+<button class="px-4 py-2 bg-primary-container text-on-primary-container rounded font-label-caps text-label-caps hover:bg-primary hover:text-on-primary transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">add</span>
+                        New Task
+                    </button>
+</div>
+</div>
+<!-- Kanban Board Grid -->
+<div class="flex-1 grid grid-cols-1 md:grid-cols-3 gap-gutter overflow-hidden">
+<!-- Column: TO DO -->
+<div class="flex flex-col bg-surface-container-low border border-outline-variant/50 rounded-lg overflow-hidden h-full">
+<div class="px-4 py-3 border-b border-outline-variant/50 bg-surface-container flex items-center justify-between sticky top-0 z-10">
+<div class="flex items-center gap-2">
+<div class="w-2 h-2 rounded-full bg-outline"></div>
+<h2 class="font-title-sm text-title-sm text-on-surface">To Do</h2>
+</div>
+<span class="bg-surface-variant text-on-surface px-2 py-0.5 rounded font-code-data text-code-data">3</span>
+</div>
+<div class="flex-1 overflow-y-auto p-3 space-y-3">
+<!-- Task Card: Normal -->
+<div class="bg-surface border border-outline-variant rounded shadow-sm hover:bg-surface-variant/50 transition-colors relative overflow-hidden group cursor-pointer">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-outline-variant"></div>
+<div class="p-4 pl-5">
+<div class="flex justify-between items-start mb-2">
+<span class="font-code-data text-code-data text-on-surface-variant">TSK-1042</span>
+<span class="bg-surface-variant text-on-surface-variant font-label-caps text-[10px] px-1.5 py-0.5 rounded">Low Priority</span>
+</div>
+<h3 class="font-title-sm text-body-base font-semibold text-on-surface mb-1">Routine Sensor Calibration</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mb-4">Perform monthly calibration on humidity sensors H-12 through H-18 in Sector 4.</p>
+<div class="flex items-center justify-between mt-auto">
+<div class="flex -space-x-2">
+<div class="w-6 h-6 rounded-full bg-secondary-container border border-surface flex items-center justify-center text-[10px] font-bold text-on-secondary-container">JD</div>
+</div>
+<div class="flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="p-1 hover:bg-surface-variant rounded text-on-surface-variant hover:text-primary"><span class="material-symbols-outlined text-[18px]">arrow_forward</span></button>
+</div>
+</div>
+</div>
+</div>
+<!-- Task Card: Warning -->
+<div class="bg-surface border border-outline-variant rounded shadow-sm hover:bg-surface-variant/50 transition-colors relative overflow-hidden group cursor-pointer">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-tertiary"></div>
+<div class="p-4 pl-5">
+<div class="flex justify-between items-start mb-2">
+<span class="font-code-data text-code-data text-on-surface-variant">TSK-1045</span>
+<span class="bg-tertiary-container/30 text-tertiary font-label-caps text-[10px] px-1.5 py-0.5 rounded border border-tertiary-container">Medium Priority</span>
+</div>
+<h3 class="font-title-sm text-body-base font-semibold text-on-surface mb-1">Check Irrigation Line B</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mb-4">Flow rate variance detected. Inspect valves for potential blockage or wear.</p>
+<div class="flex items-center justify-between mt-auto">
+<div class="flex -space-x-2">
+<div class="w-6 h-6 rounded-full bg-primary-container border border-surface flex items-center justify-center text-[10px] font-bold text-on-primary-container">AR</div>
+</div>
+<div class="flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="p-1 hover:bg-surface-variant rounded text-on-surface-variant hover:text-primary"><span class="material-symbols-outlined text-[18px]">arrow_forward</span></button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Column: IN PROGRESS -->
+<div class="flex flex-col bg-surface-container-low border border-outline-variant/50 rounded-lg overflow-hidden h-full">
+<div class="px-4 py-3 border-b border-primary/20 bg-surface-container flex items-center justify-between sticky top-0 z-10">
+<div class="flex items-center gap-2">
+<div class="w-2 h-2 rounded-full bg-primary animate-pulse"></div>
+<h2 class="font-title-sm text-title-sm text-primary">In Progress</h2>
+</div>
+<span class="bg-primary/20 text-primary px-2 py-0.5 rounded font-code-data text-code-data">2</span>
+</div>
+<div class="flex-1 overflow-y-auto p-3 space-y-3">
+<!-- Task Card: Critical/Error -->
+<div class="bg-surface border border-outline-variant rounded shadow-sm hover:bg-surface-variant/50 transition-colors relative overflow-hidden group cursor-pointer ring-1 ring-error/30">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-error"></div>
+<div class="p-4 pl-5">
+<div class="flex justify-between items-start mb-2">
+<span class="font-code-data text-code-data text-on-surface-variant">TSK-1039</span>
+<span class="bg-error-container/40 text-error font-label-caps text-[10px] px-1.5 py-0.5 rounded border border-error-container">Critical Priority</span>
+</div>
+<h3 class="font-title-sm text-body-base font-semibold text-on-surface mb-1">Replace Heater Unit 2</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mb-4">Unit failing to maintain target baseline. Immediate replacement required before nightfall drop.</p>
+<div class="flex items-center justify-between mt-auto">
+<div class="flex items-center gap-2">
+<img alt="Assignee" class="w-6 h-6 rounded-full border border-surface" data-alt="A small circular avatar of an engineering technician in a dark blue uniform." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHUYf1xZYZoCSCL2RySUMWrnyLgCBJNRCQGDRAfjp-O89NQRLLn8ZyV68pLtNtG41u1JB5coSIvtf12CjynxiI1Oecec-aAvfj4o8dXw6Y8j9bpM4ofZhaF4YFdWP9If8wYUONjYNWdr1MWSuRrEVrmu4qQBFGtKshm9u44O4E_XGxrTR762wVAaX-XQAoMEVBclLdDYVKSYyVf5r-7SflM-0yoOQiPn3vviIjjy5D4vJep8eixv-SewtBKmtBP1tAc7ZGa8um0j8"/>
+<span class="font-body-sm text-[11px] text-on-surface-variant">Active now</span>
+</div>
+<div class="flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="p-1 hover:bg-surface-variant rounded text-on-surface-variant hover:text-primary"><span class="material-symbols-outlined text-[18px]">arrow_back</span></button>
+<button class="p-1 hover:bg-surface-variant rounded text-on-surface-variant hover:text-primary"><span class="material-symbols-outlined text-[18px]">arrow_forward</span></button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Column: DONE -->
+<div class="flex flex-col bg-surface-container-low border border-outline-variant/50 rounded-lg overflow-hidden h-full opacity-80">
+<div class="px-4 py-3 border-b border-outline-variant/50 bg-surface-container flex items-center justify-between sticky top-0 z-10">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-outline text-[16px]">check_circle</span>
+<h2 class="font-title-sm text-title-sm text-on-surface-variant">Done</h2>
+</div>
+<span class="bg-surface-variant text-on-surface-variant px-2 py-0.5 rounded font-code-data text-code-data">12</span>
+</div>
+<div class="flex-1 overflow-y-auto p-3 space-y-3">
+<!-- Task Card: Done -->
+<div class="bg-surface border border-outline-variant/50 rounded shadow-sm relative overflow-hidden group">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-outline-variant/50"></div>
+<div class="p-4 pl-5">
+<div class="flex justify-between items-start mb-2">
+<span class="font-code-data text-code-data text-on-surface-variant/70 line-through">TSK-1031</span>
+<span class="text-on-surface-variant/70 font-label-caps text-[10px]">Today, 08:30</span>
+</div>
+<h3 class="font-title-sm text-body-base font-semibold text-on-surface-variant/70 mb-1 line-through">Nutrient Tank Refill</h3>
+<div class="flex items-center justify-between mt-4">
+<div class="flex -space-x-2 opacity-50">
+<div class="w-6 h-6 rounded-full bg-secondary-container border border-surface flex items-center justify-center text-[10px] font-bold text-on-secondary-container">MK</div>
+</div>
+<button class="p-1 hover:bg-surface-variant rounded text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity"><span class="material-symbols-outlined text-[18px]">undo</span></button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</body></html>
