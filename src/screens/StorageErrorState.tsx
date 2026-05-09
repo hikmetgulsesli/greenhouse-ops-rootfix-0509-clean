@@ -21,13 +21,12 @@ export interface StorageErrorStateProps {
   state?: unknown;
 }
 
-export function StorageErrorState(_props: StorageErrorStateProps = {}) {
+export function StorageErrorState({ onAction }: StorageErrorStateProps = {}) {
   return (
     <>
       {/* TopAppBar */}
       <header className="bg-surface dark:bg-surface fixed top-0 right-0 w-[calc(100%-240px)] z-50 border-b border-outline-variant flex justify-between items-center px-gutter h-16">
       <div className="flex items-center gap-4">
-      {/* Search hidden for simplicity on error state, typically handled via logic */}
       <h1 className="font-headline-md text-headline-md font-bold text-primary">Greenhouse Console</h1>
       </div>
       <div className="flex items-center gap-4">
@@ -37,7 +36,7 @@ export function StorageErrorState(_props: StorageErrorStateProps = {}) {
       <button aria-label="thermostat" className="text-on-surface-variant hover:text-primary transition-colors flex items-center justify-center w-10 h-10 rounded-full">
       <span className="material-symbols-outlined">thermostat</span>
       </button>
-      <button aria-label="humidity_mid" className="text-on-surface-variant hover:text-primary transition-colors flex items-center justify-center w-10 h-10 rounded-full">
+      <button aria-label="humidity" className="text-on-surface-variant hover:text-primary transition-colors flex items-center justify-center w-10 h-10 rounded-full">
       <span className="material-symbols-outlined">humidity_mid</span>
       </button>
       <button aria-label="sensors" className="text-on-surface-variant hover:text-primary transition-colors flex items-center justify-center w-10 h-10 rounded-full">
@@ -123,11 +122,17 @@ export function StorageErrorState(_props: StorageErrorStateProps = {}) {
       </div>
       {/* Actions */}
       <div className="flex flex-col sm:flex-row gap-4 mt-auto">
-      <button className="flex-1 bg-primary-container hover:bg-primary-container/90 text-on-primary-container font-title-sm text-title-sm py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2 shadow-lg">
+      <button
+        onClick={() => onAction?.("retry-connection")}
+        className="flex-1 bg-primary-container hover:bg-primary-container/90 text-on-primary-container font-title-sm text-title-sm py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2 shadow-lg"
+      >
       <span className="material-symbols-outlined" style={{fontVariationSettings: "'FILL' 1"}}>refresh</span>
                               Retry Connection
                           </button>
-      <button className="flex-1 bg-transparent border border-outline hover:border-on-surface hover:text-on-surface text-on-surface-variant font-title-sm text-title-sm py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2">
+      <button
+        onClick={() => onAction?.("reset-storage-cache")}
+        className="flex-1 bg-transparent border border-outline hover:border-on-surface hover:text-on-surface text-on-surface-variant font-title-sm text-title-sm py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
+      >
       <span className="material-symbols-outlined">delete_sweep</span>
                               Reset Storage Cache
                           </button>

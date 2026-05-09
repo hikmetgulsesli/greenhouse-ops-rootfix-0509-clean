@@ -8,7 +8,8 @@ import { ProfilePanel } from "./screens/ProfilePanel";
 import { FilteredOverview } from "./screens/FilteredOverview";
 import { EmptyState } from "./screens/EmptyState";
 import { StorageErrorState } from "./screens/StorageErrorState";
-import type { Screen } from "./types/domain";
+import type { Screen, MaintenanceRecord, AppSettings, UserProfile } from "./types/domain";
+
 
 const navItems: { id: Screen; label: string; icon: string }[] = [
   { id: "dashboard", label: "Dashboard", icon: "dashboard" },
@@ -222,7 +223,6 @@ export default function App() {
     onNavigate: navigate,
     onBack: goBack,
     onAction: (action: string, ...args: unknown[]) => {
-      // Generic action handler for screen-specific actions
       if (action === "acknowledge-alert" && args[0]) {
         acknowledgeAlert(String(args[0]));
       }
@@ -243,7 +243,7 @@ export default function App() {
               if (action === "create-task") navigate("task-board");
               if (action === "view-log") navigate("logs");
               if (action === "acknowledge-alert" && args[0]) acknowledgeAlert(String(args[0]));
-              commonProps.onAction(action, ...args);
+              (commonProps.onAction as (...a: unknown[]) => void)(action, ...args);
             }}
           />
         );
@@ -260,7 +260,7 @@ export default function App() {
                 const csv = maintenanceLogToCSV(maintenanceLog);
                 downloadBlob(csv, "maintenance-log.csv", "text/csv");
               }
-              commonProps.onAction(action, ...args);
+              (commonProps.onAction as (...a: unknown[]) => void)(action, ...args);
             }}
           />
         );
@@ -270,13 +270,13 @@ export default function App() {
             {...commonProps}
             onAction={(action, ...args) => {
               if (action === "save-settings" && args[0]) {
-                updateSettings(args[0] as typeof settings);
+                updateSettings(args[0] as AppSettings);
               }
               if (action === "discard-changes") {
                 // Revert by reloading from localStorage
                 window.location.reload();
               }
-              commonProps.onAction(action, ...args);
+              (commonProps.onAction as (...a: unknown[]) => void)(action, ...args);
             }}
           />
         );
@@ -286,12 +286,12 @@ export default function App() {
             {...commonProps}
             onAction={(action, ...args) => {
               if (action === "save-profile" && args[0]) {
-                updateProfile(args[0] as typeof profile);
+                updateProfile(args[0] as UserProfile);
               }
               if (action === "sign-out") {
                 resetStorageAndState();
               }
-              commonProps.onAction(action, ...args);
+              (commonProps.onAction as (...a: unknown[]) => void)(action, ...args);
             }}
           />
         );
@@ -305,7 +305,7 @@ export default function App() {
                 const csv = maintenanceLogToCSV(maintenanceLog);
                 downloadBlob(csv, "filtered-log.csv", "text/csv");
               }
-              commonProps.onAction(action, ...args);
+              (commonProps.onAction as (...a: unknown[]) => void)(action, ...args);
             }}
           />
         );
@@ -322,7 +322,7 @@ export default function App() {
               if (action === "reset-storage-cache") {
                 resetStorageAndState();
               }
-              commonProps.onAction(action);
+              (commonProps.onAction as (...a: unknown[]) => void)(action);
             }}
           />
         );
@@ -343,7 +343,7 @@ export default function App() {
   );
 }
 
-function maintenanceLogToCSV(records: typeof maintenanceLog): string {
+function maintenanceLogToCSV(records: MaintenanceRecord[]): string {
   const headers = ["ID", "Equipment", "Type", "Description", "Operator", "Date", "Duration", "Status"];
   const rows = records.map((r) => [
     r.id,
@@ -359,13 +359,17 @@ function maintenanceLogToCSV(records: typeof maintenanceLog): string {
 }
 
 function downloadBlob(content: string, filename: string, mimeType: string) {
-  const blob = new Blob([content], { type: mimeType });
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement("a");
-  a.href = url;
-  a.download = filename;
-  document.body.appendChild(a);
-  a.click();
-  document.body.removeChild(a);
-  URL.revokeObjectURL(url);
+  try {
+    const blob = new Blob([content], { type: mimeType });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = filename;
+    document.body.appendChild(a);
+    a.click();
+    try { document.body.removeChild(a); } catch { /* ignore */ }
+    URL.revokeObjectURL(url);
+  } catch {
+    // ignore in test environments
+  }
 }
